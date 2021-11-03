@@ -1,0 +1,10445 @@
+# <#>NumPy<> SpeedSheet
+<b>What you need, faster.<>
+
+Get answers to your NumPy questions fast.
+
+<*>Use <b>Search<> (above) For Realtime Answers
+Answers Get Right To The Point
+Covers The <b>NumPy<> Python Library<>
+
+
+
+# NumPy Documents
+
+
+### Official Site
+<l>https://numpy.org/doc/stable/<>
+
+
+### Data Types - Basics
+<l>https://numpy.org/doc/stable/user/basics.types.html<>
+
+
+### Data Types - Scalars
+<l>https://numpy.org/doc/stable/reference/arrays.scalars.html<>
+
+
+
+# NumPy Library
+
+
+## Install Library - pip
+
+<cb>pip install numpy<>
+@
+@ command, commandline
+
+
+
+## Install Library - pip requirements.txt
+
+requirements.txt:
+
+<cb>numpy<>
+
+Command:
+
+<cb>pip install -r requiremets.txt<>
+@
+@ command, commandline
+
+
+
+## Program - Import
+
+<cb>import numpy as np<>
+
+
+
+# Data Types
+
+
+## Arrays
+
+<table><col><c>numpy.ndarray<><><col>Standard NumPy Array
+Defaults to <c>numpy.float_<>.<>
+<col>					<><col><><>
+@
+@ numpy.array, numpy.ndarray
+
+
+
+## Scalar Types - Standard Types
+
+<table><col><c>numpy.bool_<><>			<col>Boolean<>
+<col><c>numpy.bytes_<><>		<col>Byte String<>
+<col> <><col><>
+<col><c>numpy.int_<><>			<col>Long, Signed<>
+<col><c>numpy.float_<><>		<col><>
+<col><c>numpy.complex_<><>		<col><>
+<col> <><col><>
+<col><c>numpy.str_<><>			<col><>
+<col> <><col><>
+<col><c>numpy.datetime64<><>	<col><>
+<col><c>numpy.timehdelta64<><>	<col><>
+<col>					<><col><><>
+@
+@ scalars
+
+
+
+## Scalar Types - Platform Dependant
+
+<table><col><c>numpy.bool_<><>	<col>Boolean<>
+<col> <><col><>
+<col><c>numpy.byte<><>			<col>Byte, Signed<>
+<col><c>numpy.ubyte<><>			<col>Byte, Unsigned<>
+<col> <><col><>
+<col><c>numpy.csingle<><>		<col>Complex, Typically 64 Bit<>
+<col><c>numpy.cdouble<><>		<col>Complex, Typically 128 Bit<>
+<col><c>numpy.clongdouble<><>	<col>Complex, Typically 256 Bit<>
+<col> <><col><>
+<col><c>numpy.half<><>			<col>Float, Half Precision<>
+<col><c>numpy.float16<><>		<col>Float, Half Precision<>
+<col><c>numpy.single<><>		<col>Float, Typically 32 Bit<>
+<col><c>numpy.double<><>		<col>Float, Typically 64 Bit<>
+<col><c>numpy.longdouble<><>	<col>Float, Typically 128 Bit<>
+<col> <><col><>
+<col><c>numpy.short<><>			<col>Short, Signed<>
+<col><c>numpy.ushort<><>		<col>Short, Unsigned<>
+<col> <><col><>
+<col><c>numpy.intc<><>			<col>Integer, Signed<>
+<col><c>numpy.uintc<><>			<col>Integer, Unsigned<>
+<col> <><col><>
+<col><c>numpy.int_<><>			<col>Long, Signed<>
+<col><c>numpy.uint<><>			<col>Long, Unsigned<>
+<col><c>numpy.longlong<><>		<col>Long Long, Signed<>
+<col><c>numpy.ulonglong<><>		<col>Long Long, signed<>
+<col> <><col><>
+<col><c>numpy.intp<><>			<col>Integer, For Indexing<>
+<col><c>numpy.uintp<><>			<col>Integer, For Pointers<>
+<col>					<><col><><>
+@
+@ scalars
+
+
+
+## Scalar Types - Platform Independent
+
+<table><col><c>numpy.float32<><>		<col>Float, 32 Bit<>
+<col><c>numpy.float64<><>		<col>Float, 64 Bit<>
+<col><c>numpy.float128<><>		<col>Float, 128 Bit<>
+<col> <><col><>
+<col><c>numpy.int8<><>			<col>Integer, 8 Bit, Signed<>
+<col><c>numpy.int16<><>			<col>Integer, 16 Bit, Signed<>
+<col><c>numpy.int32<><>			<col>Integer, 32 Bit, Signed<>
+<col><c>numpy.int64<><>			<col>Integer, 64 Bit, Signed<>
+<col> <><col><>
+<col><c>numpy.uint8<><>			<col>Integer, 8 Bit, Unsigned<>
+<col><c>numpy.uint16<><>		<col>Integer, 16 Bit, Unsigned<>
+<col><c>numpy.uint32<><>		<col>Integer, 32 Bit, Unsigned<>
+<col><c>numpy.uint64<><>		<col>Integer, 64 Bit, Unsigned<>
+<col> <><col><>
+<col><c>numpy.complex_<><>		<col>Complex Number, 128 Bit<>
+<col><c>numpy.complex64<><>		<col>Complex Number, 64 Bit<>
+<col><c>numpy.complex128<><>	<col>Complex Number, 128 Bit<>
+<col><c>numpy.complex256<><>	<col>Complex Number, 256 Bit<>
+<col>					<><col><><>
+@
+@ scalars
+
+
+
+# Operators
+@
+@ ops, ops-only, operator-only, operators-only
+
+
+
+## Unary Operators
+
+
+	<c>+<v>a<><>			Plus
+	<c>-<v>a<><>			Minus
+	<c>~<v>a<><>			Complement
+@
+@ +, -, ~
+
+
+
+## Arithmetic Operators
+
+	<c><v>a<> + <v>b<><>		Add
+	<c><v>a<> - <v>b<><>		Subtract
+	<c><v>a<> * <v>b<><>		Multiply
+	<c><v>a<> / <v>b<><>		Divide
+	<c><v>a<> // <v>b<><>		Floor Divide
+	<c><v>a<> ** <v>b<><>		Power Of
+	<c><v>a<> % <v>b<><>		Modulo
+@
+@ +, -, *, /, //, **, %
+
+
+
+## Arithmetic Assignment Operators
+
+	<c><v>a<> += <v>b<><>		Add
+	<c><v>a<> -= <v>b<><>		Subtract
+	<c><v>a<> *= <v>b<><>		Multiply
+	<c><v>a<> /= <v>b<><>		Divide			<#>#1<>
+	<c><v>a<> //= <v>b<><>		Floor Divide
+	<c><v>a<> **= <v>b<><>		Power Of
+	<c><v>a<> %= <v>b<><>		Modulo
+
+Calculate the operation and save the result in <c><v>a<><>.
+
+<#>#1<> - <c><v>a<><> must be an array of type float.
+@
+@ +=, -=, *=, /=, //=, **=, %=
+
+
+
+## Bitwise Operators
+
+	<c>~<v>a<><>					Complement / Inverse
+
+	<c><v>a<> & <v>b<><>				Bitwise AND
+	<c><v>a<> | <v>b<><>				Bitwise OR
+	<c><v>a<> ^ <v>b<><>				Bitwise XOR
+
+	<c><v>a<> \<\< <v>shift_count<><>		Bitwise Shift Left
+	<c><v>a<> >> <v>shift_count<><>		Bitwise Shift Right
+@
+@ ~, &, |, ^, \<\<, >>
+
+
+
+## Bitwise Assignment Operators
+
+Calculate the operation and save the result in <c><v>a<><>:
+
+	<c><v>a<> &= <v>b<><>				Bitwise AND
+	<c><v>a<> |= <v>b<><>				Bitwise OR
+	<c><v>a<> ^= <v>b<><>				Bitwise XOR
+
+	<c><v>a<> \<\<= <v>shift_count<><>	Bitwise Shift Left
+	<c><v>a<> >>= <v>shift_count<><>	Bitwise Shift Right
+@
+@ &=, |=, ^=, \<\<=, >>=
+
+
+
+## Comparison Operators
+
+	<c><v>a<> == <v>b<><>							<#># Equal in value.<>
+	<c><v>a<> != <v>b<><>
+	<c><v>a<> > <v>b<><>
+	<c><v>a<> \< <v>b<><>
+	<c><v>a<> >= <v>b<><>
+	<c><v>a<> \<= <v>b<><>
+@
+@ Boolean, ==, !=, \<>, \<, \<=, >, >/
+@ less than, greater than, less that or equal, greater than or equal
+
+
+
+## Logical Operators
+
+Not supported.
+
+Instead, Use:
+
+<cb>np.logical_not()
+np.logical_and()
+np.logical_or()
+np.logical_xor()<>
+@
+@ boolean
+
+
+
+## Matrix Operators
+
+	<c><v>A<> @ <v>B<><>				Product (Multiplication)
+
+
+<c><v>A<><> and <c><v>B<><> must be 2D NumPy arrays.
+@
+@ @, dot product, multiply, multiplication
+
+
+
+## Unary Operators - Details
+
+
+### Negative
+
+<cb>= -<v>array_1<><>
+
+
+Returns the negative of each value inside <c><v>array_1<><>
+
+
+Example:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([1, -2, 3, -4])
+
+<v>negative<> = -<v>array_1<>
+
+<#># Returns [-1, 2, -3 4]<><>
+@
+@ -
+
+
+
+## Arithmetic Operators - Details
+
+
+### Add
+
+<cb>= <v>a<> + <v>b<><>
+
+Returns: <c>numpy.ndarray<>
+
+
+If <c><v>a<><> and <c><v>b<><> are arrays, adds each element in <c><v>a<><> to the corresponding element in <c><v>b<><>.
+If <c><v>a<><> or <c><v>b<><> is a scalar value, adds that value to each element in the other's array.
+
+Either <c><v>a<><> or <c><v>b<><> must be an array but the other may be an array or a scalar value.
+If both are arrays, they must be of the same shape or have shapes that satisfy broadcasting rules.
+
+
+Examples:
+
+Array + Array:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([<v>1<>, <v>2<>, <v>3<>])
+<v>array_2<> = np.array([<v>10<>, <v>20<>, <v>30<>])
+
+<v>result<> = <v>array_1<> + <v>array_2<>
+
+<#># Returns [11 22 33]<><>
+
+Array + Scalar:
+
+<cb>import numpy as np
+
+<v>array<> = np.array([<v>1<>, <v>2<>, <v>3<>])
+<v>value<> = <v>10<>
+
+<v>result<> = <v>array<> + <v>value<>
+
+<#># Returns [11 12 13]<><>
+
+Scalar + Array:
+
+<cb>import numpy as np
+
+<v>value<> = <v>10<>
+<v>array<> = np.array([<v>1<>, <v>2<>, <v>3<>])
+
+<v>result<> = <v>value<> + <v>array<>
+
+<#># Returns [11 12 13]<><>
+@
+@ +, plus
+
+
+
+### Subtract
+
+<cb>= <v>a<> - <v>b<><>
+
+Returns: <c>numpy.ndarray<>
+
+
+If <c><v>a<><> and <c><v>b<><> are arrays, subtracts each element in <c><v>a<><> by the corresponding element in <c><v>b<><>.
+If <c><v>b<><> is a scalar value, subtracts each element in <c><v>a<><> by <c><v>b<><>.
+If <c><v>a<><> is a scalar value, subtracts <c><v>a<><> by each element in <c><v>b<><>.
+
+Either <c><v>a<><> or <c><v>b<><> must be an array but the other may be an array or a scalar value.
+If both are arrays, they must be of the same shape or have shapes that satisfy broadcasting rules.
+
+
+Examples:
+
+Array - Array:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([<v>10<>, <v>20<>, <v>30<>])
+<v>array_2<> = np.array([<v>1<>, <v>2<>, <v>3<>])
+
+<v>result<> = <v>array_1<> - <v>array_2<>
+
+<#># Returns [9 18 27]<><>
+
+Array - Scalar:
+
+<cb>import numpy as np
+
+<v>array<> = np.array([<v>1<>, <v>2<>, <v>3<>])
+<v>value<> = <v>1<>
+
+<v>result<> = <v>array<> - <v>value<>
+
+<#># Returns [0 1 2]<><>
+
+Scalar - Array:
+
+<cb>import numpy as np
+
+<v>value<> = <v>3<>
+<v>array<> = np.array([<v>1<>, <v>2<>, <v>3<>])
+
+<v>result<> = <v>value<> - <v>array<>
+
+<#># Returns [2 1 0]<><>
+@
+@ -, minus
+
+
+
+### Multiply
+
+<cb>= <v>a<> * <v>b<><>
+
+Returns: <c>numpy.ndarray<>
+
+
+If <c><v>a<><> and <c><v>b<><> are arrays, multiplies each element in <c><v>a<><> by the corresponding element in <c><v>b<><>.
+If <c><v>a<><> or <c><v>b<><> is a scalar value, multiplies that value by each element in the other's array.
+
+Either a or b must be an array but the other may be an array or a scalar value.
+If both are arrays, they must be of the same shape or have shapes that satisfy broadcasting rules.
+
+
+Examples:
+
+Array * Array:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([<v>1<>, <v>2<>, <v>3<>])
+<v>array_2<> = np.array([<v>10<>, <v>20<>, <v>30<>])
+
+<v>result<> = <v>array_1<> * <v>array_2<>
+
+<#># Returns [10 40 90]<><>
+
+Array * Scalar:
+
+<cb>import numpy as np
+
+<v>array<> = np.array([<v>1<>, <v>2<>, <v>3<>])
+<v>value<> = <v>10<>
+
+<v>result<> = <v>array<> * <v>value<>
+
+<#># Returns [10 20 30]<><>
+
+Scalar * Array:
+
+<cb>import numpy as np
+
+<v>value<> = <v>10<>
+<v>array<> = np.array([<v>1<>, <v>2<>, <v>3<>])
+
+<v>result<> = <v>value<> * <v>array<>
+
+<#># Returns [10 20 30]<><>
+@
+@ *
+
+
+
+### Divide
+
+<cb>= <v>a<> / <v>b<><>
+
+Returns: <c>numpy.ndarray<>
+
+
+If <c><v>a<><> and <c><v>b<><> are arrays, divides each element in <c><v>a<><> by the corresponding element in <c><v>b<><>.
+If <c><v>b<><> is a scalar value, divides each element in <c><v>a<><> by <c><v>b<><>.
+If <c><v>a<><> is a scalar value, divides <c><v>a<><> by each element in <c><v>b<><>.
+
+Either <c><v>a<><> or <c><v>b<><> must be an array but the other may be an array or a scalar value.
+If both are arrays, they must be of the same shape or have shapes that satisfy broadcasting rules.
+
+
+Examples:
+
+Array / Array:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([<v>10<>, <v>20<>, <v>30<>])
+<v>array_2<> = np.array([<v>1<>, <v>2<>, <v>0.333<>])
+
+<v>result<> = <v>array_1<> / <v>array_2<>
+
+<#># Returns [10. 10. 90.09009009]<><>
+
+Array / Scalar:
+
+<cb>import numpy as np
+
+<v>array<> = np.array([<v>10<>, <v>20<>, <v>30<>])
+<v>value<> = <v>3<>
+
+<v>result<> = <v>array<> / <v>value<>
+
+<#># Returns [3.33333333 6.66666667 10.]<><>
+
+Scalar / Array:
+
+<cb>import numpy as np
+
+<v>value<> = <v>3<>
+<v>array<> = np.array([<v>3<>, <v>6<>, <v>9<>])
+
+<v>result<> = <v>value<> / <v>array<>
+
+<#># Returns [1. 0.5 0.33333333]<><>
+@
+@ /, divide by, division
+
+
+
+### Floor Divide
+
+<cb>= <v>a<> // <v>b<><>
+
+Returns: <c>numpy.ndarray<>
+
+
+Divides <c><v>a<><> by <c><v>b<><> and then rounds down to the nearest integer.
+
+If <c><v>a<><> and <c><v>b<><> are arrays, divides each element in <c><v>a<><> by the corresponding element in <c><v>b<><>.
+If <c><v>b<><> is a scalar value, divides each element in <c><v>a<><> by <c><v>b<><>.
+If <c><v>a<><> is a scalar value, divides <c><v>a<><> by each element in <c><v>b<><>.
+
+Either <c><v>a<><> or <c><v>b<><> must be an array but the other may be an array or a scalar value.
+If both are arrays, they must be of the same shape or have shapes that satisfy broadcasting rules.
+
+
+Examples:
+
+Array // Array:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([<v>10<>, <v>20<>, <v>30<>])
+<v>array_2<> = np.array([<v>1<>, <v>2<>, <v>3.5<>])
+
+<v>result<> = <v>array_1<> // <v>array_2<>
+
+<#># Returns [10. 10. 8.]<><>
+
+Array // Scalar:
+
+<cb>import numpy as np
+
+<v>array<> = np.array([<v>10<>, <v>20<>, <v>30<>])
+<v>value<> = <v>3<>
+
+<v>result<> = <v>array<> // <v>value<>
+
+<#># Returns [3 6 10]<><>
+
+Scalar // Array:
+
+<cb>import numpy as np
+
+<v>value<> = <v>10<>
+<v>array<> = np.array([<v>5<>, <v>4<>, <v>3<>])
+
+<v>result<> = <v>value<> // <v>array<>
+
+<#># Returns [2 2 3]<><>
+@
+@ //, floor divide by, division
+
+
+
+### Power
+
+<cb>= <v>a<> ** <v>b<><>
+
+Returns: <c>numpy.ndarray<>
+
+
+Raises <c><v>a<><> to the power of <c><v>b<><>.
+
+If <c><v>a<><> and <c><v>b<><> are arrays, raises each element in <c><v>a<><> to the power of the corresponding element in <c><v>b<><>.
+If <c><v>b<><> is a scalar value, raises each element in <c><v>a<><> to the power of <c><v>b<><>.
+If <c><v>a<><> is a scalar value, raises <c><v>a<><> to the power of each element in <c><v>b<><>.
+
+Either a or b must be an array but the other may be an array or a scalar value.
+If both are arrays, they must be of the same shape or have shapes that satisfy broadcasting rules.
+
+
+Examples:
+
+Array ** Array:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([<v>2<>, <v>3<>, <v>4<>])
+<v>array_2<> = np.array([<v>1<>, <v>2<>, <v>3<>])
+
+<v>result<> = <v>array_1<> ** <v>array_2<>
+
+<#># Returns [2 9 64]<><>
+
+Array ** Scalar:
+
+<cb>import numpy as np
+
+<v>array<> = np.array([<v>2<>, <v>4<>, <v>6<>])
+<v>value<> = <v>2<>
+
+<v>result<> = <v>array<> ** <v>value<>
+
+<#># Returns [4 16 36]<><>
+
+Scalar ** Array:
+
+<cb>import numpy as np
+
+<v>value<> = <v>2<>
+<v>array<> = np.array([<v>2<>, <v>3<>, <v>4<>])
+
+<v>result<> = <v>value<> ** <v>array<>
+
+<#># Returns [4 8 16]<><>
+@
+@ **, powers, pow(), of
+
+
+
+### Modulo
+
+<cb>= <v>a<> % <v>b<><>
+
+Returns: <c>numpy.ndarray<>
+
+
+Returns the remainder of <c><v>a<><> after divinding by <c><v>b<><>.
+
+If <c><v>a<><> and <c><v>b<><> are arrays, calculates each remainder after dividing each element in <c><v>a<><> by the corresponding element in <c><v>b<><>.
+If <c><v>b<><> is a scalar value, calculates each remainder after dividing each element in <c><v>a<><> by <c><v>b<><>.
+If <c><v>a<><> is a scalar value, calculates each remainder after dividing <c><v>a<><> by each element in <c><v>b<><>.
+
+Either a or b must be an array but the other may be an array or a scalar value.
+If both are arrays, they must be of the same shape or have shapes that satisfy broadcasting rules.
+
+
+
+Examples:
+
+Array % Array:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([<v>3<>, <v>6<>, <v>9<>])
+<v>array_2<> = np.array([<v>2<>, <v>3<>, <v>4<>])
+
+<v>result<> = <v>array_1<> % <v>array_2<>
+
+<#># Returns [1 0 1]<><>
+
+Array % Scalar:
+
+<cb>import numpy as np
+
+<v>array<> = np.array([<v>4<>, <v>8<>, <v>12<>])
+<v>value<> = <v>3<>
+
+<v>result<> = <v>array<> % <v>value<>
+
+<#># Returns [1 2 0]<><>
+
+Scalar % Array:
+
+<cb>import numpy as np
+
+<v>value<> = <v>10<>
+<v>array<> = np.array([<v>2<>, <v>3<>, <v>4<>])
+
+<v>result<> = <v>value<> % <v>array<>
+
+<#># Returns [0 1 2]<><>
+@
+@ modulus, remainder, %
+
+
+
+## Arithmetic Assignment Operators - Details
+
+
+### Assign + Add
+
+<cb><v>a<> += <v>b<><>
+
+Returns: <c>numpy.ndarray<>
+
+
+Adds <c><v>b<><> to <c><v>a<><> and stores in <c><v>a<><>.
+
+If <c><v>b<><> is an array, adds each element in <c><v>a<><> to the corresponding element in <c><v>b<><>.
+If <c><v>b<><> is a scalar value, adds that value to each element in <c><v>a<><>'s array.
+
+<c><v>a<><> must be an array but <c><v>b<><> can be an array or a scalar value.
+If both are arrays, they must be of the same shape or have shapes that satisfy broadcasting rules.
+
+
+Examples:
+
+Array += Array:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([<v>1<>, <v>2<>, <v>3<>])
+<v>array_2<> = np.array([<v>10<>, <v>20<>, <v>30<>])
+
+<v>array_1<> += <v>array_2<>
+
+<#># Returns [11 22 33]<><>
+
+Array += Scalar:
+
+<cb>import numpy as np
+
+<v>array<> = np.array([<v>1<>, <v>2<>, <v>3<>])
+
+<v>array<> += <v>10<>
+
+<#># Returns [11 12 13]<><>
+@
+@ +=, plus
+
+
+
+### Assign + Subtract
+
+<cb><v>a<> -= <v>b<><>
+
+Returns: <c>numpy.ndarray<>
+
+
+Subtracts <c><v>b<><> from <c><v>a<><> and stores in <c><v>a<><>.
+
+If <c><v>b<><> is an array, subtracts each element in <c><v>a<><> by the corresponding element in <c><v>b<><>.
+If <c><v>b<><> is a scalar value, subtracts each element in <c><v>a<><> by <c><v>b<><>.
+
+<c><v>a<><> must be an array but <c><v>b<><> can be an array or a scalar value.
+If both are arrays, they must be of the same shape or have shapes that satisfy broadcasting rules.
+
+
+Examples:
+
+Array -= Array:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([<v>10<>, <v>20<>, <v>30<>])
+<v>array_2<> = np.array([<v>1<>, <v>2<>, <v>3<>])
+
+<v>array_1<> -= <v>array_2<>
+
+<#># Returns [9 18 27]<><>
+
+Array -= Scalar:
+
+<cb>import numpy as np
+
+<v>array<> = np.array([<v>1<>, <v>2<>, <v>3<>])
+
+<v>array<> -= <v>1<>
+
+<#># Returns [0 1 2]<><>
+@
+@ -=, minus
+
+
+
+### Assign + Multiply
+
+<cb><v>a<> *= <v>b<><>
+
+Returns: <c>numpy.ndarray<>
+
+
+Multiplies <c><v>a<><> by <c><v>b<><> and stores in <c><v>a<><>.
+
+If <c><v>b<><> is an array, multiplies each element in <c><v>a<><> by the corresponding element in <c><v>b<><>.
+If <c><v>a<><> or <c><v>b<><> is a scalar value, multiplies that value by each element in the other's array.
+
+<c><v>a<><> must be an array but <c><v>b<><> can be an array or a scalar value.
+If both are arrays, they must be of the same shape or have shapes that satisfy broadcasting rules.
+
+
+Examples:
+
+Array *= Array:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([<v>1<>, <v>2<>, <v>3<>])
+<v>array_2<> = np.array([<v>10<>, <v>20<>, <v>30<>])
+
+<v>array_1<> *= <v>array_2<>
+
+<#># Returns [10 40 90]<><>
+
+Array *= Scalar:
+
+<cb>import numpy as np
+
+<v>array<> = np.array([<v>1<>, <v>2<>, <v>3<>])
+
+<v>array<> *= <v>10<>
+
+<#># Returns [10 20 30]<><>
+@
+@ *=
+
+
+
+### Assign + Divide
+
+<cb><v>a<> /= <v>b<><>
+
+Returns: <c>numpy.ndarray<>
+
+
+Divides <c><v>a<><> by <c><v>b<><> and stores in <c><v>a<><>.
+
+If <c><v>b<><> is an array, divides each element in <c><v>a<><> by the corresponding element in <c><v>b<><>.
+If <c><v>b<><> is a scalar value, divides each element in <c><v>a<><> by <c><v>b<><>.
+If <c><v>a<><> is a scalar value, divides <c><v>a<><> by each element in <c><v>b<><>.
+
+<c><v>a<><> must be an array but <c><v>b<><> can be an array or a scalar value.
+If both are arrays, they must be of the same shape or have shapes that satisfy broadcasting rules.
+
+<!>Note:<> <c><v>array_1<><> must be of type float.
+
+
+Examples:
+
+Array /= Array:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([<v>10<>, <v>20<>, <v>30<>], dtype = np.float_)
+<v>array_2<> = np.array([<v>1<>, <v>2<>, <v>0.333<>])
+
+<v>array_1<> /= <v>array_2<>
+
+<#># Returns [10. 10. 90.09009009]<><>
+
+Array /= Scalar:
+
+<cb>import numpy as np
+
+<v>array<> = np.array([<v>10<>, <v>20<>, <v>30<>], dtype = np.float_)
+
+<v>array<> /= <v>3<>
+
+<#># Returns [3.33333333 6.66666667 10.]<><>
+@
+@ /=, divide by, division
+
+
+
+### Assign + Floor Divide
+
+<cb><v>a<> //= <v>b<><>
+
+Returns: <c>numpy.ndarray<>
+
+
+Divides <c><v>a<><> by <c><v>b<><>, rounds down to the nearest integer, then stores in <c><v>a<><>.
+
+If <c><v>b<><> is an array, divides each element in <c><v>a<><> by the corresponding element in <c><v>b<><>.
+If <c><v>b<><> is a scalar value, divides each element in <c><v>a<><> by <c><v>b<><>.
+
+<c><v>a<><> must be an array but <c><v>b<><> can be an array or a scalar value.
+If both are arrays, they must be of the same shape or have shapes that satisfy broadcasting rules.
+
+<!>Note:<> If <c><v>b<><> is a float or an array of type float, then <c><v>a<><> must be an array of type float.
+
+
+Examples:
+
+Array //= Array:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([<v>10<>, <v>20<>, <v>30<>], dtype = np.float_)
+<v>array_2<> = np.array([<v>1<>, <v>2<>, <v>3.5<>])
+
+<v>array_1<> //= <v>array_2<>
+
+<#># Returns [10. 10. 8.]<><>
+
+Array //= Scalar:
+
+<cb>import numpy as np
+
+<v>array<> = np.array([<v>10<>, <v>20<>, <v>30<>])
+
+<v>array<> //= <v>3<>
+
+<#># Returns [3. 6. 10.]<><>
+@
+@ //=, floor divide by, division
+
+
+
+### Assign + Power
+
+<cb><v>a<> **= <v>b<><>
+
+Returns: <c>numpy.ndarray<>
+
+
+Raises <c><v>a<><> to the power of <c><v>b<><>, then stores in <c><v>a<><>.
+
+If <c><v>b<><> is an array, raises each element in <c><v>a<><> to the power of the corresponding element in <c><v>b<><>.
+If <c><v>b<><> is a scalar value, raises each element in <c><v>a<><> to the power of <c><v>b<><>.
+
+<c><v>a<><> must be an array but <c><v>b<><> can be an array or a scalar value.
+If both are arrays, they must be of the same shape or have shapes that satisfy broadcasting rules.
+
+
+Examples:
+
+Array **= Array:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([<v>2<>, <v>3<>, <v>4<>])
+<v>array_2<> = np.array([<v>1<>, <v>2<>, <v>3<>])
+
+<v>array_1<> **= <v>array_2<>
+
+<#># Returns [2 9 64]<><>
+
+Array **= Scalar:
+
+<cb>import numpy as np
+
+<v>array<> = np.array([<v>2<>, <v>4<>, <v>6<>])
+
+<v>array<> **= <v>2<>
+
+<#># Returns [4 16 36]<><>
+@
+@ **=, powers, pow(), of
+
+
+
+### Assign + Modulo
+
+<cb><v>a<> %= <v>b<><>
+
+Returns: <c>numpy.ndarray<>
+
+
+Calculates the remainder of <c><v>a<><> after divinding by <c><v>b<><>, then stores in <c><v>a<><>.
+
+If <c><v>b<><> is an array, calculates each remainder after dividing each element in <c><v>a<><> by the corresponding element in <c><v>b<><>.
+If <c><v>b<><> is a scalar value, calculates each remainder after dividing each element in <c><v>a<><> by <c><v>b<><>.
+
+<c><v>a<><> must be an array but <c><v>b<><> can be an array or a scalar value.
+If both are arrays, they must be of the same shape or have shapes that satisfy broadcasting rules.
+
+
+
+Examples:
+
+Array %= Array:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([<v>3<>, <v>6<>, <v>9<>])
+<v>array_2<> = np.array([<v>2<>, <v>3<>, <v>4<>])
+
+<v>array_1<> %= <v>array_2<>
+
+<#># Returns [1 0 1]<><>
+
+Array %= Scalar:
+
+<cb>import numpy as np
+
+<v>array<> = np.array([<v>4<>, <v>8<>, <v>12<>])
+
+<v>array<> %= <v>3<>
+
+<#># Returns [1 2 0]<><>
+@
+@ modulus, remainder, %=
+
+
+
+## Bitwise Operators - Details
+
+
+
+### Complement
+
+<cb>= ~<v>a<><>
+
+
+Returns the complement for each element in <c><v>a<><>.
+
+Complement = -<v>value<> - 1
+
+
+Example:
+
+<cb>import numpy as np
+
+<v>array<> = np.array([0b10101010, 0b0, 0b1111], dtype = np.byte)
+
+<v>result<> = ~<v>array<>
+
+<#># Returns [01010101 11111111 11110000]<><>
+@
+@ ~
+
+
+
+### Bitwise AND
+
+<cb>= <v>a<> & <v>b<><>
+
+Returns: <c>numpy.ndarray<>
+
+
+Performs a bitwise AND.
+
+If <c><v>a<><> and <c><v>b<><> are arrays, ANDs each element in <c><v>a<><> with the corresponding element in <c><v>b<><>.
+If <c><v>a<><> or <c><v>b<><> is a scalar value, ANDs that value with each element in the other's array.
+
+Either <c><v>a<><> or <c><v>b<><> must be an array but the other may be an array or a scalar value.
+If both are arrays, they must be of the same shape or have shapes that satisfy broadcasting rules.
+
+
+Example:
+
+Array & Array:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([0b1010, 0b0000, 0b1111])
+<v>array_2<> = np.array([0b1001, 0b1111, 0b1100])
+
+<v>result<> = <v>array_1<> & <v>array_2<>
+
+<#># Returns [00001000 00000000 00001100]<><>
+
+Array & Scalar:
+
+<cb>import numpy as np
+
+<v>array<> = np.array([0b1010, 0b0000, 0b1111])
+<v>value<> = 0b101100
+
+<v>result<> = <v>array<> & <v>value<>
+
+<#># Returns [00001000 00000000 00001100]<><>
+
+Scalar & Array:
+
+<cb>import numpy as np
+
+<v>value<> = 0b101100
+<v>array<> = np.array([0b1010, 0b0000, 0b1111])
+
+<v>result<> = <v>value<> & <v>array<>
+
+<#># Returns [00001000 00000000 00001100]<><>
+@
+@ &
+
+
+
+### Bitwise OR
+
+<cb>= <v>a<> | <v>b<><>
+
+Returns: <c>numpy.ndarray<>
+
+
+Performs a bitwise OR.
+
+If <c><v>a<><> and <c><v>b<><> are arrays, ORs each element in <c><v>a<><> with the corresponding element in <c><v>b<><>.
+If <c><v>a<><> or <c><v>b<><> is a scalar value, ORs that value with each element in the other's array.
+
+Either <c><v>a<><> or <c><v>b<><> must be an array but the other may be an array or a scalar value.
+If both are arrays, they must be of the same shape or have shapes that satisfy broadcasting rules.
+
+
+Example:
+
+Array | Array:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([0b1010, 0b0000, 0b1111])
+<v>array_2<> = np.array([0b1001, 0b1111, 0b1100])
+
+<v>result<> = <v>array_1<> | <v>array_2<>
+
+<#># Returns [00001011 00001111 00001111]<><>
+
+Array | Scalar:
+
+<cb>import numpy as np
+
+<v>array<> = np.array([0b1010, 0b0000, 0b1111])
+<v>value<> = 0b101100
+
+<v>result<> = <v>array<> | <v>value<>
+
+<#># Returns [00101110 00101100 00101111]<><>
+
+Scalar | Array:
+
+<cb>import numpy as np
+
+<v>value<> = 0b101100
+<v>array<> = np.array([0b1010, 0b0000, 0b1111])
+
+<v>result<> = <v>value<> | <v>array<>
+
+<#># Returns [00101110 00101100 00101111]<><>
+@
+@ |
+
+
+
+### Bitwise XOR
+
+<cb>= <v>a<> ^ <v>b<><>
+
+Returns: <c>numpy.ndarray<>
+
+
+Performs a bitwise XOR.
+
+If <c><v>a<><> and <c><v>b<><> are arrays, XORs each element in <c><v>a<><> with the corresponding element in <c><v>b<><>.
+If <c><v>a<><> or <c><v>b<><> is a scalar value, XORs that value with each element in the other's array.
+
+Either <c><v>a<><> or <c><v>b<><> must be an array but the other may be an array or a scalar value.
+If both are arrays, they must be of the same shape or have shapes that satisfy broadcasting rules.
+
+
+Example:
+
+Array ^ Array:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([0b1010, 0b0000, 0b1111])
+<v>array_2<> = np.array([0b1001, 0b1111, 0b1100])
+
+<v>result<> = <v>array_1<> ^ <v>array_2<>
+
+<#># Returns [00000011 00001111 00000011]<><>
+
+Array ^ Scalar:
+
+<cb>import numpy as np
+
+<v>array<> = np.array([0b1010, 0b0000, 0b1111])
+<v>value<> = 0b101100
+
+<v>result<> = <v>array<> ^ <v>value<>
+
+<#># Returns [00100110 00101100 00100011]<><>
+
+Scalar ^ Array:
+
+<cb>import numpy as np
+
+<v>value<> = 0b101100
+<v>array<> = np.array([0b1010, 0b0000, 0b1111])
+
+<v>result<> = <v>value<> ^ <v>array<>
+
+<#># Returns [00100110 00101100 00100011]<><>
+@
+@ ^
+
+
+
+### Bitwise Shift Left
+
+<cb>= <v>a<> \<\< <v>b<><>
+
+Returns: <c>numpy.ndarray<>
+
+
+Shifts all values in <c><v>a<><> bitwise to the left.
+
+If <c><v>a<><> and <c><v>b<><> are arrays, shifts each element in <c><v>a<><> left times the corresponding value in <c><v>b<><>.
+If <c><v>a<><> is a scalar value, shifts <c><v>a<><>'s value left times each value in <c><v>b<><>.
+If <c><v>b<><> is a scalar value, shifts each element in <c><v>a<><> left times <c><v>b<><>'s value.
+
+Either <c><v>a<><> or <c><v>b<><> must be an array but the other may be an array or a scalar value.
+If both are arrays, they must be of the same shape or have shapes that satisfy broadcasting rules.
+
+
+Example:
+
+Array \<\< Array:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([0b1111, 0b111, 0b11])
+<v>array_2<> = np.array([1, 2, 3])
+
+<v>result<> = <v>array_1<> \<\< <v>array_2<>
+
+<#># Returns [00011110 00011100 00011000]<><>
+
+Array \<\< Scalar:
+
+<cb>import numpy as np
+
+<v>array<> = np.array([0b1111, 0b111, 0b11])
+
+<v>result<> = <v>array<> \<\< <v>2<>
+
+<#># Returns [00111100 00011100 00001100]<><>
+
+Scalar \<\< Array:
+
+<cb>import numpy as np
+
+<v>array<> = np.array([1, 2, 3])
+
+<v>result<> = 0b1111 \<\< <v>array<>
+
+<#># Returns [00011110 00111100 01111000]<><>
+@
+@ \<\<
+
+
+
+### Bitwise Shift Right
+
+<cb>= <v>a<> >> <v>b<><>
+
+Returns: <c>numpy.ndarray<>
+
+
+Shifts all values in <c><v>a<><> bitwise to the right.
+
+If <c><v>a<><> and <c><v>b<><> are arrays, shifts each element in <c><v>a<><> right times the corresponding value in <c><v>b<><>.
+If <c><v>a<><> is a scalar value, shifts <c><v>a<><>'s value right times each value in <c><v>b<><>.
+If <c><v>b<><> is a scalar value, shifts each element in <c><v>a<><> right times <c><v>b<><>'s value.
+
+Either <c><v>a<><> or <c><v>b<><> must be an array but the other may be an array or a scalar value.
+If both are arrays, they must be of the same shape or have shapes that satisfy broadcasting rules.
+
+
+Example:
+
+Array >> Array:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([0b11110000, 0b1110000, 0b110000])
+<v>array_2<> = np.array([1, 2, 3])
+
+<v>result<> = <v>array_1<> >> <v>array_2<>
+
+<#># Returns [01111000 00011100 00000110]<><>
+
+Array >> Scalar:
+
+<cb>import numpy as np
+
+<v>array<> = np.array([0b11110000, 0b1110000, 0b110000])
+
+<v>result<> = <v>array<> >> <v>2<>
+
+<#># Returns [00111100 00011100 00001100]<><>
+
+Scalar >> Array:
+
+<cb>import numpy as np
+
+<v>array<> = np.array([1, 2, 3])
+
+<v>result<> = 0b11110000 >> <v>array<>
+
+<#># Returns [01111000 00111100 00011110]<><>
+@
+@ >>
+
+
+
+## Bitwise Assignment Operators - Details
+
+
+
+### Assign + Bitwise AND
+
+<cb><v>a<> &= <v>b<><>
+
+Returns: <c>numpy.ndarray<>
+
+
+Performs a bitwise AND.
+
+If <c><v>b<><> is an array, ANDs each element in <c><v>a<><> with the corresponding element in <c><v>b<><>.
+If <c><v>b<><> is a scalar value, ANDs the value with each element in <c><v>a<><>.
+
+<c><v>a<><> must be an array but <c><v>b<><> can be an array or a scalar value.
+If both are arrays, they must be of the same shape or have shapes that satisfy broadcasting rules.
+
+
+Example:
+
+Array &= Array:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([0b1010, 0b0000, 0b1111])
+<v>array_2<> = np.array([0b1001, 0b1111, 0b1100])
+
+<v>array_1<> &= <v>array_2<>
+
+<#># Returns [00001000 00000000 00001100]<><>
+
+Array &= Scalar:
+
+<cb>import numpy as np
+
+<v>array<> = np.array([0b1010, 0b0000, 0b1111])
+<v>value<> = 0b101100
+
+<v>array<> &= <v>value<>
+
+<#># Returns [00001000 00000000 00001100]<><>
+@
+@ &=
+
+
+
+### Assign + Bitwise OR
+
+<cb><v>a<> |= <v>b<><>
+
+Returns: <c>numpy.ndarray<>
+
+
+Performs a bitwise OR.
+
+If <c><v>b<><> is an array, ORs each element in <c><v>a<><> with the corresponding element in <c><v>b<><>.
+If <c><v>b<><> is a scalar value, ORs that value with each element in <c><v>a<><>.
+
+<c><v>a<><> must be an array but <c><v>b<><> can be an array or a scalar value.
+If both are arrays, they must be of the same shape or have shapes that satisfy broadcasting rules.
+
+
+Example:
+
+Array |= Array:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([0b1010, 0b0000, 0b1111])
+<v>array_2<> = np.array([0b1001, 0b1111, 0b1100])
+
+<v>array_1<> |= <v>array_2<>
+
+<#># Returns [00001011 00001111 00001111]<><>
+
+Array |= Scalar:
+
+<cb>import numpy as np
+
+<v>array<> = np.array([0b1010, 0b0000, 0b1111])
+<v>value<> = 0b101100
+
+<v>array<> |= <v>value<>
+
+<#># Returns [00101110 00101100 00101111]<><>
+@
+@ |=
+
+
+
+### Assign + Bitwise XOR
+
+<cb><v>a<> ^= <v>b<><>
+
+Returns: <c>numpy.ndarray<>
+
+
+Performs a bitwise XOR.
+
+If <c><v>b<><> is an array, XORs each element in <c><v>a<><> with the corresponding element in <c><v>b<><>.
+If <c><v>b<><> is a scalar value, XORs that value with each element in <c><v>a<><>.
+
+<c><v>a<><> must be an array but <c><v>b<><> can be an array or a scalar value.
+If both are arrays, they must be of the same shape or have shapes that satisfy broadcasting rules.
+
+
+Example:
+
+Array ^= Array:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([0b1010, 0b0000, 0b1111])
+<v>array_2<> = np.array([0b1001, 0b1111, 0b1100])
+
+<v>array_1<> ^= <v>array_2<>
+
+<#># Returns [00000011 00001111 00000011]<><>
+
+Array ^= Scalar:
+
+<cb>import numpy as np
+
+<v>array<> = np.array([0b1010, 0b0000, 0b1111])
+<v>value<> = 0b101100
+
+<v>array<> ^= <v>value<>
+
+<#># Returns [00100110 00101100 00100011]<><>
+@
+@ ^=
+
+
+
+### Assign + Bitwise Shift Left
+
+<cb><v>a<> \<\<= <v>b<><>
+
+Returns: <c>numpy.ndarray<>
+
+
+Shifts all values in <c><v>a<><> bitwise to the left.
+
+If <c><v>b<><> is an array, shifts each element in <c><v>a<><> left times the corresponding value in <c><v>b<><>.
+If <c><v>a<><> is a scalar value, shifts <c><v>a<><>'s value left times each value in <c><v>b<><>.
+If <c><v>b<><> is a scalar value, shifts each element in <c><v>a<><> left times <c><v>b<><>'s value.
+
+<c><v>a<><> must be an array but <c><v>b<><> can be an array or a scalar value.
+If both are arrays, they must be of the same shape or have shapes that satisfy broadcasting rules.
+
+
+Example:
+
+Array \<\<= Array:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([0b1111, 0b111, 0b11])
+<v>array_2<> = np.array([1, 2, 3])
+
+<v>array_1<> \<\<= <v>array_2<>
+
+<#># Returns [00011110 00011100 00011000]<><>
+
+Array \<\<= Scalar:
+
+<cb>import numpy as np
+
+<v>array<> = np.array([0b1111, 0b111, 0b11])
+
+<v>array<> \<\<= <v>2<>
+
+<#># Returns [00111100 00011100 00001100]<><>
+@
+@ \<\<=
+
+
+
+### Assign + Bitwise Shift Right
+
+<cb><v>a<> >>= <v>b<><>
+
+Returns: <c>numpy.ndarray<>
+
+
+Shifts all values in <c><v>a<><> bitwise to the right.
+
+If <c><v>b<><> is an array, shifts each element in <c><v>a<><> right times the corresponding value in <c><v>b<><>.
+If <c><v>a<><> is a scalar value, shifts <c><v>a<><>'s value right times each value in <c><v>b<><>.
+If <c><v>b<><> is a scalar value, shifts each element in <c><v>a<><> right times <c><v>b<><>'s value.
+
+<c><v>a<><> must be an array but <c><v>b<><> can be an array or a scalar value.
+If both are arrays, they must be of the same shape or have shapes that satisfy broadcasting rules.
+
+
+Example:
+
+Array >>= Array:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([0b11110000, 0b1110000, 0b110000])
+<v>array_2<> = np.array([1, 2, 3])
+
+<v>array_1<> >>= <v>array_2<>
+
+<#># Returns [01111000 00011100 00000110]<><>
+
+Array >>= Scalar:
+
+<cb>import numpy as np
+
+<v>array<> = np.array([0b11110000, 0b1110000, 0b110000])
+
+<v>array<> >>= <v>2<>
+
+<#># Returns [00111100 00011100 00001100]<><>
+@
+@ >>=
+
+
+
+## Comparison Operators - Details
+
+
+### Compare - Equals
+
+<cb>= <v>a<> == <v>b<><>
+
+Returns: <c>numpy.ndarray<>
+
+
+Returns True for values in <c><v>a<><> that are equal to values in <c><v>b<><>.
+
+
+Example:
+
+Array == Array:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([<v>1<>, <v>2<>, <v>3<>])
+<v>array_2<> = np.array([<v>3<>, <v>2<>, <v>1<>])
+
+<v>result<> = <v>array_1<> == <v>array_2<>
+
+<#># Returns [False True False]<><>
+
+Array == Scalar:
+
+<cb>import numpy as np
+
+<v>array<> = np.array([<v>1<>, <v>2<>, <v>3<>])
+
+<v>result<> = <v>array<> == <v>2<>
+
+<#># Returns [False True False]<><>
+
+Scalar == Array:
+
+<cb>import numpy as np
+
+<v>array<> = np.array([<v>1<>, <v>2<>, <v>3<>])
+
+<v>result<> = <v>2<> == <v>array<>
+
+<#># Returns [False True False]<><>
+@
+@ ==, Equal To
+
+
+
+### Compare - Not Equals
+
+<cb>= <v>a<> != <v>b<><>
+
+Returns: <c>numpy.ndarray<>
+
+
+Returns True for values in <c><v>a<><> that are not equal to values in <c><v>b<><>.
+
+
+Example:
+
+Array != Array:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([<v>1<>, <v>2<>, <v>3<>])
+<v>array_2<> = np.array([<v>3<>, <v>2<>, <v>1<>])
+
+<v>result<> = <v>array_1<> != <v>array_2<>
+
+<#># Returns [True False True]<><>
+
+Array != Scalar:
+
+<cb>import numpy as np
+
+<v>array<> = np.array([<v>1<>, <v>2<>, <v>3<>])
+
+<v>result<> = <v>array<> != <v>2<>
+
+<#># Returns [True False True]<><>
+
+Scalar != Array:
+
+<cb>import numpy as np
+
+<v>array<> = np.array([<v>1<>, <v>2<>, <v>3<>])
+
+<v>result<> = <v>2<> != <v>array<>
+
+<#># Returns [True False True]<><>
+@
+@ !=, not equal to
+
+
+
+### Compare - Less Than
+
+<cb>= <v>a<> \< <v>b<><>
+
+Returns: <c>numpy.ndarray<>
+
+
+Returns True for values in <c><v>a<><> that are less than values in <c><v>b<><>.
+
+
+Example:
+
+Array < Array:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([<v>1<>, <v>2<>, <v>3<>])
+<v>array_2<> = np.array([<v>3<>, <v>2<>, <v>1<>])
+
+<v>result<> = <v>array_1<> \< <v>array_2<>
+
+<#># Returns [True False False]<><>
+
+Array < Scalar:
+
+<cb>import numpy as np
+
+<v>array<> = np.array([<v>1<>, <v>2<>, <v>3<>])
+
+<v>result<> = <v>array<> \< <v>2<>
+
+<#># Returns [True False False]<><>
+
+Scalar < Array:
+
+<cb>import numpy as np
+
+<v>array<> = np.array([<v>1<>, <v>2<>, <v>3<>])
+
+<v>result<> = <v>2<> \< <v>array<>
+
+<#># Returns [False False True]<><>
+@
+@ <
+
+
+
+### Compare - Less Than or Equal
+
+<cb>= <v>a<> \<= <v>b<><>
+
+Returns: <c>numpy.ndarray<>
+
+
+Returns True for values in <c><v>a<><> that are less than or equal to values in <c><v>b<><>.
+
+
+Example:
+
+Array <= Array:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([<v>1<>, <v>2<>, <v>3<>])
+<v>array_2<> = np.array([<v>3<>, <v>2<>, <v>1<>])
+
+<v>result<> = <v>array_1<> \<= <v>array_2<>
+
+<#># Returns [True False False]<><>
+
+Array <= Scalar:
+
+<cb>import numpy as np
+
+<v>array<> = np.array([<v>1<>, <v>2<>, <v>3<>])
+
+<v>result<> = <v>array<> \<= <v>2<>
+
+<#># Returns [True False False]<><>
+
+Scalar <= Array:
+
+<cb>import numpy as np
+
+<v>array<> = np.array([<v>1<>, <v>2<>, <v>3<>])
+
+<v>result<> = <v>2<> \<= <v>array<>
+
+<#># Returns [False False True]<><>
+@
+@ <=
+
+
+
+### Compare - Greater Than
+
+<cb>= <v>a<> > <v>b<><>
+
+Returns: <c>numpy.ndarray<>
+
+
+Returns True for values in <c><v>a<><> that are greater than values in <c><v>b<><>.
+
+
+Example:
+
+Array > Array:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([<v>1<>, <v>2<>, <v>3<>])
+<v>array_2<> = np.array([<v>3<>, <v>2<>, <v>1<>])
+
+<v>result<> = <v>array_1<> > <v>array_2<>
+
+<#># Returns [False False True]<><>
+
+Array > Scalar:
+
+<cb>import numpy as np
+
+<v>array<> = np.array([<v>1<>, <v>2<>, <v>3<>])
+
+<v>result<> = <v>array<> > <v>2<>
+
+<#># Returns [False False True]<><>
+
+Scalar > Array:
+
+<cb>import numpy as np
+
+<v>array<> = np.array([<v>1<>, <v>2<>, <v>3<>])
+
+<v>result<> = <v>2<> > <v>array<>
+
+<#># Returns [True False False]<><>
+@
+@ >
+
+
+
+### Compare - Greater Than or Equal
+
+<cb>= <v>a<> >= <v>b<><>
+
+Returns: <c>numpy.ndarray<>
+
+
+Returns True for values in <c><v>a<><> that are greater than or equal to values in <c><v>b<><>.
+
+
+Example:
+
+Array >= Array:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([<v>1<>, <v>2<>, <v>3<>])
+<v>array_2<> = np.array([<v>3<>, <v>2<>, <v>1<>])
+
+<v>result<> = <v>array_1<> >= <v>array_2<>
+
+<#># Returns [False True True]<><>
+
+Array >= Scalar:
+
+<cb>import numpy as np
+
+<v>array<> = np.array([<v>1<>, <v>2<>, <v>3<>])
+
+<v>result<> = <v>array<> >= <v>2<>
+
+<#># Returns [False True True]<><>
+
+Scalar >= Array:
+
+<cb>import numpy as np
+
+<v>array<> = np.array([<v>1<>, <v>2<>, <v>3<>])
+
+<v>result<> = <v>2<> >= <v>array<>
+
+<#># Returns [True True False]<><>
+@
+@ >=
+
+
+
+## Matrix Operators - Details
+
+
+
+### Matrix - Product (Multiply)
+
+<cb>= <v>array_1<> @ <v>array_2<><>
+
+
+The preferred way to calculate the product of two matrices.
+<c><v>array_1<><>'s row size must equal <c><v>array_2<><>'s column size.
+
+
+Example:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+        [[1, 2, 3],
+         [4, 5, 6]])
+
+<v>array_2<> = np.array(
+        [2, 3, 4])
+
+<v>product<> = <v>array_1<> @ <v>array_2<>
+
+<#>Returns: [20, 47]<><>
+@
+@ dot product, Multiplication, preferred, @
+
+
+
+# Arrays
+
+NumPy multidimentional (n-dimension) arrays.
+
+Type: <c>numpy.ndarray<>
+@
+@ np.ndarray, numpy.ndarray, .ndarray, numpy.array np.array
+
+
+
+## Array - Create
+Type: <c>numpy.ndarray<>
+
+
+Arrays (Official):
+<l>https://numpy.org/doc/stable/reference/arrays.ndarray.html<>
+
+Array Creation:
+<l>https://numpy.org/doc/stable/reference/routines.array-creation.html<>
+@
+@ define, new, instantiate
+@ array-create-only, create-only
+
+
+
+### Array - Create Empty Array
+
+<cb>import numpy as np
+
+= np.empty(<v>shape<>)<>
+
+
+1 Dimension:
+
+<cb>= np.empty((<v>x<>))<>
+
+
+2 Dimensions:
+
+<cb>= np.empty((<v>x<>, <v>y<>))<>
+
+
+Set Data Type:
+
+<cb>= np.empty((<v>x<>, <v>y<>), dtype = np.<v>type<>)<>
+
+
+Returns: <c>numpy.ndarray<>
+
+
+Creates an uninitialized array of the given size.
+The values will contain random values and should be expliticly set.
+
+
+Example:
+
+<cb>import numpy as np
+
+<v>zeros<> = np.empty((<v>2, 3<>))
+
+<#># Returns:
+\#
+\#   [[<v>?<>, <v>?<>, <v>?<>],
+\#    [<v>?<>, <v>?<>, <v>?<>]]<><>
+
+<cb>import numpy as np
+
+<v>zeros<> = np.zeros((<v>2, 3<>), dtype = np.int64)
+
+<#># Returns:
+\#
+\#   [[<v>?<>, <v>?<>, <v>?<>],
+\#    [<v>?<>, <v>?<>, <v>?<>]]<><>
+@
+@ numpy.empty(), np.empty(), .empty()
+
+
+
+### Array - Create Empty Array, Match Shape 
+
+<cb>import numpy as np
+
+= np.empty_like(<v>matching_array<>)<>
+
+
+Set Data Type:
+
+<cb>= np.empty_like(<v>matching_array<>, dtype = np.<v>type<>)<>
+
+
+Returns: <c>numpy.ndarray<>
+
+
+Create an uninitialized array but match the shape and type of the matching array.
+The values will contain random values and should be expliticly set.
+
+
+Example:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+        [[<v>1<>, <v>2<>, <v>3<>],
+         [<v>4<>, <v>5<>, <v>6<>]])
+
+<v>empty<> = np.empty_like(<v>array_1<>)
+
+<#># Returns
+\#
+\#   [[<v>?<>, <v>?<>, <v>?<>],
+\#    [<v>?<>, <v>?<>, <v>?<>]]<><>
+@
+@ numpy.empty_like(), np.empty_like(), .empty_like()
+@ with same shape, like, matching, matches
+
+
+
+### Array - Create From Function
+
+<cb>import numpy as np
+
+= np.fromfunction(<v>function_1<>, <v>shape<>)<>
+
+<cb>= np.fromfunction(<v>...<>, dtype = <v>type<>)<>
+
+Returns: <c>numpy.ndarray<>
+
+
+Creates an array of values with a given shape, using a function which returns a single value.
+The function takes the location indexes, and returns the value for that location.
+
+
+Function Form:
+
+<cb>def <v>function_1<>(<v>index_1<>, <v>index_2<>, <v>...<>):
+	<v>...<>
+	return <v>value<><>
+
+
+Example:
+
+<cb>import numpy as np
+
+<v>is_even<> = lambda <v>x<>, <v>y<>: (<v>x<> + <v>y<>) % 2 == 0
+
+<v>even_odd_mask<> = np.fromfunction(<v>is_even<>, (<v>2<>, <v>3<>))
+
+<#># Returns:
+\#
+\#   [[True,  False, True]
+\#    [False, True,  False]]<><>
+@
+@ numpy.fromfunction(), np.fromfunction(), .fromfunction()
+
+
+
+### Array - Create From List
+
+<cb>import numpy as np
+
+= np.array(<v>list_1<>)<>
+
+
+<cb>= np.array([<v>1, 2, 3, ...<>])<>
+
+
+Set Type Explicitly:
+
+<cb>= np.array(<v>list_1<>, dtype = <v>type<>)<>
+
+Returns: <c>numpy.ndarray<>
+
+
+Creates an array initialized with the values from a standard Python list.
+
+
+Examples:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+        [[<v>10<>, <v>11<>, <v>12<>],
+         [<v>20<>, <v>21<>, <v>22<>]])
+
+<#># Returns
+\#
+\#   [[10 11 12]
+\#    [20 21 22]]<><>
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+        [[<v>10<>, <v>11<>, <v>12<>],
+         [<v>20<>, <v>21<>, <v>22<>]],
+        dtype = np.float_)
+
+<#># Returns
+\#
+\#   [[10. 11. 12.]
+\#    [20. 21. 22.]]<><>
+@
+@ numpy.array(), np.array(), .array()
+@ tuple, sequence
+
+
+
+### Array - Initialize To Zeros
+
+<cb>import numpy as np
+
+= np.zeros(<v>shape<>)<>
+
+
+1 Dimension:
+
+<cb>= np.zeros((<v>x<>))<>
+
+
+2 Dimensions:
+
+<cb>= np.zeros((<v>x<>, <v>y<>))<>
+
+
+Set Data Type:
+
+<cb>= np.zeros((<v>x<>, <v>y<>), dtype = np.<v>type<>)<>
+
+
+Returns: <c>numpy.ndarray<>
+
+
+Create an array of all 0s.
+
+
+Example:
+
+<cb>import numpy as np
+
+<v>zeros<> = np.zeros((<v>2, 3<>))
+
+<#># Returns
+\#
+\#   [[0., 0., 0.],
+\#    [0., 0., 0.]]<><>
+
+<cb>import numpy as np
+
+<v>zeros<> = np.zeros((<v>2, 3<>), dtype = np.int_)
+
+<#># Returns
+\#
+\#   [[0, 0, 0],
+\#    [0, 0, 0]]<><>
+@
+@ 0s, zeros, zeroes
+@ numpy.zeros(), np.zeros(), .zeros()
+@ numpy.zeroes(), np.zeroes(), .zeroes()
+
+
+
+### Array - Initialize To Zeros, Match Shape 
+
+<cb>import numpy as np
+
+= np.zeros_like(<v>matching_array<>)<>
+
+
+Set Data Type:
+
+<cb>= np.zeros_like(<v>matching_array<>, dtype = np.<v>type<>)<>
+
+
+Returns: <c>numpy.ndarray<>
+
+
+Create an array of all 0s but match the shape and type of the matching array.
+
+
+Example:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+        [[<v>1<>, <v>2<>, <v>3<>],
+         [<v>4<>, <v>5<>, <v>6<>]])
+
+<v>zeros<> = np.zeros_like(<v>array_1<>)
+
+<#># Returns
+\#
+\#   [[0, 0, 0],
+\#    [0, 0, 0]]<><>
+@
+@ 0s, zeros, zeroes
+@ with same shape, like, matching, matches
+@ numpy.zeros_like(), np.zeros_like(), .zeros_like()
+@ numpy.zeroes_like(), np.zeroes_like(), .zeroes_like()
+
+
+
+### Array - Initialize To Ones
+
+<cb>import numpy as np
+
+= np.ones(<v>shape<>)<>
+
+
+1 Dimension:
+
+<cb>= np.ones((<v>x<>))<>
+
+
+2 Dimensions:
+
+<cb>= np.ones((<v>x<>, <v>y<>))<>
+
+
+Set Data Type:
+
+<cb>= np.ones((<v>x<>, <v>y<>), dtype = np.<v>type<>)<>
+
+
+Create an array of all 1s.
+
+
+Returns: <c>numpy.ndarray<>
+
+
+Example:
+
+<cb>import numpy as np
+
+<v>ones<> = np.ones((<v>2, 3<>))
+
+<#># Returns:
+\#
+\#   [[1., 1., 1.],
+\#    [1., 1., 1.]]<><>
+
+<cb>import numpy as np
+
+<v>ones<> = np.ones((<v>2, 3<>), dtype = np.int_)
+
+<#># Returns
+\#
+\#   [[1, 1, 1],
+\#    [1, 1, 1]]<><>
+@
+@ 1s
+@ numpy.ones(), np.ones(), .ones()
+
+
+
+### Array - Initialize To Ones, Match Shape 
+
+<cb>import numpy as np
+
+= np.ones_like(<v>matching_array<>)<>
+
+
+Set Data Type:
+
+<cb>= np.ones_like(<v>matching_array<>, dtype = np.<v>type<>)<>
+
+
+Returns: <c>numpy.ndarray<>
+
+
+Create an array of all 1s but match the shape and type of the matching array.
+
+
+Example:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+        [[<v>1<>, <v>2<>, <v>3<>],
+         [<v>4<>, <v>5<>, <v>6<>]])
+
+<v>ones<> = np.ones_like(<v>array_1<>)
+
+<#># Returns
+\#
+\#   [[1, 1, 1],
+\#    [1, 1, 1]]<><>
+@
+@ 1s
+@ numpy.ones_like(), np.ones_like(), .ones_like()
+@ with same shape, like, matching, matches
+
+
+
+### Array - Initialize To Value
+
+<cb>import numpy as np
+
+= np.full(<v>shape<>, <v>value<>)<>
+
+
+1 Dimension:
+
+<cb>= np.full((<v>x<>), <v>value<>)<>
+
+
+2 Dimensions:
+
+<cb>= np.full((<v>x<>, <v>y<>), <v>value<>)<>
+
+
+Set Data Type:
+
+<cb>= np.full((<v>x<>, <v>y<>), <v>value<>, dtype = np.<v>type<>)<>
+
+
+Returns: <c>numpy.ndarray<>
+
+
+Returns an array with all elements set to <c><v>value<><>.
+
+
+Example:
+
+<cb>import numpy as np
+
+<v>elevens<> = np.full((<v>2, 3<>), 11)
+
+<#># Returns:
+\#
+\#   [[11, 11, 11],
+\#    [11, 11, 11]]<><>
+@
+@ numpy.full(), np.full(), .full(), .fill(), fill
+
+
+
+### Array - Initialize To Value, Match Shape
+
+<cb>import numpy as np
+
+= np.full_like(<v>matching_array<>, <v>value<>)<>
+
+
+Returns: <c>numpy.ndarray<>
+
+
+Returns an array with all elements set to <c><v>value<><> but match the shape and type of the matching array..
+
+
+Example:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+        [[<v>1<>, <v>2<>, <v>3<>],
+         [<v>4<>, <v>5<>, <v>6<>]])
+
+<v>elevens<> = np.full_like(<v>array_1<>, 11)
+
+<#># Returns
+\#
+\#   [[11, 11, 11],
+\#    [11, 11, 11]]<><>
+@
+@ numpy.full_like(), np.full_like(), .full_like(), .fill_like(), fill
+@ with same shape, like, matching, matches
+
+
+
+### Array - Create Identity Matrix
+
+<cb>import numpy as np
+
+= np.identity(<v>size<>)<>
+
+Or
+
+<cb>= np.eye(<v>size<>)<>
+
+
+Set Data Type:
+
+<cb>= np.identity(<v>size<>, dtype = np.<v>type<>)<>
+
+
+Returns: <c>numpy.ndarray<>
+
+
+Example:
+
+<cb>import numpy as np
+
+<v>identity<> = np.identity(<v>3<>)
+
+<#># Returns:
+\#
+\#   [[1., 0., 0.],      ⎡ 1.0  0.0  0.0 ⎤
+\#    [0., 1., 0.],  or  ⎢ 0.0  1.0  0.0 ⎥
+\#    [0., 0., 1.]]      ⎣ 0.0  0.0  1.0 ⎦<><>
+
+<cb>import numpy as np
+
+<v>identity<> = np.identity(<v>3<>, dtype = np.int_)
+
+<#># Returns:
+\#
+\#   [[1, 0, 0],      ⎡ 1  0  0 ⎤
+\#    [0, 1, 0],  or  ⎢ 0  1  0 ⎥
+\#    [0, 0, 1]]      ⎣ 0  0  1 ⎦<><>
+@
+@ 1s, numpy.eye(), np.eye(), .eye(), np.identity(), .identity()
+
+
+
+### Array - Create With arange
+
+<cb>import numpy as np
+
+= np.arange(<v>last_plus_one<>)
+
+= np.arange(<v>first<>, <v>last_plus_one<>)
+
+= np.arange(<v>first<>, <v>last_plus_one<>, <v>step<>)<>
+
+Set Array Type:
+
+<cb>= np.arange(<v>last_plus_one<>, dtype = <v>type<>)<>
+
+Set Shape:
+
+<cb>= np.arange(<v>last_plus_one<>).reshape(<v>dimensions<>)<>
+
+
+Returns: <c>numpy.ndarray<>
+
+
+Returns a sequence of integers.
+
+Default first value is 0.
+Default type is <c>numpy.int64<>.
+
+
+Official Doc:
+<l>https://numpy.org/doc/stable/reference/generated/numpy.arange.html<>
+
+
+Examples:
+
+Basic:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.arange(<v>5<>)
+
+<#># Returns [0 1 2 3 4]<><>
+
+With First, Last Values:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.arange(<v>2<>, <v>5<>)
+
+<#># Returns [2 3 4]<><>
+
+With First, Last, Step:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.arange(<v>2<>, <v>11<>, <v>2<>)
+
+<#># Returns [2 4 6 8 10]<><>
+
+Return as <c>float_<>:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.arange(<v>5<>, dtype = np.float_)
+
+<#># Returns [0. 1. 2. 3. 4.]<><>
+
+Define Shape:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.arange(<v>6<>).reshape(<v>2,3<>)
+
+<#># Returns:
+\#
+\#		[[0 1 2]
+\#		 [3 4 5]]<><>
+@
+@ numpy.arange(), np.arange(), .arange(), range()
+@ linear, even series evenly spaced, interval
+
+
+
+### Array - Create With linspace
+
+Return Array of 50 Numbers (Default):
+
+<cb>import numpy as np
+
+= np.linspace(<v>first<>, <v>last<>)<>
+
+Return Array of <c><v>count<><> Numbers:
+
+<cb>= np.linspace(<v>first<>, <v>last<>, <v>count<>)<>
+
+Set Array Type:
+
+<cb>= np.linspace(<v>first<>, <v>last<>, dtype = <v>type<>)<>
+
+
+Returns: <c>numpy.ndarray<>
+
+
+Returns a sequence of evenly spaced numbers.
+
+Returns 50 values by default from <c><v>first<><> to <c><v>last<><>.
+Default type is <c>numpy.float64<>.
+
+
+Official Doc:
+<l>https://numpy.org/doc/stable/reference/generated/numpy.linspace.html<>
+
+
+Examples:
+
+Return 50 Numbers From 1 to 20:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.linspace(<v>1<>, <v>20<>)
+
+<#># Returns 50 numbers from 1 to 20:<>
+
+<#>\#[ 1.          1.3877551   1.7755102   2.16326531  2.55102041  2.93877551
+\#  3.32653061  3.71428571  4.10204082  4.48979592  4.87755102  5.26530612
+\#  5.65306122  6.04081633  6.42857143  6.81632653  7.20408163  7.59183673
+\#  7.97959184  8.36734694  8.75510204  9.14285714  9.53061224  9.91836735
+\# 10.30612245 10.69387755 11.08163265 11.46938776 11.85714286 12.24489796
+\# 12.63265306 13.02040816 13.40816327 13.79591837 14.18367347 14.57142857
+\# 14.95918367 15.34693878 15.73469388 16.12244898 16.51020408 16.89795918
+\# 17.28571429 17.67346939 18.06122449 18.44897959 18.83673469 19.2244898
+\# 19.6122449  20.        ]<><>
+
+Return 10 Numbers From 1 to 20:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.linspace(<v>1<>, <v>20<>, <v>10<>)
+
+<#># Returns 10 numbers from 1 to 20:<>
+
+<#>\#[ 1.          3.11111111  5.22222222  7.33333333  9.44444444 11.55555556
+\# 13.66666667 15.77777778 17.88888889 20.        ]<><>
+
+Return as <c>int_<>:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.linspace(<v>1<>, <v>20<>, <v>10<>, dtype = np.int_)
+
+<#># Returns 10 integers from 1 to 20:<>
+
+<#>\#[ 1  3  5  7  9 11 13 15 17 20]<><>
+@
+@ numpy.linspace(), np.linspace(), .linspace()
+@ line space, linespace, linear, even series evenly spaced, interval
+
+
+
+### Array - Create With geomspace
+
+Return Array of 50 Numbers (Default) Logarithmically Spaced:
+
+<cb>import numpy as np
+
+= np.geomspace(<v>first<>, <v>last<>)<>
+
+Return Array of <c><v>count<><> Numbers:
+
+<cb>= np.geomspace(<v>first<>, <v>last<>, <v>count<>)<>
+
+Set Array Type:
+
+<cb>= np.geomspace(<v>first<>, <v>last<>, dtype = <v>type<>)<>
+
+
+Returns: <c>numpy.ndarray<>
+
+
+Returns a sequence of numbers spaced logarithmically.
+
+Values range from <c><v>first<><> to <c><v>last<><>
+Returns 50 values by default.
+Default type is <c>numpy.float64<>.
+
+
+Official Doc:
+<l>https://numpy.org/doc/stable/reference/generated/numpy.geomspace.html<>
+
+
+Examples:
+
+Return 50 Numbers From 1 to 100:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.geomspace(<v>1<>, <v>100<>)
+
+<#># Returns 50 numbers from 1 to 100:<>
+
+<#>\#[  1.           1.09854114   1.20679264   1.32571137   1.45634848
+\#   1.59985872   1.75751062   1.93069773   2.12095089   2.32995181
+\#   2.55954792   2.8117687    3.0888436    3.39322177   3.72759372
+\#   4.09491506   4.49843267   4.94171336   5.42867544   5.96362332
+\#   6.55128557   7.19685673   7.90604321   8.68511374   9.54095476
+\#  10.48113134  11.51395399  12.64855217  13.89495494  15.26417967
+\#  16.76832937  18.42069969  20.23589648  22.22996483  24.42053095
+\#  26.82695795  29.47051703  32.37457543  35.56480306  39.06939937
+\#  42.9193426   47.14866363  51.79474679  56.89866029  62.50551925
+\#  68.6648845   75.43120063  82.86427729  91.0298178  100.        ]<><>
+
+Return 10 Numbers From 1 to 10:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.geomspace(<v>1<>, <v>100<>, <v>10<>)
+
+<#># Returns 10 numbers from 1 to 100:<>
+
+<#>\#[  1.           1.66810054   2.7825594    4.64158883   7.74263683
+\#  12.91549665  21.5443469   35.93813664  59.94842503 100.        ]<><>
+
+Return as <c>int_<>:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.geomspace(<v>1<>, <v>100<>, <v>10<>, dtype = np.int_)
+
+<#># Returns 10 integers from 1 to 100:<>
+
+<#>\#[  1   1   2   4   7  12  21  35  59 100]<><>
+@
+@ numpy.geomspace(), np.geomspace(), .geomspace()
+@ logarithmic, log spaced, interval, series
+
+
+
+### Array - Create With logspace
+
+Return Array of 50 Numbers (Default):
+
+<cb>import numpy as np
+
+= np.logspace(<v>first_base<>, <v>last_base<>)<>
+
+Return Array of <c><v>count<><> Numbers:
+
+<cb>= np.logspace(<v>first_base<>, <v>last_base<>, <v>count<>)<>
+
+Set Array Type:
+
+<cb>= np.logspace(<v>first_base<>, <v>last_base<>, dtype = <v>type<>)<>
+
+
+Returns: <c>numpy.ndarray<>
+
+
+Returns a sequence of numbers spaced logarithmically.
+
+Values range from <c>10<super><v>first_base<><><> to <c>10<super><v>last_base<><><>.
+Returns 50 values by default.
+Default type is <c>numpy.float64<>.
+
+
+Official Doc:
+<l>https://numpy.org/doc/stable/reference/generated/numpy.logspace.html<>
+
+
+Examples:
+
+Return 50 Numbers From 1 to 100:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.logspace(<v>0<>, <v>2<>)
+
+<#># Returns 50 numbers from 1 to 100:<>
+
+<#>\#[  1.           1.09854114   1.20679264   1.32571137   1.45634848
+\#   1.59985872   1.75751062   1.93069773   2.12095089   2.32995181
+\#   2.55954792   2.8117687    3.0888436    3.39322177   3.72759372
+\#   4.09491506   4.49843267   4.94171336   5.42867544   5.96362332
+\#   6.55128557   7.19685673   7.90604321   8.68511374   9.54095476
+\#  10.48113134  11.51395399  12.64855217  13.89495494  15.26417967
+\#  16.76832937  18.42069969  20.23589648  22.22996483  24.42053095
+\#  26.82695795  29.47051703  32.37457543  35.56480306  39.06939937
+\#  42.9193426   47.14866363  51.79474679  56.89866029  62.50551925
+\#  68.6648845   75.43120063  82.86427729  91.0298178  100.        ]<><>
+
+Return 10 Numbers From 1 to 10:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.logspace(<v>0<>, <v>2<>, <v>10<>)
+
+<#># Returns 10 numbers from 1 to 100:<>
+
+<#>\#[  1.           1.66810054   2.7825594    4.64158883   7.74263683
+\#  12.91549665  21.5443469   35.93813664  59.94842503 100.        ]<><>
+
+Return as <c>int_<>:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.logspace(<v>0<>, <v>2<>, <v>10<>, dtype = np.int_)
+
+<#># Returns 10 integers from 1 to 100:<>
+
+<#>\#[  1   1   2   4   7  12  21  35  59 100]<><>
+@
+@ numpy.logspace(), np.logspace(), .logspace()
+@ logarithmic, log spaced, interval, series
+
+
+
+### Array - Create With Diagonal
+
+<cb>import numpy as np
+
+= np.diag(<v>diagonal_values<>)<>
+
+
+Returns: <c>numpy.ndarray<>
+
+
+
+Creates a square array with the given diagonal values.
+
+
+Example:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.diag([<v>1<>, <v>2<>, <v>3<>])
+
+<#># Returns:
+\#
+\#   [[1, 0, 0],
+\#    [0, 2, 0],
+\#    [0, 0, 3]]<><>
+@
+@ numpy.diag(), np.diag(), .diag()
+@ numpy.diagonal(), np.diagonal(), .diagonal()
+
+
+
+### Array - Create Random Floats (0 to 1)
+
+Preferred:
+
+<cb>import numpy as np
+<v>generator<> = np.random.default_rng()
+
+= <v>generator<>.random((<v>shape<>))<>
+
+Old Way:
+
+<cb>from numpy import random
+
+= random.random((<v>shape<>))<>
+
+
+Returns:	<c>numpy.ndarray<>
+Range:	 <c>0 \<= <v>value<> \< 1<>
+
+
+Returns an array of random floats.
+
+
+Examples:
+
+Preferred:
+
+<cb>import numpy as np
+<v>generator<> = np.random.default_rng()
+
+<v>random_1<> = <v>generator<>.random((<v>2<>, <v>3<>))
+
+<#># Returns:
+\#
+\#   [[0.40928577, 0.79790089, 0.77605813],
+\#    [0.63162753, 0.19415552, 0.19275159]]<><>
+
+Old Way:
+
+<cb>from numpy import random
+
+<v>random_1<> = random.random((<v>2<>, <v>3<>))
+
+<#># Returns:
+\#
+\#   [[0.40922785, 0.91082236, 0.62097166],
+\#    [0.93666851, 0.35611792, 0.29840064]]<><>
+@
+@ numpy.random.random(), np.random.random(), .random.random(), .random()
+@ rng.random(), .random()
+@ numpy.random.default_rng(), np.random.default_rng(), random.default_rng(), .default_rng(), default_rng()
+@ randomized values
+
+
+
+### Array - Create Random Floats (Min to Max)
+
+Preferred:
+
+<cb>import numpy as np
+<v>generator<> = np.random.default_rng()
+
+= <v>generator<>.uniform(<v>min<>, <v>max<>, (<v>shape<>))<>
+
+Old Way:
+
+<cb>from numpy import random
+
+= random.uniform(<v>min<>, <v>max<>, (<v>dimension_1_size<>, <v>dimension_2_size<>, <v>...<>)<>
+
+
+Returns:	<c>numpy.ndarray<>
+Range:	<c><v>min<> \<= <v>value<> \< <v>max<><>
+
+
+Returns an array of random floats.
+
+
+Examples:
+
+Preferred:
+
+<cb>import numpy as np
+<v>generator<> = np.random.default_rng()
+
+<v>random_1<> = <v>generator<>.uniform(<v>1<>, <v>5<>, (<v>2<>, <v>3<>))
+
+<#># Returns:
+\#
+\#   [[1.75500425, 4.04546217, 1.69267232],
+\#    [3.67729486, 4.42992328, 4.14945881]]<><>
+
+Old Way:
+
+<cb>from numpy import random
+
+<v>random_1<> = random.uniform(<v>1<>, <v>5<>, (<v>2<>, <v>3<>))
+
+<#># Returns:
+\#
+\#   [[3.87308038, 3.73146899, 2.23873443],
+\#    [1.70877385, 1.52080134, 2.70181788]]<><>
+@
+@ numpy.random.uniform(), np.random.uniform(), random.uniform(), .uniform()
+@ rng.uniform(), rng.uniform(), .uniform()
+@ numpy.random.default_rng(), np.random.default_rng(), random.default_rng(), .default_rng(), default_rng()
+@ minimum, maximum, randomized, values
+
+
+### Array - Create Random Integers
+
+Preferred:
+
+<cb>import numpy as np
+<v>generator<> = np.random.default_rng()
+
+= <v>generator<>.integers(<v>min<>, <v>max<>, (<v>shape<>))<>
+
+Old Way:
+
+<cb>from numpy import random
+
+= random.randint(<v>min<>, <v>max_plus_1<>, (<v>shape<>))<>
+
+
+Returns:	<c>numpy.ndarray<>
+Range:	<c><v>min<> \<= <v>value<> \< <v>max_plus_1<><>
+
+
+Returns an array of random integers.
+
+
+Examples:
+
+Preferred:
+
+<cb>import numpy as np
+<v>generator<> = np.random.default_rng()
+
+<v>random_1<> = <v>generator<>.integers(<v>1<>, <v>11<>, (<v>2<>, <v>3<>))
+
+<#># Returns:
+\#
+\#   [[8, 10, 1],
+\#    [8, 6, 4]]<><>
+
+Old Way:
+
+<cb>from numpy import random
+
+<v>random_1<> = random.randint(<v>1<>, <v>11<>, (<v>2<>, <v>3<>))
+
+<#># Returns:
+\#
+\#  [[3, 8, 4],
+\#   [9, 4, 6]]<><>
+@
+@ numpy.random.randint(), np.random.randint(), random.randint(), .randint(), .random_integer()
+@ rng.randint(), rng.integers(), .integers()
+@ numpy.random.default_rng(), np.random.default_rng(), random.default_rng(), .default_rng(), default_rng()
+@ minimum, maximum, randomized, values
+
+
+
+### Array - Create Random Floats With Standard Distribution
+
+<cb>import numpy as np
+<v>generator<> = np.random.default_rng()
+
+= <v>generator<>.standard_normal((<v>shape<>))<>
+
+<cb>= <v>mean<> + <v>standard_deviation<> * <v>generator<>.standard_normal((<v>shape<>))<>
+
+
+Returns:	<c>numpy.ndarray<>
+
+
+Returns an array of random floats with a normal distribution.
+(mean = 0, standard deviation = 1)
+
+
+Examples:
+
+<cb>import numpy as np
+<v>generator<> = np.random.default_rng()
+
+<v>sample<> = <v>generator<>.standard_normal((<v>2<>, <v>3<>))
+
+<#># Returns:
+\#
+\#   [[-0.93928296,  0.6520388 ,  1.28263012],
+\#    [-0.94537835,  0.48608571, -1.54853397]]<><>
+
+With Mean 50, Standard Deviation 10:
+
+<cb>import numpy as np
+<v>generator<> = np.random.default_rng()
+
+<v>mean<> = <v>50<>
+<v>standard_deviation<> = <v>10<>
+
+<v>sample<> = <v>mean<> + <v>standard_deviation<> * <v>generator<>.standard_normal((<v>2<>, <v>3<>))
+
+<#># Returns:
+\#
+\#   [[56.2546677 , 48.57793679, 58.29200796],
+\#    [59.46658645, 42.43935806, 40.72183798]]<><>
+@
+@ rng.standard_normal(), .standard_normal()
+@ numpy.random.default_rng(), np.random.default_rng(), random.default_rng(), .default_rng(), default_rng()
+@ randomized values, normal
+
+
+
+### Array - Create Random Sample From Array
+
+<cb>import numpy as np
+<v>generator<> = np.random.default_rng()
+
+= <v>generator<>.choice(<v>choices<>, (<v>shape<>))<>
+
+
+Returns:	<c>numpy.ndarray<>
+
+
+Returns an array of random floats with a normal distribution.
+(mean = 0, standard deviation = 1)
+
+
+Examples:
+
+<cb>import numpy as np
+<v>generator<> = np.random.default_rng()
+
+<v>choices<> = np.array([1, 10, 100, 1000])
+
+<v>sample<> = <v>generator<>.choice(<v>choices<>, (<v>2<>, <v>3<>))
+
+<#># Returns:
+\#
+\#   [[1, 100, 10],
+\#    [100, 1, 1]]<><>
+@
+@ rng.choice(), .choice()
+@ numpy.random.default_rng(), np.random.default_rng(), random.default_rng(), .default_rng(), default_rng()
+@ randomized values, normal, elements, sample
+
+
+
+## Array - Create Indexes
+@
+@ indices
+
+
+
+### Create Indexes
+
+<cb>import numpy as np
+
+= np.indices(<v>shape<>)<>
+
+<cb>= np.indices(<v>shape<>, sparse = True)<>
+
+Returns: <c>numpy.ndarray<>
+
+
+Returns an array in this form:
+
+<cb>[<v>axis_0_indexes<>, <v>axis_1_indexes<>, <v>...<>]<>
+
+
+Creates an array of index co-ordinates for a given shape.
+Retuns the co-ordinates by axis.
+i.e. the first sub-array contains the axis 0 indexes for accessing an element.
+
+
+Example:
+
+<cb>import numpy as np
+
+<v>indices<> = np.indices((<v>2<>, <v>3<>))
+
+<#># Returns:
+\#
+\#   [[[0, 0, 0],      # Axis 0 Indexes
+\#     [1, 1, 1]],
+\#
+\#    [[0, 1, 2],      # Axis 1 Indexes
+\#     [0, 1, 2]]]<><>
+@
+@ numpy.indices(), np.indices(), .indices()
+@ indices
+
+
+
+### Create Mesh Grid Indexes
+
+<cb>import numpy as np
+
+= np.meshgrid(<v>array_x<>, <v>array_y<>)<>
+
+<cb>= np.meshgrid(<v>array_x<>, <v>array_y<>, sparse = True)<>
+
+Matrix Indexing
+
+<cb>= np.meshgrid(<v>array_i<>, <v>array_j<>, indexing = 'ij')<>
+
+Returns: <c>list<> of <c>numpy.ndarray<>
+
+
+Returns a list of arrays in this form:
+
+<cb>[<v>axis_0_indexes<>, <v>axis_1_indexes<>, <v>...<>]<>
+
+
+Creates co-ordinates for a grid based on an array of x and an array of y values.
+Returns the co-ordinates as a pair of arrays.
+
+The first array contains the x co-ordinates (axis 1), the second contains the y co-ordinate (axis 0).
+For matrix co-ordinates, the first array contains i co-ordinates (axis 0), and the second array contains j co-ordinates (axis 1).
+
+
+
+Examples:
+
+Cartesian Co-ordinates:
+
+<cb>import numpy as np
+
+<v>array_x<> = np.array([1, 2, 3])
+<v>array_y<> = np.array([10, 20])
+
+<v>indices<> = np.meshgrid(<v>array_x<>, <v>array_y<>)
+
+<#># Returns:
+\#
+\#   list[
+\#       array([[ 1,  2,  3],       # Axis 1 Indexes (x)
+\#              [ 1,  2,  3]]),
+\#
+\#       array([[10, 10, 10],       # Axis 0 Indexes (y)
+\#              [20, 20, 20]])
+\#   ]<><>
+
+Matrix Co-ordinates:
+
+<cb>import numpy as np
+
+<v>array_i<> = np.array([1, 2, 3])
+<v>array_j<> = np.array([10, 20])
+
+<v>indices<> = np.meshgrid(<v>array_i<>, <v>array_j<>, indexing = 'ij')
+
+<#># Returns:
+\#
+\#   list[
+\#       array([[ 1,  1],          # Axis 0 Indexes (i)
+\#              [ 2,  2],
+\#              [ 3,  3]]),
+\#
+\#       array([[10, 20],          # Axis 1 Indexes (j)
+\#              [10, 20],
+\#              [10, 20]])
+\#   ]<><>
+@
+@ numpy.meshgrid(), np.meshgrid(), .meshgrid()
+@ indices
+
+
+
+## Array - Operations
+
+
+
+### Array - Get Dimensions
+
+<cb>= <v>array_1<>.ndim<>
+
+Returns the number of dimensions.
+
+
+Example:
+
+<cb>from numpy import array
+
+<v>array_1<> = array(
+        [[<v>10<>, <v>11<>, <v>12<>],
+         [<v>20<>, <v>21<>, <v>22<>]])
+
+<v>dimensions<> = <v>array_1<>.ndim
+
+<#># Returns 2<><>
+@
+@ number of, size, .ndim
+
+
+
+### Array - Get Shape
+
+<cb>= <v>array_1<>.size<>
+
+Returns the number of elements in the array.
+
+
+Example:
+
+<cb>from numpy import array
+
+<v>array_1<> = array(
+        [[<v>10<>, <v>11<>, <v>12<>],
+         [<v>20<>, <v>21<>, <v>22<>]])
+
+<v>size<> = <v>array_1<>.size
+
+<#># Returns (2, 3)<><>
+@
+@ count, length, len(), .size
+
+
+
+### Array - Get Size
+
+<cb>= <v>array_1<>.size<>
+
+Returns the number of elements in the array.
+
+
+Example:
+
+<cb>from numpy import array
+
+<v>array_1<> = array(
+        [[<v>10<>, <v>11<>, <v>12<>],
+         [<v>20<>, <v>21<>, <v>22<>]])
+
+<v>size<> = <v>array_1<>.size
+
+<#># Returns 6<><>
+@
+@ count, length, len(), .size
+
+
+
+### Array - Get Size of Axis 0 
+
+<cb>= len(<v>array_1<>)<>
+
+
+Returns the number of elements in the 1st axis of the array.
+
+
+Example:
+
+<cb>from numpy import array
+
+<v>array_1<> = array(
+        [[<v>10<>, <v>11<>, <v>12<>],
+         [<v>20<>, <v>21<>, <v>22<>]])
+
+<v>size<> = len(<v>array_1<>)
+
+<#># Returns 2<><>
+@
+@ count, length, len(), .size, first, dimension, row, 1st
+
+
+
+### Array - Get Data Type
+
+<cb>= <v>array_1<>.dtype.type<>
+
+
+Returns the data type stored in the array.
+
+
+Example:
+
+<cb><s>import numpy as np<>
+
+<v>array_1<> = np.array([<v>1<>, <v>2<>], dtype = <v>np.int32<>)
+
+<v>type<> = <v>array_1<>.dtype.type
+<#># Returns np.int32<>
+
+if <v>array_1<>.dtype.type == <v>np.int32<>:
+    print("Is type np.int32.")<>
+
+
+
+### Array - Update Element
+
+<cb><v>array_1<>[<v>i<>, <v>j<>, <v>...<>] = <v>new_value<><>
+
+Equivalent To:
+
+<cb><v>array_1<>[<v>i<>][<v>j<>][<v>...<>] = <v>new_value<><>
+
+
+Updates the value of a single element.
+
+
+Example:
+
+<cb>from numpy import array
+
+<v>array_1<> = array(
+        [[<v>1<>, <v>2<>, <v>3<>],
+         [<v>4<>, <v>5<>, <v>6<>]])
+
+array_1[0,0] = 10
+<#># or...<>
+array_1[0][0] = 10
+
+<#># Updates array_1 to:
+\#
+\#    [[10, 2, 3],
+\#     [ 4, 5, 6]]<><>
+@
+@ element, item, value
+@ update, set, change
+
+
+
+### Array - Update Subarray
+
+<cb><v>array_1<>[<v>i<>] = <v>sub_list<><>
+
+<cb><v>array_1<>[<v>i<>, <v>j<>, <v>...<>] = <v>sub_list<><>
+
+
+Updates the subarray at the given axis location.
+The new subarray must match the size and shape of the original subarray it replaces but numpy will broadcast if possible.
+
+
+Examples:
+
+<cb>from numpy import array
+
+<v>array_1<> = array(
+        [[<v>1<>, <v>2<>, <v>3<>],
+         [<v>4<>, <v>5<>, <v>6<>]])
+
+array_1[1] = [40, 50, 60]
+
+<#># Updates array_1 to:
+\#
+\#    [[ 1,  2,  3],
+\#     [40, 50, 60]]<><>
+
+Broadcast:
+
+<cb>from numpy import array
+
+<v>array_1<> = array(
+        [[<v>1<>, <v>2<>, <v>3<>],
+         [<v>4<>, <v>5<>, <v>6<>]])
+
+array_1[1] = 10
+
+<#># Updates array_1 to:
+\#
+\#    [[ 1,  2,  3],
+\#     [10, 10, 10]]<><>
+@
+@ elements, items, update, set, change
+
+
+
+### Array - Change Type
+
+<cb>= <v>array_1<>.astype(<v>new_type<>)<>
+
+
+Changes the internal data type of the array.
+
+
+Example:
+
+<cb>from numpy import array
+
+<v>array_1<> = array([1, 2, 3])
+
+<v>float_array<> = <v>array_1<>.astype(np.float_)
+
+<#># Converted array from np.int_ to np.float_<><>
+@
+@ cast, casting, .astype(), convert
+
+
+
+### Array - Copy
+
+<cb>= <v>array_1<>.copy()<>
+
+Creates a copy of <c><v>array_1<><>.
+
+
+Example:
+
+<cb>from numpy import array
+
+<v>array_1<> = array(
+        [[<v>1<>, <v>2<>, <v>3<>],
+         [<v>4<>, <v>5<>, <v>6<>]])
+
+<v>copy<> = <v>array_1<>.copy()
+
+<#># Returns
+\#
+\#   [[1, 2, 3],
+\#    [4, 5, 6]]<><>
+
+@
+@ duplicate, clone, .copy()
+
+
+
+### Array - Deep Copy
+
+<cb>from copy import deepcopy
+
+= <v>array_1<>.copy()<>
+
+Creates a deep copy of <c><v>array_1<><>.
+
+
+Example:
+
+<cb>from copy import deepcopy
+from numpy import array
+
+<v>array_1<> = array(
+        [[<v>1<>, <v>2<>, <v>3<>],
+         [<v>4<>, <v>5<>, <v>6<>]])
+
+<v>deep_copy<> = deepcopy(<v>array_1<>)
+
+<#># Returns
+\#
+\#   [[1, 2, 3],
+\#    [4, 5, 6]]<><>
+
+@
+@ duplicate, clone, .deepcopy()
+
+
+
+### Array - Copy With Reorder
+
+<m>Didn't work when testing. Feedback?<>
+
+<cb>= <v>array_1<>.copy(order = <v>order<>)<>
+
+Creates a copy of <c><v>array_1<><>.
+
+
+Order Values (See <l "/s/numpy?search=axis+order">Axis Order<>):
+
+<card><table><col>'C'	<><col>(default) (C Style Order)<>
+<col>'F'<><col>Reverse Axis Order (Fortran Style Order)<>
+<col>'A'<><col>Reverse Axis Order (Fortran Order) (If Stored In Contiguous Memory)<>
+<col>'K'<><col>In Memory Order (As Stored In Memory)<><><>
+
+
+Example:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+        [[<v>1<>, <v>2<>, <v>3<>],
+         [<v>4<>, <v>5<>, <v>6<>]])
+
+<v>copy<> = <v>array_1<>.copy(order = 'f')
+
+<#># Returns
+\#
+\#   [[1, 2, 3],
+\#    [4, 5, 6]]
+\#
+\# <!>(Returned this but not what was expected)<><><>
+
+@
+@ duplicate, clone, .copy(), order=
+
+
+
+### Array - Fill
+
+<cb>= <v>array_1<>.fill(<v>value<>)<>
+
+Creates a copy of <c><v>array_1<><>.
+
+
+Example:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.empty((2, 3))
+
+<v>elevens<> = <v>array_1<>.fill(11)
+
+<#># Returns
+\#
+\#   [[11.0, 11.0, 11.0],
+\#    [11.0, 11.0, 11.0]]<><>
+@
+@ .fill(), set
+
+
+
+### Array - Repeat Elements
+
+<cb>= <v>array_1<>.repeat(<v>count<>)<>
+
+
+Repeats each element <v><c>count<><> times.
+
+
+Example:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([<v>1<>, <v>2<>, <v>3<>])
+
+<v>repeated<> = <v>array_1<>.repeat(<v>3<>)
+
+<#># Return: [1, 1, 1, 2, 2, 2, 3, 3, 3]<><>
+@
+@ .repeat(), values
+
+
+
+### Array - Shuffle
+
+Preferred:
+
+<cb>import numpy as np
+<v>generator<> = np.random.default_rng()
+
+= <v>generator<>.permutation(<v>array_1<>)<>
+
+<cb>= <v>generator<>.permutation(<v>array_1<>, axis = <v>axis<>)<>
+
+
+Returns:	<c>numpy.ndarray<>
+
+
+Returns a copy of the array but with the elements shuffle around.
+Shuffles axis 0 by default.
+
+
+Examples:
+
+<cb>import numpy as np
+<v>generator<> = np.random.default_rng()
+
+<v>array_1<> = np.array([1, 2, 3, 4, 5])
+
+<v>shuffled<> = <v>generator<>.permutation(<v>array_1<>)
+
+<#># Returns:
+\#
+\#  [5, 3, 2, 1, 4]<><>
+
+2D Array:
+
+<cb>import numpy as np
+<v>generator<> = np.random.default_rng()
+
+<v>array_1<> = np.array(
+        [[1, 2, 3],
+         [4, 5, 6],
+         [7, 8, 9]])
+
+<v>shuffled<> = <v>generator<>.permutation(<v>array_1<>)
+
+<#># Returns:
+\#
+\#  [[4, 5, 6],
+\#   [7, 8, 9],
+\#   [1, 2, 3]]<><>
+@
+@ rng.permutation(), .permutation()
+@ numpy.random.default_rng(), np.random.default_rng(), random.default_rng(), .default_rng(), default_rng()
+@ randomized, values
+
+
+
+### Array - Shuffle In Place
+
+Preferred:
+
+<cb>import numpy as np
+<v>generator<> = np.random.default_rng()
+
+<v>generator<>.shuffle(<v>array_1<>)<>
+
+<cb><v>generator<>.shuffle(<v>array_1<>, axis = <v>axis<>)<>
+
+Old Way:
+
+<cb>from numpy import random
+
+random.shuffle(<v>array_1<>)<>
+
+
+Returns:	<c>numpy.ndarray<>
+
+
+Shuffles the elements around inside the array.
+The array is randomized in place.
+Shuffles axis 0 by default.
+
+
+Examples:
+
+<cb>import numpy as np
+<v>generator<> = np.random.default_rng()
+
+<v>array_1<> = np.array([1, 2, 3, 4, 5])
+
+<v>generator<>.shuffle(<v>array_1<>)
+
+<#># Sets:
+\#
+\#  [5, 3, 2, 1, 4]<><>
+
+2D Array:
+
+<cb>import numpy as np
+<v>generator<> = np.random.default_rng()
+
+<v>array_1<> = np.array(
+        [[1, 2, 3],
+         [4, 5, 6],
+         [7, 8, 9]])
+
+<v>generator<>.shuffle(<v>array_1<>)
+
+<#># Sets:
+\#
+\#  [[4, 5, 6],
+\#   [7, 8, 9],
+\#   [1, 2, 3]]<><>
+
+Old Way:
+
+<cb>from numpy import array
+from numpy import random
+
+<v>array_1<> = array([1, 2, 3, 4, 5])
+
+random.shuffle(<v>array_1<>)
+
+<#># Sets:
+\#
+\#  [4, 2, 1, 3, 5]<><>
+@
+@ np.random.shuffle(), random.shuffle(), rng.shuffle(), .shuffle()
+@ numpy.random.default_rng(), np.random.default_rng(), random.default_rng(), .default_rng(), default_rng()
+@ randomized, values
+
+
+
+### Array - Sort
+
+<cb>import numpy as np
+
+= np.sort(<v>array_1<>)<>
+
+
+Returns:	<c>numpy.ndarray<>
+
+
+Sorts the elements in order.
+Sorts on the highest order axis by default.
+e.g. for a 3D array, sorts axis 2.
+
+
+Examples:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([5, 3, 2, 1, 4])
+
+<v>sorted<> = np.sort(<v>array_1<>)
+
+<#># Returns: [1, 2, 3, 4, 5]<><>
+
+2D Array (Sorts Axis 1):
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+        [[5, 8, 7],
+         [4, 1, 9],
+         [6, 2, 3]])
+
+<v>sorted<> = np.sort(<v>array_1<>)
+
+<#># Returns:
+\#
+\# [[5, 7, 8],
+\#  [1, 4, 9],
+\#  [2, 3, 6]]
+\#
+\#  Sorted \<-><><>
+@
+@ numpy.sort(), .sort()
+@ values, elements
+
+
+
+### Array - Sorted Indexes
+
+<cb>import numpy as np
+
+= np.argsort(<v>array_1<>)<>
+
+
+Returns:	<c>numpy.ndarray<>
+
+
+Returns the indices of the elements in sorted order.
+Returns indexes for the highest order axis by default.
+e.g. for a 3D array, returns indices for axis 2.
+
+
+Examples:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([5, 3, 2, 1, 4])
+
+<v>sorted<> = np.argsort(<v>array_1<>)
+
+<#># Returns: [3, 2, 1, 4, 0]<><>
+
+2D Array (Sorts Axis 1):
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+        [[5, 8, 7],
+         [4, 1, 9],
+         [6, 2, 3]])
+
+<v>sorted<> = np.argsort(<v>array_1<>)
+
+<#># Returns:
+\#
+\# [[0, 2, 1],
+\#  [1, 0, 2],
+\#  [1, 2, 0]]
+\#
+\#  Sorted \<-><><>
+@
+@ numpy.argsort(), .argsort()
+@ values, elements, indices
+
+
+
+### Array - To List
+
+<cb>= <v>array_1<>.tolist()<>
+
+Returns: <c>list<>
+
+
+Converts a NumPy array into a Python list.
+
+
+Example:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.arange(<v>1<>, <v>5<>)
+
+<v>list_1<> = <v>array_1<>.tolist()
+
+<#>Returns [1, 2, 3, 4]<><>
+@
+@ convert, conversion, from
+@ tolist()
+
+
+
+## Array - Calculation Operations
+
+
+
+### Array - All
+
+<cb>= <v>array_1<>.all()<>
+
+Return By Axis:
+
+<cb>= <v>array_1<>.all(axis = <v>axis_number<>)<>
+
+
+Returns <c>True<> if all value in the array (or axis) is <c>True<> or non-zero.
+
+
+Examples:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([True, False])
+
+<v>all<> = <v>array_1<>.all()
+
+<#># Returns: False<><>
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([True, True])
+
+<v>all<> = <v>array_1<>.all()
+
+<#># Returns: True<><>
+
+Test By Axis:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+    [[False, True],
+     [True, True]])
+
+<v>all<> = <v>array_1<>.all(axis = <v>1<>)
+
+<#># Returns: [False True]<><>
+
+Test Integers:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+    [[0, 2],
+     [2, 4]])
+
+<v>all<> = <v>array_1<>.all(axis = <v>1<>)
+
+<#># Returns: [False True]<><>
+@
+@ .all(), axis=
+
+
+
+### Array - Any
+
+<cb>= <v>array_1<>.any()<>
+
+Return By Axis:
+
+<cb>= <v>array_1<>.any(axis = <v>axis_number<>)<>
+
+
+Returns <c>True<> if any value in the array (or axis) is <c>True<> or non-zero.
+
+
+Examples:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([False, True])
+
+<v>any<> = <v>array_1<>.any()
+
+<#># Returns: True<><>
+
+Test By Axis:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+    [[False, False],
+     [False, True]])
+
+<v>any<> = <v>array_1<>.any(axis = <v>1<>)
+
+<#># Returns: [False True]<><>
+
+Test Integers:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+    [[0, 0],
+     [0, 2]])
+
+<v>any<> = <v>array_1<>.any(axis = <v>1<>)
+
+<#># Returns: [False True]<><>
+@
+@ .any(), axis=
+
+
+
+### Array - Clip Minimum / Maximum Values
+
+<cb>= <v>array_1<>.clip(<v>min_value<>, <v>max_value<>)<>
+
+Clip Maximum Only:
+
+<cb>= <v>array_1<>.clip(max = <v>max_value<>)<>
+
+Clip Minimum Only:
+
+<cb>= <v>array_1<>.clip(mix = <v>max_value<>)<>
+
+
+Clips the values in the array to within the minimum and maximum values.
+The returned array is the same size as the original array.
+
+
+Examples:
+
+Clip To Between 2 and 6:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+    [[1, 2, 3],
+     [4, 5, 6],
+     [7, 8, 9]])
+
+<v>clip<> = <v>array_1<>.clip(<v>2<>, <v>6<>)
+
+<#># Returns:
+\#
+\#   [[2 2 3]
+\#    [4 5 6]
+\#    [6 6 6]]<><>
+
+Clip To 5 and Above:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+    [[1, 2, 3],
+     [4, 5, 6],
+     [7, 8, 9]])
+
+<v>clip<> = <v>array_1<>.clip(min = <v>4<>)
+
+<#># Returns:
+\#
+\#   [[5 5 5]
+\#    [5 5 6]
+\#    [7 8 9]]
+<><>
+
+Clip To 5 and Below:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+    [[1, 2, 3],
+     [4, 5, 6],
+     [7, 8, 9]])
+
+<v>clip<> = <v>array_1<>.clip(max = <v>3<>)
+
+<#># Returns:
+\#
+\#   [[1 2 3]
+\#    [4 5 5]
+\#    [5 5 5]]<><>
+@
+@ .clip(), min(), max(), elements
+
+
+
+### Array - Complex Conjugate
+
+<cb>= <v>array_1<>.conj()<>
+
+<cb>= <v>array_1<>.conjugate()<>
+
+
+Returns the conjugate of a complex number (reverses the sign of the imaginary part).
+
+
+Examples:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([1 + 2j, 3 - 4j])
+
+<v>conjunction<> = <v>array_1<>.conj()
+
+<#># Returns: [1.-2.j 3.+4.j]<><>
+@
+@ .conj(), .conjugate()
+
+
+
+### Array - Cumulative Product (Multiply)
+
+<cb>= <v>array_1<>.cumprod()<>
+
+Sum By Axis:
+
+<cb>= <v>array_1<>.cumprod(axis = <v>axis_number<>)<>
+
+
+Creates a cumulative product (multiply) from all values in the array.
+If no axis is given, the total is created as if the array is a single dimension.
+
+
+Calculates:
+
+<cb>product[0] = a[0]
+product[<v>n<>] = product[<v>n<> - 1] * a[<v>n<>]<>
+
+
+Examples:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+    [[1, 2, 3],
+     [4, 5, 6],
+     [7, 8, 9]])
+
+<v>cumulative_product<> = <v>array_1<>.cumprod()
+
+<#># Returns: [ 1  2  6  24  120  720  5040  40320  362880]<><>
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+    [[1, 2, 3],
+     [4, 5, 6],
+     [7, 8, 9]])
+
+<v>cumulative_product<> = <v>array_1<>.cumprod(axis = <v>0<>)
+
+<#># Returns:
+\#
+\#   [[  1   2   3]
+\#    [  4  10  18]
+\#    [ 28  80 162]]<><>
+@
+@ .cumprod(), running product, multiply, multiplication, axis=
+
+
+
+### Array - Cumulative Sum
+
+<cb>= <v>array_1<>.cumsum()<>
+
+Sum By Axis:
+
+<cb>= <v>array_1<>.cumsum(axis = <v>axis_number<>)<>
+
+
+Creates a cumulative sum (running total) from all values in the array.
+If no axis is given, the total is created as if the array is a single dimension.
+
+
+Calculates:
+
+<cb>sum[0] = a[0]
+sum[<v>n<>] = sum[<v>n<> - 1] + a[<v>n<>]<>
+
+
+Examples:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+    [[1, 2, 3],
+     [4, 5, 6],
+     [7, 8, 9]])
+
+<v>cumulative_sum<> = <v>array_1<>.cumsum()
+
+<#># Returns: [ 1  3  6 10 15 21 28 36 45]<><>
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+    [[1, 2, 3],
+     [4, 5, 6],
+     [7, 8, 9]])
+
+<v>cumulative_sum<> = <v>array_1<>.cumsum(axis = <v>0<>)
+
+<#># Returns:
+\#
+\#   [[ 1  2  3]
+\#    [ 5  7  9]
+\#    [12 15 18]]<><>
+@
+@ .cumsum(), running total, axis=
+
+
+
+### Array - Maximum
+
+<cb>= <v>array_1<>.max()<>
+
+Return By Axis:
+
+<cb>= <v>array_1<>.max(axis = <v>axis_number<>)<>
+
+
+Returns the largest value in the array.
+
+
+Examples:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+    [[1, 2, 3],
+     [4, 5, 6]])
+
+<v>maximum<> = <v>array_1<>.max()
+
+<#># Returns: 6<><>
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+    [[1, 2, 3],
+     [4, 5, 6]])
+
+<v>maximum<> = <v>array_1<>.max(axis = <v>1<>)
+
+<#># Returns: [3 6]<><>
+@
+@ .max(), axis=
+
+
+
+### Array - Maximum Index
+
+<cb>= <v>array_1<>.argmax()<>
+
+Return By Axis:
+
+<cb>= <v>array_1<>.argmax(axis = <v>axis_number<>)<>
+
+
+Returns the index of the largest value in the array.
+The index is the linear 
+
+
+Examples:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+    [[1, 2, 3],
+     [4, 5, 6]])
+
+<v>index<> = <v>array_1<>.argmax()
+
+<#># Returns: 5<><>
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+    [[1, 2, 3],
+     [4, 5, 6]])
+
+<v>index<> = <v>array_1<>.argmax(axis = <v>1<>)
+
+<#># Returns: [2 2]<><>
+@
+@ .argmax(), axis=
+
+
+
+### Array - Minimum
+
+<cb>= <v>array_1<>.min()<>
+
+Return By Axis:
+
+<cb>= <v>array_1<>.min(axis = <v>axis_number<>)<>
+
+
+Returns the smallest value in the array.
+
+
+Examples:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+    [[1, 2, 3],
+     [4, 5, 6]])
+
+<v>minimum<> = <v>array_1<>.min()
+
+<#># Returns: 1<><>
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+    [[1, 2, 3],
+     [4, 5, 6]])
+
+<v>minimum<> = <v>array_1<>.min(axis = <v>1<>)
+
+<#># Returns: [1 4]<><>
+@
+@ .min(), axis=
+
+
+
+### Array - Minimum Index
+
+<cb>= <v>array_1<>.argmin()<>
+
+Return By Axis:
+
+<cb>= <v>array_1<>.argmin(axis = <v>axis_number<>)<>
+
+
+Returns the index of the smallest value in the array.
+
+
+Examples:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+    [[1, 2, 3],
+     [4, 5, 6]])
+
+<v>index<> = <v>array_1<>.argmin()
+
+<#># Returns: 0<><>
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+    [[1, 2, 3],
+     [4, 5, 6]])
+
+<v>index<> = <v>array_1<>.argmin(axis = <v>1<>)
+
+<#># Returns: [0 0]<><>
+@
+@ .argmin(), axis=
+
+
+
+### Array - Peak to Peak
+
+<cb>= <v>array_1<>.ptp()<>
+
+Return By Axis:
+
+<cb>= <v>array_1<>.ptp(axis = <v>axis_number<>)<>
+
+
+Returns difference between the minimum and maximum values.
+
+
+Examples:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+    [[1, 2, 3],
+     [4, 5, 6]])
+
+<v>peak_to_peak<> = <v>array_1<>.ptp()
+
+<#># Returns: 5<><>
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+    [[1, 2, 3],
+     [4, 5, 6]])
+
+<v>peak_to_peak<> = <v>array_1<>.ptp(axis = <v>1<>)
+
+<#># Returns: [2 2]<><>
+@
+@ .ptp(), difference between minimum and maximum, axis=
+
+
+
+### Array - Round
+
+To Nearest Integer:
+
+<cb>= <v>array_1<>.round()<>
+
+To Number of Decimal Places:
+
+<cb>= <v>array_1<>.round(decimals = <v>number<>)<>
+
+
+Rounds all values in the array up or down to the nearest decimal.
+Defaults to zero decimals.
+
+
+Examples:
+
+To Integers:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+    [[1.4, 1.5, 1.6],
+     [2.54, 2.55, 2.56]])
+
+<v>rounded<> = <v>array_1<>.round()
+
+<#># Returns:
+\#
+\#   [[1. 2. 2.]
+\#    [3. 3. 3.]]<><>
+
+To 1 Decimal Place:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+    [[1.4, 1.5, 1.6],
+     [2.54, 2.55, 2.56]])
+
+<v>rounded<> = <v>array_1<>.round(decimals = <v>1<>)
+
+<#># Returns:
+\#
+\#   [[1.4 1.5 1.6]
+\#    [2.5 2.6 2.6]]<><><><>
+@
+@ .round()
+
+
+
+### Array - Sum
+
+<cb>= <v>array_1<>.sum()<>
+
+Return By Axis:
+
+<cb>= <v>array_1<>.sum(axis = <v>axis_number<>)<>
+
+
+Returns the sum of all values in the array.
+
+
+Examples:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+    [[1, 2],
+     [3, 4]])
+
+<v>sum<> = <v>array_1<>.sum()
+
+<#># Returns: 10<><>
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+    [[1, 2],
+     [3, 4]])
+
+<v>sum<> = <v>array_1<>.sum(axis = <v>1<>)
+
+<#># Returns: [3 7]<><>
+@
+@ .sum(), total, axis=
+
+
+
+### Array - Trace (Sum of Diagonal)
+
+<cb>= <v>array_1<>.trace()<>
+
+With Offset:
+
+<cb>= <v>array_1<>.trace(offset = <v>offset<>)<>
+
+3+D Array:
+
+<cb>= <v>array_1<>.trace(axis1 = <v>first_axis<>, axis2 = <v>second_axis<>)<>
+
+
+Sums all values along the diagonal.
+The offset 
+
+For 2D Array:
+
+<cb>= <v>a<>[0][0] + <v>a<>[1][1] + ... + <v>a<>[<v>n<>][<v>n<>]<>
+
+
+Examples:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+    [[<m> 1 <>,  2 ,  3 ],
+     [ 4 , <m> 5 <>,  6 ],
+     [ 7 ,  8 , <m> 9 <>]])
+
+<v>traced<> = <v>array_1<>.trace()
+
+<#># Returns: 15<><>
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+    [[ 1 , <m> 2 <>,  3 ],
+     [ 4 ,  5 , <m> 6 <>],
+     [ 7 ,  8 , 9]])
+
+<v>traced<> = <v>array_1<>.trace(offset = 1)
+
+<#># Returns: 8<><>
+@
+@ .trace(), axis1=, , axis2=, offset=
+
+
+
+## Array - Index and Slicing Operations
+@
+@ slice, split, splitting
+
+
+### Array - Index and Slicing Basics
+
+Array Syntax:
+
+<cb><table><col><v>result<><><col>= <v>array_1<>[<v>slice<>]<>
+<col><v>result<><><col>= <v>array_1<>[<v>slice<>, <v>slice<>, <v>...<>]<>
+<col> <>
+<col><#>Which Axis:<><>
+<col> <>
+<col><v>result<><><col>= <v>array_1<>[<v>axis_0<>, <v>axis_1<>, <v>...<>]<><><>
+
+Slice Syntax:
+
+<cb><table><col><v>first<><><col>= <v>array_1<>[0]<>
+<col><v>nth<><><col>= <v>array_1<>[<v>n<>]<><col><#># Indexes are 0 based<><>
+<col><v>second_last<><><col>= <v>array_1<>[-2]<><col> <>
+<col><v>last<><><col>= <v>array_1<>[-1]<>
+<col> <>
+<col><v>all<><><col>= <v>array_1<>[:]<>
+<col><v>all_but_first<><><col>= <v>array_1<>[1:]<>
+<col><v>all_but_last<><><col>= <v>array_1<>[:-1]<>
+<col><v>reversed<><><col>= <v>array_1<>[::-1]<>
+<col> <>
+<col><v>from<><><col>= <v>array_1<>[<v>start<>:]<>
+<col><v>from_to<><><col>= <v>array_1<>[<v>start<>:<v>end_plus_1<>]<>
+<col><v>from_to_with_step<><><col>= <v>array_1<>[<v>start<>:<v>end_plus_1<>:<v>step<>]<>
+<col><v>from_with_step<><><col>= <v>array_1<>[<v>start<>::<v>step<>]<>
+<col><v>to<><><col>= <v>array_1<>[:<v>end_plus_1<>]<>
+<col><v>step_over<><><col>= <v>array_1<>[::<v>step<>]<>
+<col> <>
+<col><v>m_to_nth<><><col>= <v>array_1<>[<v>m<> : <v>n<> + 1]<><><>
+
+
+Positive Values - From Start (0)
+Negative Values - From End (-1)
+
+
+Examples:
+
+<cb>from numpy import array
+
+<v>array_1<> = array([<v>0<>, <v>1<>, <v>2<>, <v>3<>, <v>4<>])
+
+<table><col><v>first<><><col>= <v>array_1<>[0]		<><col><#># Returns 0<><>
+<col><v>second<><><col>= <v>array_1<>[1]<><col><#># Returns 1<><>
+<col><v>...<><>
+<col><v>second_last<><><col>= <v>array_1<>[-2]<><col><#># Returns 3<><>
+<col><v>last<><><col>= <v>array_1<>[-1]<><col><#># Returns 4<><>
+<col> <>
+<col><v>all<><><col>= <v>array_1<>[:]<><col><#># Returns [0, 1, 2, 3, 4]<><>
+<col><v>all_but_first<><><col>= <v>array_1<>[1:]<><col><#># Returns [1, 2, 3, 4]<><>
+<col><v>all_but_last<><><col>= <v>array_1<>[:-1]<><col><#># Returns [0, 1, 2, 3]<><>
+<col> <>
+<col><v>from_1_to_3<><><col>= <v>array_1<>[<v>1<>:<v>4<>]<><col><#># Returns [1, 2, 3]<><>
+<col><v>from_1_step_to_3<><><col>= <v>array_1<>[<v>1<>:<v>4<>:<v>2<>]<><col><#># Returns [1, 3]<><>
+<col><v>even<><><col>= <v>array_1<>[::<v>2<>]<><col><#># Returns [0, 2, 4]<><>
+<col><v>odd_from_1<><><col>= <v>array_1<>[<v>1<>::<v>2<>]<><col><#># Returns [1, 3]<><><><>
+@
+@ examples, [0], [-1], [:], [::], summary
+
+
+
+### Array - Get Value
+
+<cb>= <v>array_1<>[<v>index_1<>, <v>index_2<>, <v>...<>]<>
+
+<cb>= <v>array_1<>[<v>index_1<>][<v>index_2<>]<v>...<><>
+
+<cb>= <v>array_1<>[(<v>index_1<>, <v>index_2<>, <v>...<>)]<>
+
+
+Returns an element from the array.
+
+
+Example:
+
+<cb>from numpy import array
+
+<v>array_1<> = array(
+        [[<v>10<>, <v>11<>, <v>12<>],
+         [<v>20<>, <v>21<>, <v>22<>]])
+
+<v>value<> = <v>array_1<>[<v>0<>, <v>2<>]
+
+<#># or...<>
+
+<v>value<> = <v>array_1<>[<v>0<>][<v>2<>]
+
+<#># or...<>
+
+<v>value<> = <v>array_1<>[(<v>0<>, <v>2<>)]
+
+<#># Returns 12<><>
+@
+@ element, item, retrieve, by index, single, by tuple
+
+
+
+### Array - Get First Value
+
+1D Array:
+
+<cb>= <v>array_1<>[0]<>
+
+2D Array:
+
+<cb>= <v>array_1<>[0, 0]<>
+
+Any Size Array:
+
+<cb>= <v>array_1<>.ravel()[0]<>
+
+
+Returns the first element from the array.
+Use <c>ravel()<> for any dimension array.
+
+
+Example:
+
+<cb>from numpy import array
+
+<v>array_1<> = array(
+        [[<v>10<>, <v>11<>, <v>12<>],
+         [<v>20<>, <v>21<>, <v>22<>]])
+
+<v>first<> = <v>array_1<>[0, 0]
+
+<#># or...<>
+
+<v>first<> = <v>array_1<>.ravel()[0]
+
+<#># Returns 10<><>
+@
+@ element, item, retrieve
+
+
+
+### Array - Get Last Value
+
+1D Array:
+
+<cb>= <v>array_1<>[-1]<>
+
+2D Array:
+
+<cb>= <v>array_1<>[-1, -1]<>
+
+Very Last Value, Any Dimension:
+
+<cb>= <v>array_1<>.ravel()[-1]<>
+
+
+Returns the last element from the array.
+Use <c>ravel()<> for any dimension array.
+
+
+Example:
+
+<cb>from numpy import array
+
+<v>array_1<> = array(
+        [[<v>10<>, <v>11<>, <v>12<>],
+         [<v>20<>, <v>21<>, <v>22<>]])
+
+<v>last<> = <v>array_1<>[-1, -1]
+
+<#># or...<>
+
+<v>last<> = <v>array_1<>.ravel()[-1]
+
+<#># Returns 22<><>
+@
+@ element, item, retrieve
+
+
+
+### Array - Get Values - Boolean Indexing / With Mask
+
+<cb>= <v>array_1<>(<v>boolean_mask_array<>)<>
+
+
+This:
+
+<cb><v>array<>([[True, False, False], [False, True, True]])<>
+
+Returns These:
+
+<cb><v>array<>[0,0]
+<v>array<>[1,1]
+<v>array<>[1,2]<>
+
+
+Returns elements from the array where the equivalent elements are <c>True<> in the masking array.
+
+
+Example:
+
+<cb>from numpy import array
+
+<v>array_1<> = array(
+        [[<v>1<>, <v>2<>, <v>3<>],
+         [<v>4<>, <v>5<>, <v>6<>]])
+
+<v>mask<> = np.array(
+        [[<v>True<>, <v>False<>, <v>False<>],
+         [<v>False<>, <v>True<>, <v>True<>]])
+
+<v>values<> = <v>array_1<>[<v>mask<>]
+
+<#># Returns: [1, 5, 6]<><>
+@
+@ masks, masking, multiple, retrieve
+
+
+
+### Array - Get Values - Integer Indexing
+
+<cb>= <v>array_1<>[<v>axis_0_indexes<>, <v>axis_1_indexes<>, <v>...<>]<>
+
+<cb>= <v>array_1<>[[<v>x1<>, <v>x2<>, <v>...<>], [<v>y1<>, <v>y2<>, <v>...<>], <v>...<>]<>
+
+
+This:
+
+<cb><v>array<>[[<v>1<>, <v>1<>, <v>2<>], [<v>3<>, <v>4<>, <v>5<>]]<>
+
+Returns These:
+
+<cb><v>array<>[<v>1<>, <v>3<>]
+<v>array<>[<v>1<>, <v>4<>]
+<v>array<>[<v>2<>, <v>5<>]<>
+
+
+Returns a list of values at the given array index co-ordinates.
+Each index array parameter references the index of elements in that axis.
+i.e the first index array references element indexes on axis 0, the second array references element indexes on axis 1, etc.
+
+
+Examples:
+
+Return Single Value:
+
+<cb>from numpy import array
+
+<v>array_1<> = array(
+        [[<v>1<>, <v>2<>, <v>3<>],
+         [<v>4<>, <v>5<>, <v>6<>]])
+
+<v>values<> = <v>array_1<>[[1],[2]]
+
+<#># Returns: [6]<>
+
+<#># Same As: array_1[1, 2]<><>
+
+Return Multiple Values:
+
+<cb>from numpy import array
+
+<v>array_1<> = array(
+        [[<v>1<>, <v>2<>, <v>3<>],
+         [<v>4<>, <v>5<>, <v>6<>]])
+
+<v>values<> = <v>array_1<>[[0, 0, 1], [1, 2, 2]]
+
+<#># Returns: [2, 3, 6]<>
+
+<#># Same As: array_1[0, 1]
+           array_1[0, 2]
+           array_1[1, 2]<><>
+@
+@ indexes, indices, multiple, retrieve
+
+
+
+## Array - 1D Slicing Operations
+@
+@ slice, split, splitting, index, indexing
+
+
+
+#### 1D Array - Get Value
+
+<cb>= <v>array_1<>[<v>index<>]<>
+
+
+Returns one value from the array.
+
+
+Example:
+
+<cb>from numpy import array
+
+<v>array_1<> = array([<v>0<>, <v>1<>, <v>2<>, <v>3<>, <v>4<>])
+
+<v>value<> = <v>array_1<>[<v>1<>]
+
+<#># Returns 1<><>
+@
+@ item, []
+
+
+
+#### 1D Array - Get First Value
+
+<cb>= <v>array_1<>[0]<>
+
+
+Returns the first value from the array.
+
+
+Example:
+
+<cb>from numpy import array
+
+<v>array_1<> = array([<v>0<>, <v>1<>, <v>2<>, <v>3<>, <v>4<>])
+
+<v>value<> = <v>array_1<>[0]
+
+<#># Returns 0<><>
+@
+@ item, [0]
+
+
+
+#### 1D Array - Get Last Value
+
+<cb>= <v>array_1<>[-1]<>
+
+
+Returns the last value from the array.
+
+
+Example:
+
+<cb>from numpy import array
+
+<v>array_1<> = array([<v>0<>, <v>1<>, <v>2<>, <v>3<>, <v>4<>])
+
+<v>value<> = <v>array_1<>[-1]
+
+<#># Returns 4<><>
+@
+@ item, [-1]
+
+
+
+#### 1D Array - Get Subarray
+
+<cb>= <v>array_1<>[<v>start<> : <v>end_plus_1<>]<>
+
+
+Return everything but the first item.
+
+
+Example:
+
+<cb>from numpy import array
+
+<v>array_1<> = array([<v>0<>, <v>1<>, <v>2<>, <v>3<>, <v>4<>])
+
+<v>subarray<> = <v>array_1<>[<v>2<> : <v>4<>]
+
+<#># Returns [2, 3]<><>
+@
+@ item, [1:]
+
+
+
+#### 1D Array - Get Subarray From Position
+
+<cb>= <v>array_1<>[<v>start<>:]<>
+
+
+Return everything but the first item.
+
+
+Example:
+
+<cb>from numpy import array
+
+<v>array_1<> = array([<v>0<>, <v>1<>, <v>2<>, <v>3<>, <v>4<>])
+
+<v>subarray<> = <v>array_1<>[<v>2<>:]
+
+<#># Returns [2, 3, 4]<><>
+@
+@ item, [1:], index
+
+
+
+#### 1D Array - Get Subarray To Position
+
+<cb>= <v>array_1<>[<v>start<> : <v>end_plus_1<>]<>
+
+
+Return everything but the first item.
+
+
+Example:
+
+<cb>from numpy import array
+
+<v>array_1<> = array([<v>0<>, <v>1<>, <v>2<>, <v>3<>, <v>4<>])
+
+<v>subarray<> = <v>array_1<>[:<v>4<>]
+
+<#># Returns [0, 1, 2, 3]<><>
+@
+@ item, [1:], index
+
+
+
+#### 1D Array - Get Remainder
+
+<cb>= <v>array_1<>[1:]<>
+
+
+Return everything but the first item.
+
+
+Example:
+
+<cb>from numpy import array
+
+<v>array_1<> = array([<v>0<>, <v>1<>, <v>2<>, <v>3<>, <v>4<>])
+
+<v>remainder<> = <v>array_1<>[1:]
+
+<#># Returns [1, 2, 3, 4]<><>
+@
+@ item, [1:], Subarray
+
+
+
+## Array - 2D Slicing Operations
+@
+@ slice, split, splitting, index, indexing
+
+
+
+### 2D Array - Get Row
+
+<cb>= <v>array_1<>[<v>row<>]<>
+
+
+Example:
+
+<cb>from numpy import array
+
+<v>array_1<> = array(
+        [[<v>10<>, <v>11<>, <v>12<>],
+         [<v>20<>, <v>21<>, <v>22<>],
+         [<v>30<>, <v>31<>, <v>32<>]])
+
+<v>row<> = <v>array_1<>[<v>1<>]
+
+<#># Returns [20, 21, 22]<><>
+
+
+
+### 2D Array - Get Column
+
+<cb>= <v>array_1<>[:, <v>column<>]<>
+
+
+Example:
+
+<cb>from numpy import array
+
+<v>array_1<> = array(
+        [[<v>10<>, <v>11<>, <v>12<>],
+         [<v>20<>, <v>21<>, <v>22<>],
+         [<v>30<>, <v>31<>, <v>32<>]])
+
+<v>row<> = <v>array_1<>[:, <v>1<>]
+
+<#># Returns [11, 21, 31]<><>
+@
+@ :
+
+
+
+## Array - Shape Operations
+
+
+
+### Array - Flatten
+
+<cb>= <v>array_1<>.flatten()<>
+
+<cb>= <v>array_1<>.flatten(order = <v>order<>)<>
+
+Returns a single dimension array.
+<c>flatten()<> returns a new copy of the array.
+
+
+Order Values (See <l "/s/numpy?search=axis+order">Axis Order<>):
+
+<card><table><col>'C'	<><col>(default) (C Style Order)<>
+<col>'F'<><col>Reverse Axis Order (Fortran Style Order)<>
+<col>'A'<><col>Reverse Axis Order (Fortran Order) (If Stored In Contiguous Memory)<>
+<col>'K'<><col>In Memory Order (As Stored In Memory)<><><>
+
+
+Example:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.arange(<v>1<>, <v>25<>).reshape(<v>2<>, <v>3<>, <v>4<>)
+
+<v>flattened<> = <v>array_1<>.flatten()
+
+<#>Returns:
+/#
+/#   [ 1 2 3 4  .... 21 22 23 24]<><>
+@
+@ .flatten(), order
+
+
+
+### Array - Flatten In Place
+
+<cb>= <v>array_1<>.ravel()<>
+
+<cb>= <v>array_1<>.ravel(order = <v>order<>)<>
+
+Returns a single dimension array.
+<c>ravel()<> returns a flattened representation of the array referencing the original data.
+
+
+Order Values (See <l "/s/numpy?search=axis+order">Axis Order<>):
+
+<card><table><col>'C'	<><col>(default) (C Style Order)<>
+<col>'F'<><col>Reverse Axis Order (Fortran Style Order)<>
+<col>'A'<><col>Reverse Axis Order (Fortran Order) (If Stored In Contiguous Memory)<>
+<col>'K'<><col>In Memory Order (As Stored In Memory)<><><>
+
+
+Example:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.arange(<v>1<>, <v>25<>).reshape(<v>2<>, <v>3<>, <v>4<>)
+
+<v>flattened<> = <v>array_1<>.ravel()
+
+<#>Returns:
+/#
+/#   [ 1 2 3 4  .... 21 22 23 24]<><>
+@
+@ .ravel(), order
+
+
+
+### Array - Reshape
+
+<cb>= <v>array_1<>.reshape(<v>shape<>)<>
+
+Passing Dimensions As Tuple:
+
+<cb>= <v>array_1<>.reshape((<v>shape<>))<>
+
+
+To 1 Dimension:
+
+<cb>= <v>array_1<>.reshape(<v>n<>)<>
+
+To 2 Dimensions:
+
+<cb>= <v>array_1<>.reshape(<v>m<>, <v>n<>)<>
+
+
+Reforms the array into the given shape.
+
+
+Example:
+
+<cb>from numpy import array
+
+<v>array_1<> = array([<v>11, 21, 12, 22, 13, 23<>])
+
+<v>reshaped<> = <v>array_1<>.reshape(<v>3, 2<>)
+
+<#># Returns:
+\#
+\#    [[11, 21]
+\#     [12, 22]
+\#     [13, 23]]<><>
+
+Using Tuple:
+
+<cb>from numpy import array
+
+<v>array_1<> = array([<v>11, 21, 12, 22, 13, 23<>])
+
+<v>dimensions<> = (<v>3, 2<>)
+<v>reshaped<> = <v>array_1<>.reshape(<v>dimensions<>)
+
+<#># Returns:
+\#
+\#    [[11, 21]
+\#     [12, 22]
+\#     [13, 23]]<><>
+@
+@ .reshape(), resize
+
+
+### Array - Reshape With -1
+
+<cb>= <v>array_1<>.reshape(<v>shape<>)<>
+
+
+To 1 Dimension:
+
+<cb>= <v>array_1<>.reshape(-1)
+
+= <v>array_1<>.reshape((-1))<>
+
+To 2 Dimensions:
+
+<cb>= <v>array_1<>.reshape(-1, <v>n<>)
+
+= <v>array_1<>.reshape((-1, <v>n<>))<>
+
+<cb>= <v>array_1<>.reshape(<v>m<>, -1)
+
+= <v>array_1<>.reshape((<v>m<>, -1))<>
+
+
+Reforms the array into the given shape.
+-1 tells Numpy to calculate the required size.
+
+
+Examples:
+
+Flatten:
+
+<cb>from numpy import array
+
+<v>array_1<> = array([[<v>11, 12, 13<>], [<v>21, 22, 23<>]])
+
+<v>reshaped<> = <v>array_1<>.reshape(-1)
+
+<#># Returns: [11, 12, 13, 21, 22, 23]<><>
+
+Reshape To 3 x ?:
+
+<cb>from numpy import array
+
+<v>array_1<> = array([<v>11, 21, 12, 22, 13, 23<>])
+
+<v>reshaped<> = <v>array_1<>.reshape((<v>3, -1<>))
+
+<#># Returns:
+\#
+\#    [[11, 21]
+\#     [12, 22]
+\#     [13, 23]]<><>
+@
+@ .reshape(), -1, resize
+
+
+
+## Array - Statistics Operations
+@
+@ calculations, stats
+
+
+
+### Array - Mean (Average)
+
+<cb>= <v>array_1<>.mean()<>
+
+Return By Axis:
+
+<cb>= <v>array_1<>.mean(axis = <v>axis_number<>)<>
+
+
+Returns the arithmetic mean of the array values.
+
+
+Examples:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+    [[3, 4, 6],
+     [3, 3, 8],
+     [5, 6, 5],
+     [6, 5, 7]])
+
+<v>mean<> = <v>array_1<>.mean()
+
+<#># Returns: 5.083333333333333<><>
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+    [[3, 4, 6],
+     [3, 3, 8],
+     [5, 6, 5],
+     [6, 5, 7]])
+
+<v>mean<> = <v>array_1<>.mean(axis = <v>0<>)
+
+<#># Returns: [4.25 4.5  6.5 ]<><>
+@
+@ .mean(), axis=
+
+
+
+### Array - Standard Deviation
+
+<cb>= <v>array_1<>.std()<>
+
+Return By Axis:
+
+<cb>= <v>array_1<>.std(axis = <v>axis_number<>)<>
+
+
+Returns the standard deviation of the array values.
+
+
+Examples:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+    [[3, 4, 6],
+     [3, 3, 8],
+     [5, 6, 5],
+     [6, 5, 7]])
+
+<v>standard_deviation<> = <v>array_1<>.std()
+
+<#># Returns: 3.303312731183652<><>
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+    [[3, 4, 6],
+     [3, 3, 8],
+     [5, 6, 5],
+     [6, 5, 7]])
+
+<v>standard_deviation<> = <v>array_1<>.std(axis = <v>0<>)
+
+<#># Returns: [4.10304765 1.54818442 1.71245438 2.18217208 4.58823223]<><>
+@
+@ .std(), axis=
+
+
+
+### Array - Variance
+
+<cb>= <v>array_1<>.var()<>
+
+Return By Axis:
+
+<cb>= <v>array_1<>.var(axis = <v>axis_number<>)<>
+
+
+Returns the variance of the array.
+
+
+Examples:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+    [[3, 4, 6],
+     [3, 3, 8],
+     [5, 6, 5],
+     [6, 5, 7]])
+
+<v>variance<> = <v>array_1<>.var()
+
+<#># Returns: 10.911874999999998<><>
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+    [[3, 4, 6],
+     [3, 3, 8],
+     [5, 6, 5],
+     [6, 5, 7]])
+
+<v>variance<> = <v>array_1<>.var(axis = <v>0<>)
+
+<#># Returns: [16.835     2.396875  2.9325    4.761875 21.051875]<><>
+@
+@ .var(), axis=
+
+
+
+## Array - Matrix Operations
+
+
+
+### Matrix Array - Product (Multiply)
+
+<cb>= <v>array_1<>.dot(<v>array_2<>)<>
+
+
+Calculates the product of two matrices.
+<c><v>array_1<><>'s row size must equal <c><v>array_2<><>'s column size.
+
+
+Better:
+
+<cb>= <v>array_1<> @ <v>array_2<><>
+
+
+Example:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+        [[1, 2, 3],
+         [4, 5, 6]])
+
+<v>array_2<> = np.array(
+        [2, 3, 4])
+
+<v>product<> = <v>array_1<>.dot(<v>array_2<>)
+
+<#>Returns: [20, 47]<><>
+@
+@ .dot(), dot product, Multiplication
+
+
+
+### Matrix Array - Transpose
+
+<cb>= <v>array_1<>.transpose()<>
+
+or
+
+<cb>= <v>array_1<>.T<>
+
+
+
+
+Transposes a 2 dimension array.
+
+
+Example:
+
+<cb>from numpy import array
+
+<v>array_1<> = array(
+        [[<v>10<>, <v>11<>, <v>12<>],
+         [<v>20<>, <v>21<>, <v>22<>]])
+
+<v>transpose<> = <v>array_1<>.transpose()
+
+<#># Converts:
+\#
+\#    [[10, 11, 12],        [[10, 20],
+\#     [20, 21, 22]]   ->    [11, 21],
+\#                           [12, 22]]
+\#
+\#    ⎡ 10  11  12 ⎤        ⎡ 10  20 ⎤
+\#    ⎣ 20  21  22 ⎦   ->   ⎢ 11  21 ⎥
+\#                          ⎣ 12  22 ⎦<><>
+@
+@ .transpose()
+
+
+
+## Array Axes
+@ axis
+
+
+### 1D Array
+
+
+For Shape (4):
+
+
+
+#### Axis = 0
+
+<image "axes-1d-axis-0.png">
+@
+@ axis-0
+
+
+### 2D Array
+
+
+For Shape (3, 4):
+
+
+
+#### Axis = 0
+
+<image "axes-2d-axis-0.png">
+@
+@ axis-0
+
+
+
+#### Axis = 1
+
+<image "axes-2d-axis-1.png">
+@
+@ axis-1
+
+
+
+### Axis Order
+
+<cb><v>...<>(order = <v>order<>)<>
+
+<c><v>order<><>:
+
+<card><table><col>'C'	<><col>(default) (C Style Order)<>
+<col>'F'<><col>Reverse Axis Order (Fortran Style Order)<>
+<col>'A'<><col>Reverse Axis Order (Fortran Order) (If Stored In Contiguous Memory)<>
+<col>'K'<><col>In Memory Order (As Stored In Memory)<><><>
+
+'C' Order - From Axis <v>n<> to Axis 0:
+
+Index Order For 3 Dimension Array:
+
+<cb>[0,0,0]
+[0,0,1]
+...
+[0,1,0]
+[0,1,1]
+...
+[1,1,0]
+[1,1,1]
+...
+<>
+
+
+'F' Order - From Axis 0 to Axis <v>n<>:
+
+Index Order For 3 Dimension Array:
+
+<cb>[0,0,0]
+[1,0,0]
+...
+[0,1,0]
+[1,1,0]
+...
+[0,1,1]
+[1,1,1]
+...<>
+
+
+Examples:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.arange(1, 9).reshape(2,2,2)
+
+
+<#>#Default / 'C' Order:<>
+
+<v>flattened<> = <v>array_1<>.flatten()
+
+<#>\# Or...<>
+
+<v>flattened<> = <v>array_1<>.flatten(order = 'C')
+
+<#># Returns [1, 2, 3, 4, 5, 6, 7, 8]
+\#
+\# Indexes [0,0,0], [0,0,1], [0,1,0], [0,1,1], ...<>
+
+
+<#># 'F' Order:<>
+
+<v>flattened<> = <v>array_1<>.flatten(order = 'F')
+
+<#># Returns [1, 5, 3, 7, 2, 6, 4, 8]
+\#
+\# Indexes [0,0,0], [1,0,0], [0,1,0], [1,1,0], ...<><>
+@
+@ 'c', 'f', 'a', 'k',  "c", "f", "a", "k"
+
+
+
+# Iterators
+@
+@ iteration operations, iterate, control statements
+
+
+
+### For Each
+
+<cb>for <v>axis_0_item<> in <v>array_1<>:
+    <v>...<><>
+
+
+Iterates over the outer items in the array (axis 0).
+
+
+Examples:
+
+1D Array:
+
+<cb>from numpy import array
+
+<v>array_1<> = array([1, 2, 3])
+
+for <v>item<> in <v>array_1<>:
+    print(<v>item<>)<>
+
+Prints:
+
+<cb><#>1
+2
+3<><>
+
+2D Array, Axis 0 Only:
+
+<cb>from numpy import array
+
+<v>array_1<> = array(
+        [[<v>1<>, <v>2<>, <v>3<>],
+         [<v>4<>, <v>5<>, <v>6<>]])
+
+for <v>item<> in <v>array_1<>:
+    print(<v>item<>)<>
+
+Prints:
+
+<cb><#>[1 2 3]
+[4 5 6]<><>
+
+
+2D Array, All Values
+
+<cb>from numpy import array
+
+<v>array_1<> = array(
+        [[<v>1<>, <v>2<>, <v>3<>],
+         [<v>4<>, <v>5<>, <v>6<>]])
+
+for <v>subarray<> in <v>array_1<>:
+    for <v>item<> in <v>subarray<>:
+        print(<v>item<>)
+    print()<>
+
+Prints:
+
+<cb><#>1
+2
+3
+
+4
+5
+6<><>
+@
+@ for each, foreach, for loop, values
+
+
+
+### Flat Iterator
+
+<cb>= <v>array_1<>.flat<>
+
+<cb>for <v>item<> in <v>array_1<>.flat:
+	<v>...<><>
+
+Returns: <c>np.flatiter<>
+
+
+Returns an iterator that traverses all values of the array.
+
+
+Example:
+
+<cb>from numpy import array
+
+<v>array_1<> = array([[<v>1<>, <v>2<>], [<v>3<>, <v>4<>]])
+
+for <v>item<> in <v>array_1<>.flat:
+    print(<v>item<>)<>
+
+Prints:
+
+<cb><#>1
+2
+3
+4<><>
+@
+@ .flat, .flat(), numpy.flatiter(), np.flatiter(), .flatiter(), .flatiter, loop, values
+@ over each element, elements
+
+
+
+### Flat Iterator - Over Non-Zero Values
+
+<cb>import numpy as np
+
+for <v>item<> in np.flatnonzero(<v>array_1<>)<>
+
+
+Iterates over all non-zero values.
+
+
+Example:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+        [[<v>2<>, <v>0<>, <v>3<>],
+         [<v>0<>, <v>0<>, <v>6<>]])
+
+for <v>item<> in np.flatnonzero(<v>array_1<>):
+    print(<v>item<>)<>
+
+Prints:
+
+<cb><#>0
+2
+5<><>
+@
+@ numpy.flatnonzero(), np.flatnonzero(), .flatnonzero(), nonzero
+
+
+
+### nditer Iterator
+
+<cb>import numpy as np
+
+for <v>item<> in np.nditer(<v>array_1<>):
+    <v>...<><>
+
+<cb>for <v>item<> in np.nditer(<v>array_1<>, order = <v>order_type<>):
+    <v>...<><>
+
+
+Examples:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([[1, 2], [3, 4]])
+
+for <v>item<> in np.nditer(<v>array_1<>):
+    print(<v>item<>)<>
+
+Prints:
+
+<cb><#>1
+2
+3
+4<><>
+@
+@ numpy.nditer, np.nditer, loop
+
+
+
+# Functional Functions
+@
+@ func-only, funcs-only, functional-only
+
+
+
+### Function - To Array Function (ufunc)
+
+<cb>import numpy as np
+
+= np.frompyfunc(<v>function_1<>, <v>input_count<>, <v>return_count<>)<>
+
+Returns: <c>numpy.ufunc<>
+
+
+Allows a function that takes one element to be applied to all elements in an array or a set of arrays, by converting it into a <c>ufunc<> function.
+
+The ufunc form accepts an array, loops through the elements passing them one at a time to the original function. The function should accept the element and return the appropriate new value.
+
+The ufunc form returns an array of dtype <c>Object<>.
+
+
+Function Form:
+
+<cb>def <v>function_1<>(<v>element<>):
+	<v>...<>
+	return <v>value<><>
+
+<cb>def <v>function_1<>(<v>element_1<>, <v>element_2<>):
+	<v>...<>
+	return <v>value<><>
+
+
+Examples:
+
+Apply to a Single Array:
+
+<cb>import numpy as np
+
+<v>double<> = lambda <v>a<>: <v>a * 2<>
+<v>double_ufunc<> = np.frompyfunc(<v>double<>, 1, 1)
+
+<v>array_1<> = np.array([<v>1<>, <v>2<>, <v>3<>])
+
+<v>doubled<> = <v>double_ufunc<>(<v>array_1<>)
+
+<#># Returns: [2, 4, 6]<><>
+
+Apply to Two Arrays:
+
+<cb>import numpy as np
+
+<v>add<> = lambda <v>a<>, <v>b<>: <v>a + b<>
+<v>add_ufunc<> = np.frompyfunc(<v>add<>, 2, 1)
+
+<v>array_1<> = np.array([<v>1<>, <v>2<>, <v>3<>])
+<v>array_2<> = np.array([<v>10<>, <v>20<>, <v>30<>])
+
+<v>added<> = <v>add_ufunc<>(<v>array_1<>, <v>array_2<>)
+
+<#># Returns: [11, 22, 33]<><>
+@
+@ numpy.frompyfunc(), np.frompyfunc(), .frompyfunc()
+@ apply, ufunc, universal function
+@ convert, wrap, wrapper
+
+
+
+### Function - To Array Function (vectorize)
+
+<cb>import numpy as np
+
+= np.vectorize(<v>function_1<>)<>
+
+Returns: <c>numpy.vectorize<>
+
+
+Allows a function that takes one element to be applied to all elements in an array or a set of arrays, by wrapping the function in <c>vectorize<>.
+
+The vectorized form accepts an array, loops through the elements passing them one at a time to the original function. The function should accept the element and return the appropriate new value.
+
+
+Function Form:
+
+<cb>def <v>function_1<>(<v>element<>):
+	<v>...<>
+	return <v>value<><>
+
+<cb>def <v>function_1<>(<v>element_1<>, <v>element_2<>):
+	<v>...<>
+	return <v>value<><>
+
+
+Examples:
+
+Apply to a Single Array:
+
+<cb>import numpy as np
+
+<v>double<> = lambda <v>a<>: <v>a * 2<>
+<v>double_vectorized<> = np.vectorize(<v>double<>)
+
+<v>array_1<> = np.array([<v>1<>, <v>2<>, <v>3<>])
+
+<v>doubled<> = <v>double_vectorized<>(<v>array_1<>)
+
+<#># Returns: [2, 4, 6]<><>
+
+Apply to Two Arrays:
+
+<cb>import numpy as np
+
+<v>add<> = lambda <v>a<>, <v>b<>: <v>a + b<>
+<v>add_vectorized<> = np.vectorize(<v>add<>)
+
+<v>array_1<> = np.array([<v>1<>, <v>2<>, <v>3<>])
+<v>array_2<> = np.array([<v>10<>, <v>20<>, <v>30<>])
+
+<v>added<> = <v>add_vectorized<>(<v>array_1<>, <v>array_2<>)
+
+<#># Returns: [11, 22, 33]<><>
+@
+@ numpy.vectorize(), np.vectorize(), .vectorize()
+@ apply, ufunc
+@ convert, wrap, wrapper
+
+
+### Function - Apply Conditionally
+
+<cb>import numpy as np
+
+= np.piecewise(<v>array_1<>, [<v>conditions<>], [<v>functions<>])<>
+
+<cb>= np.piecewise(<v>array_1<>,
+        [<v>condition_1<>, <v>condition_2<>, <v>...<>],
+        [<v>function_1<>, <v>function_2<>, <v>...<>])<>
+
+
+Applies functions to the elements in an array conditionally.
+
+For each condition that is <c>True<>, the corresponding function is applied to that element.
+If no condition is <c>True<> for an element, <c>piecewise()<> returns 0.
+
+
+Example:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([[<v>1<>, <v>2<>],
+                    [<v>3<>, <v>4<>]])
+
+<v>multiply_1<> = lambda <v>a<>: <v>a * 10<>
+<v>multiply_2<> = lambda <v>a<>: <v>a * -10<>
+
+<v>multiplied<> = np.piecewise(<v>array_1<>,
+        [<v>array_1<> \<= 2, <v>array_1<> > 2],
+        [<v>multiply_1<>, <v>multiply_2<>])
+
+<#># Returns:
+\#
+\#   [[ 10,  20],
+\#    [-30, -40]]<><>
+@
+@ numpy.piecewise(), np.piecewise(), .piecewise()
+
+
+
+### Function - Apply Mask
+
+<cb>import numpy as np
+
+= np.piecewise(<v>array_1<>, [<v>masks<>], [<v>functions<>])<>
+
+<cb>= np.piecewise(<v>array_1<>,
+        [<v>mask_1<>, <v>mask_2<>, <v>...<>],
+        [<v>function_1<>, <v>function_2<>, <v>...<>])<>
+
+
+Applies functions to the elements in an array where the masks are <v>True<>.
+
+For each mask location that is <c>True<>, the corresponding function is applied to that element.
+If an element is never referenced with a <c>True<> mask, <c>piecewise()<> returns 0.
+
+
+Example:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([[<v>1<>, <v>2<>],
+                    [<v>3<>, <v>4<>]])
+
+<v>mask_1<> = np.array([[<v>True<>,  <v>False<>],
+                   [<v>False<>, <v>True<>]])
+
+<v>mask_2<> = np.array([[<v>False<>, <v>True<>],
+                   [<v>True<>,  <v>False<>]])
+
+<v>multiply<> = lambda <v>a<>: <v>a * 10<>
+<v>same<> = lambda <v>a<>: <v>a<>
+
+<v>multiplied<> = np.piecewise(<v>array_1<>,
+        [<v>mask_1<>, <v>mask_2<>],
+        [<v>multiply<>, <v>same<>])
+
+<#># Returns:
+\#
+\#   [[10,  2],
+\#    [ 3, 40]]<><>
+@
+@ numpy.piecewise(), np.piecewise(), .piecewise()
+
+
+
+# Bitwise Functions
+
+
+
+### Bitwise - Invert (Complement)
+
+<cb>import numpy as np
+
+= np.invert(<v>array<>)<>
+
+
+Inverts the bits in each value in <c><v>array<><> (returns the complement).
+
+Complement = -<v>value<> - 1
+
+
+Example:
+
+<cb>import numpy as np
+
+<v>array<> = np.array([0b10101010, 0b0, 0b1111], dtype = np.byte)
+
+<v>result<> = np.invert(<v>array<>)
+
+<#># Returns [01010101 11111111 11110000]<><>
+@
+@ numpy.invert(), np.invert(), .invert()
+
+
+
+# Compare Functions
+@
+@ tests, comparison
+
+
+### Is Equal
+
+<cb>import numpy as np
+
+= np.array_equal(<v>array_1<>, <v>array_2<>)<>
+
+
+Returns: <c>bool<>
+
+
+Returns True when both arrays are same shape and have the same eleemnts.
+
+
+Examples:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([<v>1<>, <v>2<>, <v>3<>])
+<v>array_2<> = np.array([<v>1<>, <v>2<>, <v>3<>])
+
+<v>is_equal<> = np.array_equal(<v>array_1<>, <v>array_2<>)
+
+<#># Returns: True<><>
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([<v>1<>, <v>2<>, <v>3<>])
+<v>array_2<> = np.array([<v>1<>, <v>2<>, <v>4<>])
+
+<v>is_equal<> = np.array_equal(<v>array_1<>, <v>array_2<>)
+
+<#># Returns: False<><>
+@
+@ numpy.array_equal(), np.array_equal(), .array_equal(), equals
+
+
+
+### Is Equivalent
+
+<cb>import numpy as np
+
+= np.array_equiv(<v>array_1<>, <v>array_2<>)<>
+
+Returns: <c>bool<>
+
+
+Returns True if both arrays are same shape and have the same eleemnts.
+Will apply broadcasting rules if necessary.
+
+
+Examples:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([<v>1<>, <v>1<>, <v>1<>])
+<v>array_2<> = np.array([<v>1<>])
+
+<v>is_equivalent<> = np.array_equiv(<v>array_1<>, <v>array_2<>)
+
+<#># Returns: True<><>
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([<v>1<>, <v>1<>, <v>2<>])
+<v>array_2<> = np.array([<v>1<>])
+
+<v>is_equivalent<> = np.array_equiv(<v>array_1<>, <v>array_2<>)
+
+<#># Returns: False<><>
+@
+@ numpy.array_equiv(), np.array_equiv(), .array_equiv(), equals, 
+
+
+
+# Conditional Functions
+
+
+
+### Count Non-Zero Values
+
+<cb>import numpy as np
+
+= np.count_nonzero(<v>array_1<>)<>
+
+
+Returns the number of non-zero elements.
+
+
+Examples:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+        [[<v>2<>, <v>0<>, <v>3<>],
+         [<v>0<>, <v>0<>, <v>6<>]])
+
+<v>count<> = np.count_nonzero(<v>array_1<>)
+
+<#># Returns: 3<><>
+
+Count True Values:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+        [[<v>True<>, <v>True<>],
+         [<v>True<>, <v>False<>]])
+
+<v>count<> = np.count_nonzero(<v>array_1<>)
+
+<#># Returns: 3<><>
+@
+@ numpy.count_nonzero(), np.count_nonzero(), .count_nonzero(), count_nonzero
+@ numpy.count_non_zero(), np.count_non_zero(), .count_non_zero(), count_non_zero
+@ numpy.countnonzero(), np.countnonzero(), .countnonzero(), countnonzero
+@ mask
+
+
+
+### Extract Conditionally
+
+<cb>import numpy as np
+
+= np.extract(<v>condition<>, <v>array_1<>)<>
+
+Returns: <c>numpy.ndarray<>
+
+
+Returns a list values from <c><v>array_1<><> where the positions in <v>condition<><> are True.
+
+
+Examples:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([<v>1<>, <v>2<>, <v>3<>])
+<v>conditions<> = np.array([<v>True<>, <v>False<>, <v>True<>])
+
+<v>values<> = np.extract(<v>conditions<>, <v>array_1<>)
+
+<#># Returns [1, 3]<><>
+
+Get Index of Odd Values:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+        [[<v>1<>, <v>2<>, <v>3<>],
+         [<v>4<>, <v>5<>, <v>6<>]])
+
+<v>extracted<> = np.extract(<v>array_1<> % 2, <v>array_1<>)
+
+<#># Returns [1, 3, 5]<><>
+@
+@ numpy.extract(), np.extract(), .extract(), condition
+@ get, retrieve, elements, values, boolean index, mask
+
+
+
+### Extract By Index
+
+<cb>import numpy as np
+
+= np.choose(<v>select_indexes<>, <v>array_1<>)<>
+
+
+Returns the elements from the array at the selected index locations.
+
+
+Example:
+
+<cb>import numpy as np
+
+<v>array_1<> = array(
+        [[<v>1<>, <v>2<>, <v>3<>],
+         [<v>4<>, <v>5<>, <v>6<>]])
+
+<v>select<> = [<v>0<>,<v>0<>,<v>1<>]
+
+<v>extracted<> = np.choose(<v>select<>, <v>array_1<>)
+
+<#># Returns: [1, 2, 6]<><>
+@
+@ numpy.choose(), np.choose(), .choose()
+
+
+
+### Non-Zero Indexes
+
+<cb>import numpy as np
+
+= np.nonzero(<v>array_1<>)<>
+
+Returns: Integer Index (<c>tuple<> of <c>ndarray<>)
+
+
+Return the integer index for all non-zero values,
+as a tuple of index arrays, one for each axis.
+Each index array maps the index values along an axis.
+
+
+Example:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+        [[<v>2<>, <v>0<>, <v>3<>],
+         [<v>0<>, <v>0<>, <v>6<>]])
+
+<v>indices<> = np.nonzero(<v>array_1<>)
+
+<#># Returns: ([0, 0, 1], [0, 2, 2])<><>
+@
+@ numpy.nonzero(), np.nonzero(), .nonzero(), nonzero, indices
+@ integer index
+
+
+
+### Where / Conditional Values
+
+<cb>import numpy as np
+
+= np.where(<v>condition<>, <v>true_array<>, <v>false_array<>)<>
+
+Returns: <c>numpy.ndarray<>
+
+
+Works similarly to Pythons conditional operator (<c><v>true_value<> if <v>condition<> else <v>false<><>) and operates at the element level.
+
+Returns an array of values based on the True | False values in <c><v>condition<><>.
+Returns values from <c><v>true_array<><> where that position is True in <c><v>condition<><>.
+Returns values from <c><v>false_array<><> where that position is False in <c><v>condition<><>.
+
+
+Example:
+
+<cb>import numpy as np
+from numpy import array
+
+<v>true_array<> = [<v>1<>, <v>2<>, <v>3<>]
+<v>false_array<> = [<v>-1<>, <v>-2<>, <v>-3<>]
+<v>condition<> = [<v>True<>, <v>False<>, <v>True<>]
+
+<v>result<> = np.where(<v>condition<>, <v>true_array<>, <v>false_array<>)
+
+<#># Returns [1, -2, 3]<><>
+@
+@ numpy.where(), np.where(), .where(), condition, ternary, conditional
+@ mask, boolean index
+
+
+
+### Where / Conditional Indexes
+
+<cb>import numpy as np
+
+= np.argwhere(<v>condition<>)<>
+
+Returns: <c>numpy.ndarray<>
+
+
+Returns an array of index tuples matching the index of values where the condition are True or non zero.
+
+
+Examples:
+
+<cb>import numpy as np
+
+<v>conditions<> = np.array([<v>True<>, <v>False<>, <v>True<>])
+
+<v>result<> = np.argwhere(<v>conditions<>)
+
+<#># Returns [[0], [2]]<><>
+
+Get Index of Odd Values:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+        [[<v>1<>, <v>2<>, <v>3<>],
+         [<v>4<>, <v>5<>, <v>6<>]])
+
+<v>result<> = np.argwhere(<v>array_1<> % 2)
+
+<#># Returns [[0, 0], [0, 2], [1, 1]]<><>
+@
+@ numpy.argwhere(), np.argwhere(), .argwhere(), condition
+@ mask, boolean index
+
+
+
+# Logical Functions
+@
+@ boolean, operators
+
+
+### Logical And
+
+<cb>import numpy as np
+
+= np.logical_and(<v>array_a<>, <v>array_b<>)<>
+
+
+Performs a logical AND on each element between the arrays.
+
+
+Example:
+
+<cb>import numpy as np
+
+<v>array_a<> = np.array([True, False, True, False])
+<v>array_b<> = np.array([True, True, False, False])
+
+<v>a_and_b<> = np.logical_and(<v>array_a<>, <v>array_b<>)
+
+<#># Returns: [True, False, False, False]<><>
+@
+@ numpy.logical_and(), np.logical_and(), .logical_and()
+
+
+
+### Logical Not
+
+<cb>import numpy as np
+
+= np.logical_not(<v>array_a<>)<>
+
+
+Performs a logical NOT on each element in the array.
+
+
+Example:
+
+<cb>import numpy as np
+
+<v>array_a<> = np.array([True, False])
+
+<v>not_a<> = np.logical_not(<v>array_a<>)
+
+<#># Returns: [False, True]<><>
+@
+@ numpy.logical_not(), np.logical_not(), .logical_not()
+
+
+
+### Logical Or
+
+<cb>import numpy as np
+
+= np.logical_or(<v>array_a<>, <v>array_b<>)<>
+
+
+Performs a logical OR on each element between the arrays.
+
+
+Example:
+
+<cb>import numpy as np
+
+<v>array_a<> = np.array([True, False, True, False])
+<v>array_b<> = np.array([True, True, False, False])
+
+<v>a_or_b<> = np.logical_or(<v>array_a<>, <v>array_b<>)
+
+<#># Returns: [True, True, True, False]<><>
+@
+@ numpy.logical_or(), np.logical_or(), .logical_or()
+
+
+
+### Logical Xor
+
+<cb>import numpy as np
+
+= np.logical_xor(<v>array_a<>, <v>array_b<>)<>
+
+
+Performs a logical XOR on each element between the arrays.
+
+
+Example:
+
+<cb>import numpy as np
+
+<v>array_a<> = np.array([True, False, True, False])
+<v>array_b<> = np.array([True, True, False, False])
+
+<v>a_xor_b<> = np.logical_xor(<v>array_a<>, <v>array_b<>)
+
+<#># Returns: [False, True, True, False]<><>
+@
+@ numpy.logical_xor(), np.logical_xor(), .logical_xor()
+
+
+
+# Math Functions
+@
+@ maths
+
+
+
+### Absolute Value
+
+<cb>import numpy as np
+
+= abs(<v>array_1<>)<>
+
+Converts all values in <c><v>array_1<><> to positive values.
+
+
+Example:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([1, -2, 3, -4])
+
+<v>absolute<> = abs(<v>array_1<>)<>
+
+<#># Returns [1, 2, 3, 4]<><>
+@
+@ np.abs(), of
+
+
+
+### Exponent
+
+<cb>import numpy as np
+
+= np.exp(<v>array_1<>)<>
+
+
+Returns the exponent (e to the power of) for every value in <c><v>array_1<><>.
+
+
+Equivalent To:
+
+<cb>= np.e ** <v>array_1<><>
+
+or
+
+<cb>= e<super><v>array_1<><><>
+
+
+Example:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([-1, 0, 1, 2])
+
+<v>exponents<> = np.exp(<v>array_1<>).round(decimals = 2)
+
+<#># Returns [0.37, 1.0, 2.72, 7.39]<><>
+@
+@ np.exp(), .exp(), power of, base-e, base e
+
+
+
+### Exponent 2
+
+<cb>import numpy as np
+
+= np.exp2(<v>array_1<>)<>
+
+
+Returns 2 to the power of each value in <c><v>array_1<><> ('2 exponent').
+
+
+Equivalent To:
+
+<cb>= 2 ** <v>array_1<><>
+
+or
+
+<cb>= 2<super><v>array_1<><><>
+
+
+Example:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([-1, 0, 1, 2])
+
+<v>exponents<> = np.exp2(<v>array_1<>).round(decimals = 2)
+
+<#># Returns [0.5, 1.0, 2.0, 4.0]<><>
+@
+@ np.exp2(), .exp2(), power of, base 2, base-2
+
+
+
+### Exponent Minus One
+
+<cb>import numpy as np
+
+= np.expm1(<v>array_1<>)<>
+
+
+Returns the exponent for all values in <c><v>array_1<><>, then subtracts 1 from them.
+
+
+Equivalent To:
+
+<cb>= np.exp(<v>array_1<>) - 1<>
+
+or
+
+<cb>= (np.e ** <v>array_1<>) - 1<>
+
+
+Example:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([-1, 0, 1, 2])
+
+<v>exponents<> = np.expm1(<v>array_1<>).round(decimals = 2)
+
+<#># Returns [-0.63, 0.0, 1.72, 6.39]<><>
+@
+@ np.exp(), .exp(), power of, base-e
+
+
+
+### Log
+
+<cb>import numpy as np
+
+= np.log(<v>array_1<>)<>
+
+
+Returns the natural log for all values in <c><v>array_1<><>.
+
+
+Example:
+
+<cb>import numpy as np
+from numpy import e
+
+<v>array_1<> = np.array([1/e, 1, e, e**2])
+
+<v>logs<> = np.log(<v>array_1<>)
+
+<#># Returns [-1.0, 0.0, 1.0, 2.0]<><>
+@
+@ np.log(), .log(), natural, logarithm, of, base e, base-e
+
+
+
+### Log Base 10
+
+<cb>import numpy as np
+
+= np.log10(<v>array_1<>)<>
+
+
+Returns the base 10 log for all values in <c><v>array_1<><>.
+
+
+Example:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([1/10, 1, 10, 100])
+
+<v>logs<> = np.log10(<v>array_1<>)
+
+<#># Returns [-1.0, 0.0, 1.0, 2.0]<><>
+@
+@ np.log10(), .log10(), logarithm, of, base-10
+
+
+
+### Log Base 2
+
+<cb>import numpy as np
+
+= np.log2(<v>array_1<>)<>
+
+
+Returns the base 2 log for all values in <c><v>array_1<><>.
+
+
+Example:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([1/2, 1, 2, 4])
+
+<v>logs<> = np.log2(<v>array_1<>)
+
+<#># Returns [-1.0, 0.0, 1.0, 2.0]<><>
+@
+@ np.log2(), .log2(), logarithm, of, base-2
+
+
+
+### Log Base N
+
+<cb>from numpy.lib.scimath import logn
+
+= logn(<v>base<>, <v>array_1<>)<>
+
+
+Returns the base n log for all values in <c><v>array_1<><>.
+
+
+Example:
+
+<cb>import numpy as np
+from numpy.lib.scimath import logn
+
+<v>array_1<> = np.array([1/8, 1, 8, 64])
+
+<v>logs<> = logn(8, <v>array_1<>)
+
+<#># Returns [-1.0, 0.0, 1.0, 2.0]<><>
+@
+@ numpy.lib.scimath.logn(), scimath.logn(), .logn(), logarithm, of, base-n
+
+
+
+### Log One Plus
+
+<cb>import numpy as np
+
+= np.log1p(<v>array_1<>)<>
+
+
+Adds 1 to each value in the array and then calculates the natural log.
+
+
+Equivalent To:
+
+<cb>= np.log (<v>array_1<> + 1)<>
+
+
+Example:
+
+<cb>import numpy as np
+from numpy import e
+
+<v>array_1<> = np.array([0, e - 1, e**2 - 1])
+
+<v>logs<> = np.log1p(<v>array_1<>)
+
+<#># Returns [0.0, 1.0, 2.0]<><>
+@
+@ np.log1p(), .log1p(), natural, logarithm, of, base-e
+
+
+
+### Log of Sum of Exponents
+
+<cb>import numpy as np
+
+= np.logaddexp(<v>array_1<>, <v>array_2<>)<>
+
+
+Returns the log of the sum of the exponents for each array.
+
+
+Equivalent To:
+
+<cb>= np.log(np.exp(<v>array_1<>) + np.exp(<v>array_2<>))<>
+
+or
+
+<cb>= log(e<super><v>array_1<><> + e<super><v>array_2<><>)<>
+
+
+Example:
+
+<cb>import numpy as np
+from numpy import e
+
+<v>array_1<> = np.array([0,                 0, 1.3068528194400548])
+<v>array_2<> = np.array([0, 0.541324854612918, 1.3068528194400548])
+
+<v>log_sum<> = np.logaddexp(<v>array_1<>, <v>array_2<>)
+
+<#># Returns [0.69314718, 1.0, 2.0]<><>
+@
+@ np.logaddexp(), .logaddexp(), logarithm add exp, base e, base-e
+
+
+
+### Log of Sum of Exponents 2
+
+<cb>import numpy as np
+
+= np.logaddexp2(<v>array_1<>, <v>array_2<>)<>
+
+
+Returns the log of the sum of the 'binary' exponents for each array.
+
+
+Equivalent To:
+
+<cb>= np.log2(np.exp2(<v>array_1<>) + np.exp2(<v>array_2<>))<>
+
+or
+
+<cb>= log2(2<super><v>array_1<><> + 2<super><v>array_2<><>)<>
+
+
+Example:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([0, 1])
+<v>array_2<> = np.array([0, 1])
+
+<v>log_sum<> = np.logaddexp2(<v>array_1<>, <v>array_2<>)
+
+<#># Returns [1.0, 2.0]<><>
+@
+@ np.logaddexp2(), .logaddexp2(), logarithm add exp, base 2, base-2
+
+
+
+### Power
+
+<cb>import numpy as np
+
+= np.power(<v>array_1<>, <v>array_2<>)<>
+
+<cb>= power(<v>array_1<>, <v>value_2<>)<>
+
+Equivalent of:
+
+<cb>= <v>array_1<> ** <v>array_2<><>
+
+<cb>= <v>array_1<> ** <v>value_2<><>
+
+
+Raises all values in <c><v>array_1<><> to either the corresponding value in <c><v>array_2<><> or by <c><v>value_2<><>.
+
+
+Example:
+
+Array ** Array:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([2, 5, 10])
+<v>array_2<> = np.array([2, 3, 4])
+
+<v>power<> = np.power(<v>array_1<>, <v>array_2<>)
+
+<#># Returns [4, 125, 10000]<><>
+
+Array ** Scalar:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([2, 5, 10])
+
+<v>power<> = np.power(<v>array_1<>, 2)
+
+<#># Returns [4, 25, 100]<><>
+@
+@ np.power(), .power(), np.pow(), .pow(), power of
+
+
+
+### Square Root
+
+<cb>= sqrt(<v>array_1<>)<>
+
+
+Calculates the square root of all values.
+
+
+Example:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([4, 25, 100])
+
+<v>square_root<> = np.sqrt(<v>array_1<>, <v>array_2<>)
+
+<#># Returns [2.0, 5.0, 10.0]<><>
+@
+@ np.sqrt(), .sqrt(), of
+
+
+
+# Manipulation Functions
+
+
+
+### Concatenate
+
+<cb>import numpy as np
+
+= np.concatenate((<v>array_1<>, <v>array_2<>))<>
+
+<cb>= np.concatenate((<v>array_1<>, <v>array_2<>), axis = <v>axis<>)<>
+
+
+Joins two arrays along an axis.
+Default axis is 0.
+
+
+Examples:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([<v>1<>, <v>2<>, <v>3<>])
+<v>array_2<> = np.array([<v>4<>, <v>5<>, <v>6<>])
+
+<v>joined<> = np.concatenate((<v>array_1<>, <v>array_2<>))
+
+<#># Returns: [1, 2, 3, 4, 5, 6]<><>
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([[<v>1<>, <v>2<>], [<v>3<>, <v>4<>]])
+<v>array_2<> = np.array([[<v>5<>, <v>6<>]])
+
+<v>joined<> = np.concatenate((<v>array_1<>, <v>array_2<>))
+
+<#># Returns: [[1, 2], [3, 4], [5, 6]]<><>
+@
+@ arrays
+@ numpy.concatenate(), np.concatenate(), .concatenate()
+@ append, merge, combine, union
+
+
+
+### Expand / Pad
+
+<cb>import numpy as np
+
+= np.pad(<v>array_1<>, <v>expand_size<>)<>
+
+Expand on All Axes:
+
+<cb>= np.pad(<v>array_1<>, (<v>before<>, <v>after<>))<>
+
+Expand Each Axis Explicitly:
+
+<cb>= np.pad(<v>array_1<>,
+        ((<v>before<>, <v>after<>),
+        (<v>before<>, <v>after<>),
+        <v>...<>))<>
+
+Set Default Value:
+
+<cb>= np.pad(<v>array_1<>, <v>expand_size<>, constant_values = <v>value<>)<>
+
+<cb>= np.pad(<v>array_1<>, <v>expand_size<>, constant_values = (<v>before_value<>, <v>after_value<>)<>
+
+
+Expands (pads) the size of an array.
+
+Padding sizes are given as pairs of values giving the number of entries before and after the current data.
+Each pair applies to an axis.
+
+
+Examples:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([[<v>1<>, <v>2<>, <v>3<>]])
+
+<v>expanded<> = np.pad(<v>array_1<>, ((<v>0<>, <v>1<>)))
+
+<#># Returns:
+\#
+\#   [[1, 2, 3, 0],
+\#    [0, 0, 0, 0]]<><>
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([[<v>1<>, <v>2<>, <v>3<>]])
+
+<v>expanded<> = np.pad(<v>array_1<>, ((<v>0<>, <v>1<>), (<v>0<>, <v>0<>)))
+
+<#># Returns:
+\#
+\#   [[1, 2, 3],
+\#    [0, 0, 0]]<><>
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([[<v>1<>, <v>2<>, <v>3<>]])
+
+<v>padding<> = ((<v>0<>, <v>1<>), (<v>0<>, <v>0<>))
+<v>expanded<> = np.pad(<v>array_1<>, <v>padding<>, constant_values = 4)
+
+<#># Returns:
+\#
+\#   [[1, 2, 3],
+\#    [4, 4, 4]]<><>
+@
+@ numpy.pad(), np.pad(), .pad(), expand()
+@ .resize()
+
+
+
+### Flip / Reverse
+
+<cb>import numpy as np
+
+= np.flip(<v>array_1<>, axis = <v>n<>)<>
+
+Flip All Axes:
+
+<cb>= np.flip(<v>array_1<>)<>
+
+
+Flips (reverses) all the elements along an axis.
+If no axis is given, this will flip all values along all axes.
+
+
+Examples:
+
+Flip All:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+    [[<v>1<>, <v>2<>, <v>3<>],
+     [<v>4<>, <v>5<>, <v>6<>],
+     [<v>7<>, <v>8<>, <v>9<>]])
+
+<v>flipped<> = np.flip(<v>array_1<>)
+
+<#># Returns:
+\#
+\#   [[9, 8, 7],
+\#    [6, 5, 4],
+\#    [3, 2, 1]]
+<><>
+
+Flip Axis 0:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+    [[<v>1<>, <v>2<>, <v>3<>],
+     [<v>4<>, <v>5<>, <v>6<>],
+     [<v>7<>, <v>8<>, <v>9<>]])
+
+<v>flipped<> = np.flip(<v>array_1<>, axis = 0)
+
+<#># Returns:
+\#
+\#   [[7, 8, 9],
+\#    [4, 5, 6],
+\#    [1, 2, 3]]<><>
+@
+@ numpy.flip(), np.flip(), .flip(),
+@ reverse, mirror
+
+
+
+### Flip / Reverse Horizontally (Axis 1)
+
+<cb>import numpy as np
+
+= np.fliplr(<v>array_1<>)<>
+
+
+Flips (reverses) all the elements on axis 1.
+
+
+Example:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+    [[<v>1<>, <v>2<>, <v>3<>],
+     [<v>4<>, <v>5<>, <v>6<>],
+     [<v>7<>, <v>8<>, <v>9<>]])
+
+<v>flipped<> = np.fliplr(<v>array_1<>)
+
+<#># Returns:
+\#
+\#   [[3, 2, 1],
+\#    [6, 5, 4],
+\#    [9, 8, 7]]<><>
+@
+@ numpy.fliplr(), np.fliplr(), .fliplr(),
+@ reverse, mirror, left, right
+
+
+
+### Flip / Reverse Vertically (Axis 0)
+
+<cb>import numpy as np
+
+= np.flipud(<v>array_1<>)<>
+
+Alternative (More Efficient):
+
+<cb>= <v>array_1<>[::-1]<>
+
+
+Flips (reverses) all the elements on axis 0.
+
+
+Example:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+    [[<v>1<>, <v>2<>, <v>3<>],
+     [<v>4<>, <v>5<>, <v>6<>],
+     [<v>7<>, <v>8<>, <v>9<>]])
+
+<v>flipped<> = np.flipud(<v>array_1<>)
+
+<#># Returns:
+\#
+\#   [[7, 8, 9],
+\#    [4, 5, 6],
+\#    [1, 2, 3]]<><>
+@
+@ numpy.flipud(), np.flipud(), .flipud(),
+@ reverse, mirror, up, down
+
+
+
+### Repeat Elements
+
+<cb>import numpy as np
+
+= np.repeat(<v>array_1<>, <v>count<>)<>
+
+
+Repeats each element <v><c>count<><> times.
+
+
+Example:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([<v>1<>, <v>2<>, <v>3<>])
+
+<v>repeated<> = np.repeat(<v>array_1<>, <v>3<>)
+
+<#># Return: [1, 1, 1, 2, 2, 2, 3, 3, 3]<><>
+@
+@ numpy.repeat(), np.repeat(), .repeat()
+
+
+
+### Repeat Tiled
+
+<cb>import numpy as np
+
+= np.tile(<v>array_1<>, <v>count<>)<>
+
+
+Repeats an array <v><c>count<><> times.
+
+
+Example:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([<v>1<>, <v>2<>, <v>3<>])
+
+<v>tiled<> = np.tile(<v>array_1<>, <v>3<>)
+
+<#># Return: [1, 2, 3, 1, 2, 3, 1, 2, 3]<><>
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+        [[<v>1<>, <v>2<>],
+         [<v>3<>, <v>4<>]])
+
+<v>tiled<> = np.tile(<v>array_1<>, <v>3<>)
+
+<#># Return:
+\#
+\#    [[1, 2, 1, 2, 1, 2],
+\#     [3, 4, 3, 4, 3, 4]]<><>
+@
+@ numpy.tile(), np.tile(), .tile()
+
+
+
+### Rotate 90˚ ⃔
+
+<cb>import numpy as np
+
+= np.rot90(<v>array_1<>)<>
+
+
+Rotates the array anti-clockwise 90˚.
+
+
+Example:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+    [[<v>1<>, <v>2<>, <v>3<>],
+     [<v>4<>, <v>5<>, <v>6<>],
+     [<v>7<>, <v>8<>, <v>9<>]])
+
+<v>rotated<> = np.rot90(<v>array_1<>)
+
+<#># Returns:
+\#
+\#   [[3, 6, 9],
+\#    [2, 5, 8],
+\#    [1, 4, 7]]<><>
+@
+@ numpy.rot90(), np.rot90(), .rot90()
+@ degrees, anti-clockwise
+
+
+
+### Rotate 180˚
+
+<cb>import numpy as np
+
+= np.rot90(<v>array_1<>, 2)<>
+
+
+Rotates the array by 180˚.
+
+
+Example:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+    [[<v>1<>, <v>2<>, <v>3<>],
+     [<v>4<>, <v>5<>, <v>6<>],
+     [<v>7<>, <v>8<>, <v>9<>]])
+
+<v>rotated<> = np.rot90(<v>array_1<>, 2)
+
+<#># Returns:
+\#
+\#   [[9, 8, 7],
+\#    [6, 5, 4],
+\#    [3, 2, 1]]<><>
+@
+@ numpy.rot90(), np.rot90(), .rot90()
+@ degrees
+
+
+
+### Rotate 90˚ ⃕
+
+<cb>import numpy as np
+
+= np.rot90(<v>array_1<>, -1)<>
+
+
+Rotates the array anti clockwise 270˚ (clockwise 90˚).
+
+
+Example:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+    [[<v>1<>, <v>2<>, <v>3<>],
+     [<v>4<>, <v>5<>, <v>6<>],
+     [<v>7<>, <v>8<>, <v>9<>]])
+
+<v>rotated<> = np.rot90(<v>array_1<>, -1)
+
+<#># Returns:
+\#
+\#   [[7, 4, 1],
+\#    [8, 5, 2],
+\#    [9, 6, 3]]<><>
+@
+@ numpy.rot90(), np.rot90(), .rot90()
+@ -90˚, 270˚, degrees, clockwise
+
+
+
+### Shift / Roll
+
+<cb>import numpy as np
+
+= np.roll(<v>array_1<>, <v>positions<>, axis = <v>axis<>)<>
+
+Flatten, then Shift:
+
+<cb>= np.roll(<v>array_1<>, <v>positions<>)<>
+
+
+Shifts all the values along a given axis.
+Entries that roll off the bottom are moved to the top.
+If no axis is given, then shift the underlying memory (basically flatten, shift and restore shape).
+
+
+Examples:
+
+Shift 2 Positions on Axis 0:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+    [[<v>1<>, <v>2<>, <v>3<>],
+     [<v>4<>, <v>5<>, <v>6<>],
+     [<v>7<>, <v>8<>, <v>9<>]])
+
+<v>shifted<> = np.roll(<v>array_1<>, 2, axis = 0)
+
+<#># Returns:
+\#
+\#   [[4, 5, 6],
+\#    [7, 8, 9],
+\#    [1, 2, 3]]<><>
+
+Shift Underlying Positions By 2:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+    [[<v>1<>, <v>2<>, <v>3<>],
+     [<v>4<>, <v>5<>, <v>6<>],
+     [<v>7<>, <v>8<>, <v>9<>]])
+
+<v>shifted<> = np.roll(<v>array_1<>, 2)
+
+<#># Returns:
+\#
+\#   [[8, 9, 1],
+\#    [2, 3, 4],
+\#    [5, 6, 7]]<><>
+@
+@ numpy.roll(), np.roll(), .roll()
+
+
+
+### Split
+
+<cb>import numpy as np
+
+= np.split(<v>array_1<>, <v>count<>)<>
+
+<cb>= np.split(<v>array_1<>, <v>count<>, axis = <v>n<>)<>
+
+Split Unevenly:
+
+<cb>= np.array_split(<v>array_1<>, <v>count<>)<>
+
+<cb>= np.array_split(<v>array_1<>, <v>count<>, axis = <v>n<>)<>
+
+Returns: <c>list<> of <c>ndarray<>
+
+
+Splits an array into sub-arrays and returns them in a list.
+Returns <c><v>count<><> number of sub-arrays.
+
+<c>split()<> requires that the array splits evenly and all sub-arrays will be the same size.
+<c>array_split()<> allows the arrays to split even if the resulting sub-arrays are different sizes.
+
+
+Example:
+
+Split In 2:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+        [[<v>1<>, <v>2<>, <v>3<>, <v>4<>],
+         [<v>5<>, <v>6<>, <v>7<>, <v>8<>]])
+
+<v>split<> = np.split(<v>array_1<>, <v>2<>)
+
+<#># Returns:
+\#
+\#   list[
+\#       array([1, 2, 3, 4]),
+\#       array([5, 6, 7, 8])
+\#   ]<><>
+
+Split In 2 on Axis 1:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+        [[<v>1<>, <v>2<>, <v>3<>, <v>4<>],
+         [<v>5<>, <v>6<>, <v>7<>, <v>8<>]])
+
+<v>split<> = np.split(<v>array_1<>, <v>2<>, axis = <v>1<>)
+
+<#># Returns:
+\#
+\#   list[
+\#       array([[1, 2], [5, 6]]),
+\#       array([[3, 4], [7, 8]])
+\#   ]<><>
+
+Split In 3:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+        [[<v>1<>, <v>2<>, <v>3<>, <v>4<>],
+         [<v>5<>, <v>6<>, <v>7<>, <v>8<>]])
+
+<v>split<> = np.array_split(<v>array_1<>, <v>3<>)
+
+<#># Returns:
+\#
+\#   list[
+\#       array([[1, 2], [5, 6]]),
+\#       array([[3, 4], [7, 8]]),
+\#       array([])
+\#   ]<><>
+@
+@ numpy.array_split(), np.array_split(), .array_split()
+@ numpy.split(), np.split(), .split()
+
+
+
+### Split Deep (Axis 2)
+
+<cb>import numpy as np
+
+= np.dsplit(<v>array_1<>, <v>count<>)<>
+
+Returns: <c>list<> of <c>ndarray<>
+
+
+Splits an array into sub-arrays along axis 2.
+Returns the sub-arrays as a list of arrays.
+Returns <c><v>count<><> number of sub-arrays.
+
+
+Example:
+
+Split In 2:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+        [[[<v>1<>, <v>2<>],
+          [<v>3<>, <v>4<>]],
+         [[<v>5<>, <v>6<>],
+          [<v>7<>, <v>8<>]]])
+
+<v>split<> = np.dsplit(<v>array_1<>, <v>2<>)
+
+<#># Returns:
+\#
+\#   list[
+\#       array([[[1], [3]],
+\#              [[5], [7]]]),
+\#       array([[[2], [4]],
+\#              [[6], [8]]])
+\#   ]<><>
+@
+@ numpy.dsplit(), np.dsplit(), .dsplit()
+
+
+
+### Split Horizontally (Axis 1)
+
+<cb>import numpy as np
+
+= np.hsplit(<v>array_1<>, <v>count<>)<>
+
+Returns: <c>list<> of <c>ndarray<>
+
+
+Splits an array horizontally into sub-arrays along axis 1.
+Returns the sub-arrays as a list of arrays.
+Returns <c><v>count<><> number of sub-arrays.
+
+
+Example:
+
+Split In 2:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+        [[<v>1<>, <v>2<>, <v>3<>, <v>4<>],
+         [<v>5<>, <v>6<>, <v>7<>, <v>8<>]])
+
+<v>split<> = np.hsplit(<v>array_1<>, <v>2<>)
+
+<#># Returns:
+\#
+\#   list[
+\#       array([[1, 2], [5, 6]]),
+\#       array([[3, 4], [7, 8]])
+\#   ]<><>
+@
+@ numpy.hsplit(), np.hsplit(), .hsplit()
+
+
+
+### Split Vertically (Axis 0)
+
+<cb>import numpy as np
+
+= np.vsplit(<v>array_1<>, <v>count<>)<>
+
+Returns: <c>list<> of <c>ndarray<>
+
+
+Splits an array vertically into sub-arrays along axis 0.
+Returns the sub-arrays as a list of arrays.
+Returns <c><v>count<><> number of sub-arrays.
+
+
+Example:
+
+Split In 2:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+        [[<v>1<>, <v>2<>, <v>3<>],
+         [<v>4<>, <v>5<>, <v>6<>]])
+
+<v>split<> = np.vsplit(<v>array_1<>, <v>2<>)
+
+<#># Returns:
+\#
+\#   list[
+\#       array([[1, 2, 3]]),
+\#       array([[4, 5, 6]])
+\#   ]<><>
+@
+@ numpy.vsplit(), np.vsplit(), .vsplit()
+
+
+
+### Stack
+
+<cb>import numpy as np
+
+= np.stack((<v>array_1<>, <v>array_2<>))<>
+
+<cb>= np.stack((<v>array_1<>, <v>array_2<>, <v>...<>, <v>array_n<>))<>
+
+<cb>= np.stack(<v>arrays<>, axis = <v>n<>)<>
+
+
+Creates a new array containing all the given arrays.
+Defaults to axis 0.
+
+
+Examples:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([[<v>1<>, <v>1<>], [<v>1<>, <v>1<>]])
+<v>array_2<> = np.array([[<v>2<>, <v>2<>], [<v>2<>, <v>2<>]])
+
+<v>stacked<> = np.stack([<v>array_1<>, <v>array_2<>])
+
+<#># Returns
+\#
+\#   [[[1, 1], [1, 1]],
+\#    [[2, 2], [2, 2]]]<><>
+
+Stack on Axis 1:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([[<v>1<>, <v>1<>], [<v>1<>, <v>1<>]])
+<v>array_2<> = np.array([[<v>2<>, <v>2<>], [<v>2<>, <v>2<>]])
+
+<v>stacked<> = np.stack([<v>array_1<>, <v>array_2<>], axis = 1)
+
+<#># Returns:
+\#
+\#   [[[1, 1], [2, 2]],
+\#    [[1, 1], [2, 2]]]<><>
+@
+@ numpy.stack(), np.stack(), .stack()
+
+
+
+### Stack Deep (Axis 2)
+
+<cb>import numpy as np
+
+= np.dstack((<v>array_1<>, <v>array_2<>))<>
+
+<cb>= np.dstack((<v>array_1<>, <v>array_2<>, <v>...<>, <v>array_n<>))<>
+
+
+Combines 2 or more arrays along axis 2.
+Creates an new array of same size 
+Pairs up all elements at a given location into a new array
+<c>dstack()<> will create axes as needed to create a 3 dimension array.
+
+
+Example:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+        [[<v>1<>, <v>2<>],
+         [<v>3<>, <v>4<>]])
+
+<v>array_2<> = np.array(
+        [[<v>21<>, <v>22<>],
+         [<v>23<>, <v>24<>]])
+
+<v>stacked<> = np.dstack([<v>array_1<>, <v>array_2<>])
+
+<#># Returns
+\#
+\#   [[[1, 21],
+\#     [2, 22]],
+\#    [[3, 23],
+\#     [4, 24]]]<><>
+@
+@ numpy.dstack(), np.dstack(), .dstack(), depth
+
+
+
+### Stack Horizontally (Axis 1)
+
+<cb>import numpy as np
+
+= np.hstack((<v>array_1<>, <v>array_2<>))<>
+
+<cb>= np.hstack((<v>array_1<>, <v>array_2<>, <v>...<>, <v>array_n<>))<>
+
+
+Combines 2 or more arrays along axis 1.
+
+
+Equivalent To:
+
+<cb>= np.concatenate(<v>arrays<>, axis = 1)<>
+
+
+Example:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+        [[<v>1<>, <v>1<>],
+         [<v>1<>, <v>1<>]])
+
+<v>array_2<> = np.array(
+        [[<v>2<>, <v>2<>],
+         [<v>2<>, <v>2<>]])
+
+<v>stacked<> = np.hstack([<v>array_1<>, <v>array_2<>])
+
+<#># Returns
+\#
+\#   [[1, 1, 2, 2],
+\#    [1, 1, 2, 2]]<><>
+@
+@ numpy.hstack(), np.hstack(), .hstack()
+
+
+
+### Stack Vertically (Axis 0)
+
+<cb>import numpy as np
+
+= np.vstack((<v>array_1<>, <v>array_2<>))<>
+
+<cb>= np.vstack((<v>array_1<>, <v>array_2<>, <v>...<>, <v>array_n<>))<>
+
+
+Combines 2 or more arrays along axis 0.
+
+
+Example:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+        [[<v>1<>, <v>1<>],
+         [<v>1<>, <v>1<>]])
+
+<v>array_2<> = np.array(
+        [[<v>2<>, <v>2<>],
+         [<v>2<>, <v>2<>]])
+
+<v>stacked<> = np.vstack([<v>array_1<>, <v>array_2<>])
+
+<#># Returns
+\#
+\#   [[1, 1],
+\#    [1, 1],
+\#    [2, 2],
+\#    [2, 2]]<><>
+@
+@ numpy.vstack(), np.vstack(), .vstack()
+
+
+
+### Swap Axes
+
+<cb>import numpy as np
+
+= np.swapaxes(<v>array_1<>, <v>axis_1<>, <v>axis_2<>)<>
+
+
+Swap the values along 2 axes.
+
+
+Examples:
+
+Swap Axes 0 and 1:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+        [[<v>1<>, <v>2<>, <v>3<>],
+         [<v>4<>, <v>5<>, <v>6<>]])
+
+<v>swapped<> = np.swapaxes(<v>array_1<>, <v>0<>, <v>1<>)
+
+<#># Return:
+\#
+\#   [[1, 4],
+\#    [2, 5],
+\#    [3, 6]]<><>
+
+Swap Axes 0 and 2:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+        [[[ <v>1<>,  <v>2<>,  <v>3<>],
+          [ <v>4<>,  <v>5<>,  <v>6<>]],
+         [[ <v>7<>,  <v>8<>,  <v>9<>],
+          [<v>10<>, <v>11<>, <v>12<>]]])
+
+<v>swapped<> = np.swapaxes(<v>array_1<>, <v>0<>, <v>2<>)
+
+<#># Return:
+\#
+\#   [[[1,  7],
+\#     [4, 10]],
+\#    [[2,  8],
+\#     [5, 11]],
+\#    [[3,  9],
+\#     [6, 12]]]<><>
+@
+@ numpy.swapaxes(), np.swapaxes(), .swapaxes()
+
+
+
+# Matrix Functions
+
+
+
+### Matrix - Determinant
+
+<cb>import numpy as np
+
+= np.linalg.det(<v>array_1<>)<>
+
+
+Calculates the determinant of a matrix.
+
+
+Example:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+        [[<v>1<>, <v>2<>],
+         [<v>3<>, <v>4<>]])
+
+<v>determinant<> = np.linalg.det(<v>array_1<>)
+
+<#># Returns: -2.0000000000000004<><>
+@
+@ np.linalg.det(), .linalg.det(), .det()
+
+
+
+### Matrix - Inverse
+
+<cb>import numpy as np
+
+= np.linalg.inv(<v>array_1<>)<>
+
+
+Calculates the inverse of a matrix.
+Only works for square matrices with non zero deteminants.
+
+
+Example:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+        [[<v>1<>, <v>2<>],
+         [<v>3<>, <v>4<>]])
+
+<v>inverse<> = np.linalg.inv(<v>array_1<>)
+
+<#># Returns:
+\#
+\#   [[-2.   1. ]
+\#    [ 1.5 -0.5]]<><>
+@
+@ np.linalg.det(), .linalg.det(), .det()
+
+
+
+### Matrix - Product (Multiply)
+
+<cb>= np.dot(<v>array_1<>, <v>array_2<>)<>
+
+
+Calculates the product of two matrices.
+<c><v>array_1<><>'s row size must equal <c><v>array_2<><>'s column size.
+
+
+Better:
+
+<cb>= <v>array_1<> @ <v>array_2<><>
+
+
+Example:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+        [[1, 2, 3],
+         [4, 5, 6]])
+
+<v>array_2<> = np.array(
+        [2, 3, 4])
+
+<v>product<> = np.dot(<v>array_1<>, <v>array_2<>)
+
+<#>Returns: [ 20  47 ]<><>
+@
+@ .dot(), dot product, Multiplication
+
+
+
+# Rounding Functions
+
+
+
+### Round
+
+To Nearest Integer:
+
+<cb>import numpy as np
+
+= np.round(<v>array_1<>)<>
+
+To Number of Decimal Places:
+
+<cb>= np.round(<v>array_1<>, decimals = <v>number<>)<>
+
+
+Rounds all values in the array up or down to the nearest decimal.
+Defaults to zero decimals.
+
+
+Examples:
+
+To Integers:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+    [[1.4, 1.5, 1.6],
+     [2.54, 2.55, 2.56]])
+
+<v>rounded<> = np.round(<v>array_1<>)
+
+<#># Returns:
+\#
+\#   [[1. 2. 2.]
+\#    [3. 3. 3.]]<><>
+
+To 1 Decimal Place:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+    [[1.4, 1.5, 1.6],
+     [2.54, 2.55, 2.56]])
+
+<v>rounded<> = <v>array_1<>.round(decimals = <v>1<>)
+
+<#># Returns:
+\#
+\#   [[1.4 1.5 1.6]
+\#    [2.5 2.6 2.6]]<><><><>
+@
+@ np.round(), .round()
+
+
+
+### Round To Ceiling
+
+<cb>import numpy as np
+
+= np.ceil(<v>array_1<>)<>
+
+
+Rounds to greater positive number (1.1 -> 2)
+or lesser negative number (-1.9 -> -1).
+
+
+Examples:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+    [[-1.4, -1.5, 1.4, 1.5]])
+
+<v>rounded<> = np.ceil(<v>array_1<>)
+
+<#># Returns: [-1.0, -1.0, 2.0, 2.0]<><>
+@
+@ np.ceil(), .ceil(), up
+
+
+
+### Round To Floor
+
+<cb>import numpy as np
+
+= np.floor(<v>array_1<>)<>
+
+
+Rounds to lesser positive number (1.9 -> 1)
+or greater negative number (-1.1 -> -2).
+
+
+Examples:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+    [[-1.4, -1.5, 1.4, 1.5]])
+
+<v>rounded<> = np.floor(<v>array_1<>)
+
+<#># Returns: [-2.0, -2.0, 1.0, 1.0]<><>
+@
+@ np.floor(), .floor(), down
+
+
+
+### Round To Nearest Integer
+
+<cb>import numpy as np
+
+= np.rint(<v>array_1<>)<>
+
+
+Rounds to nearest integer.
+Rounds up or down as needed.
+
+
+Equivalent To:
+
+<cb>= np.round(<v>array_1<>)<>
+
+Benefits over <c>round()<>:
+Performance. <c>rint()<> is about 4 times faster.
+
+
+Examples:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+    [[-1.4, -1.5, 1.4, 1.5]])
+
+<v>rounded<> = np.rint(<v>array_1<>)
+
+<#># Returns: [-1.0, -2.0, 1.0, 2.0]<><>
+@
+@ np.rint(), .rint()
+
+
+
+### Round To 0 (Truncate)
+
+<cb>import numpy as np
+
+= np.trunc(<v>array_1<>)<>
+
+
+Rounds each value in the array to the integer nearest to zero.
+
+
+Examples:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+    [[-1.4, -1.5, 1.4, 1.5]])
+
+<v>truncated<> = np.trunc(<v>array_1<>)
+
+<#># Returns: [-1.0, -1.0, 1.0, 1.0]<><>
+@
+@ np.trunc(), .trunc(), down
+
+
+
+# Statistics Functions
+@
+@ statistical, stats
+
+
+
+### Mean (Average)
+
+<cb>import numpy as np
+
+= np.mean(<v>array_1<>)<>
+
+Return By Axis:
+
+<cb>= np.mean(<v>array_1<>, axis = <v>axis_number<>)<>
+
+
+Returns the arithmetic mean of the array values.
+
+
+Examples:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+    [[3, 4, 6],
+     [3, 3, 8],
+     [5, 6, 5],
+     [6, 5, 7]])
+
+<v>mean<> = np.mean(<v>array_1<>)
+
+<#># Returns: 5.083333333333333<><>
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+    [[3, 4, 6],
+     [3, 3, 8],
+     [5, 6, 5],
+     [6, 5, 7]])
+
+<v>mean<> = np.mean(<v>array_1<>, axis = <v>0<>)
+
+<#># Returns: [4.25 4.5  6.5 ]<><>
+@
+@ numpy.mean(), np.mean(), .mean(), axis=
+
+
+
+### Mean - Weighted Average
+
+<cb>import numpy as np
+
+= np.average(<v>array_1<>, weight = <v>weight_array<>)<>
+
+Return By Axis:
+
+<cb>= np.average(<v>array_1<>, weight = <v>weight_array<>, axis = <v>axis_number<>)<>
+
+
+Returns the mean given the array values and their weights.
+
+
+Equivalent of:
+
+<cb>= np.sum(np.multiply(<v>array_1<>, <v>weight_array<>) / sum(<v>weight_array<>)<>
+
+
+Examples:
+
+<cb>import numpy as np
+
+<#># Values x Count:
+\# 
+\#     50 x    14
+\#     75 x     4
+\#    100 x     2<>
+
+<v>array_1<> = np.array([50, 75, 100])
+<v>weights<> = np.array([14, 4, 2])
+
+<v>mean<> = np.average(<v>array_1<>, weights = <v>weights<>)
+
+<#># Returns: 60.0<><>
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+    [[50, 75, 100],
+     [150, 175, 200]])
+
+<v>weights<> = np.array(
+    [14, 4, 2])
+
+<v>mean<> = np.average(<v>array_1<>, weights = <v>weights<>, axis = <v>1<>)
+
+<#># Returns: [ 60. 160.]<><>
+@
+@ numpy.mean(), np.mean(), .mean(), axis=
+
+
+
+### Median
+
+<cb>import numpy as np
+
+= np.median(<v>array_1<>)<>
+
+Return By Axis:
+
+<cb>= np.median(<v>array_1<>, axis = <v>axis_number<>)<>
+
+
+Returns the median of the array values.
+
+
+Examples:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+    [[3, 4, 6],
+     [3, 3, 8],
+     [5, 6, 5],
+     [6, 5, 7]])
+
+<v>median<> = np.median(<v>array_1<>)
+
+<#># Returns: 5.0<><>
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+    [[3, 4, 6],
+     [3, 3, 8],
+     [5, 6, 5],
+     [6, 5, 7]])
+
+<v>median<> = np.median(<v>array_1<>, axis = <v>0<>)
+
+<#># Returns: [4.  4.5 6.5]<><>
+@
+@ numpy.median(), np.median(), .median(), axis=
+
+
+
+### Percentile
+
+<cb>= <v>array_1<>.percentile(<v>array_1<>, <v>percent<>)<>
+
+Return By Axis:
+
+<cb>= <v>array_1<>.percentile(<v>array_1<>, <v>percent<>, axis = <v>axis_number<>)<>
+
+
+Calculates the value at the given percentile.
+
+
+Examples:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+    [[3, 4, 6],
+     [3, 3, 8],
+     [5, 6, 5],
+     [6, 5, 7]])
+
+<v>percentile_50th<> = <v>array_1<>.percentile(<v>array_1<>, <v>50<>)
+
+<#># Returns: 5.0<><>
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+    [[3, 4, 6],
+     [3, 3, 8],
+     [5, 6, 5],
+     [6, 5, 7]])
+
+<v>percentile_25th<> = <v>array_1<>.percentile(<v>array_1<>, <v>25<>)
+
+<#># Returns: 3.75<><>
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+    [[3, 4, 6],
+     [3, 3, 8],
+     [5, 6, 5],
+     [6, 5, 7]])
+
+<v>percentile_25th<> = <v>array_1<>.percentile(<v>array_1<>, <v>25<>, axis = <v>0<>)
+
+<#># Returns: [3.   3.75 5.75]<><>
+@
+@ numpy.percentile(), np.percentile(), .percentile(), axis=
+
+
+
+### Standard Deviation
+
+<cb>import numpy as np
+
+= np.std(<v>array_1<>)<>
+
+Return By Axis:
+
+<cb>= np.std(<v>array_1<>.std, axis = <v>axis_number<>)<>
+
+
+Returns the standard deviation of the array values.
+
+
+Examples:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+    [[3, 4, 6],
+     [3, 3, 8],
+     [5, 6, 5],
+     [6, 5, 7]])
+
+<v>standard_deviation<> = np.std(<v>array_1<>)
+
+<#># Returns: 1.552328000849763<><>
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+    [[3, 4, 6],
+     [3, 3, 8],
+     [5, 6, 5],
+     [6, 5, 7]])
+
+<v>standard_deviation<> = np.std(<v>array_1<>, axis = <v>0<>)
+
+<#># Returns: [1.29903811 1.11803399 1.11803399]<><>
+@
+@ numpy.std(), np.std(), .std(), axis=
+
+
+
+### Variance
+
+<cb>import numpy as np
+
+= np.var(<v>array_1<>)<>
+
+Return By Axis:
+
+<cb>= np.var(<v>array_1<>, axis = <v>axis_number<>)<>
+
+
+Returns the variance of the array.
+
+
+Examples:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+    [[3, 4, 6],
+     [3, 3, 8],
+     [5, 6, 5],
+     [6, 5, 7]])
+
+<v>variance<> = np.var(<v>array_1<>)
+
+<#># Returns: 2.409722222222222<><>
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+    [[3, 4, 6],
+     [3, 3, 8],
+     [5, 6, 5],
+     [6, 5, 7]])
+
+<v>variance<> = np.var(<v>array_1<>, axis = <v>1<>)
+
+<#># Returns: [1.6875 1.25   1.25  ]<><>
+@
+@ numpy.var(), np.var(), .var(), axis=
+
+
+
+# Test Functions
+@
+@ contents
+
+
+
+### Is Finite / isfinite()
+
+<cb>import numpy as np
+
+= np.isfinite(<v>array_1<>)<>
+
+
+Returns: <c>np.ndarray<>
+
+
+Returns <c>False<> for values equal to <c>NAN<>, <c>inf<>, or <c>NINF<>,
+and returns <c>True<> for all other values.
+
+
+Example:
+
+<cb>import numpy as np
+
+array_1 = np.array([0, 1, np.NAN, np.inf, np.NINF])
+
+is_finite = np.isfinite(<v>array_1<>)
+
+<#># Returns: [True, True, False, False, False]<><>
+@
+@ numpy.isfinite(), np.isfinite(), .isfinite()
+
+
+
+### Is Infinite / isinf()
+
+<cb>import numpy as np
+
+= np.isinf(<v>array_1<>)<>
+
+
+Returns: <c>np.ndarray<>
+
+
+Returns <c>True<> for all positive and negative values,
+and returns <c>False<> for all other values.
+
+
+Example:
+
+<cb>import numpy as np
+
+array_1 = np.array([0, 1, np.NAN, np.inf, np.NINF])
+
+is_infinite = np.isinf(<v>array_1<>)
+
+<#># Returns: [False, False, False, True, True]<><>
+@
+@ numpy.isinf(), np.isinf(), .isinf(), numpy.isinfinite(), np.isinfinite(), .isinfinite()
+@ positive
+
+
+
+### Is Not A Number / isnan()
+
+<cb>import numpy as np
+
+= np.isnan(<v>array_1<>)<>
+
+
+Returns: <c>np.ndarray<>
+
+
+Returns <c>True<> for all NAN values,
+and returns <c>False<> for all other values.
+
+
+Example:
+
+<cb>import numpy as np
+
+array_1 = np.array([0, 1, np.NAN, np.inf, np.NINF])
+
+is_nan = np.isnan(<v>array_1<>)
+
+<#># Returns: [False, False, True, False, False]<><>
+@
+@ numpy.isnan(), np.isnan(), .isnan(), is nan
+
+
+
+### Is Negative Infinity / isneginf()
+
+<cb>import numpy as np
+
+= np.isneginf(<v>array_1<>)<>
+
+
+Returns: <c>np.ndarray<>
+
+
+Returns <c>True<> for all NINF values,
+and returns <c>False<> for all other values.
+
+
+Example:
+
+<cb>import numpy as np
+
+array_1 = np.array([0, 1, np.NAN, np.inf, np.NINF])
+
+is_negative_infinity = np.isneginf(<v>array_1<>)
+
+<#># Returns: [False, False, False, False, True]<><>
+@
+@ numpy.isneginf(), np.isneginf(), .isneginf(), is neg inf
+
+
+
+### Is Postive Infinity / isposinf()
+
+<cb>import numpy as np
+
+= np.isposinf(<v>array_1<>)<>
+
+
+Returns: <c>np.ndarray<>
+
+
+Example:
+
+<cb>import numpy as np
+
+array_1 = np.array([0, 1, np.NAN, np.inf, np.NINF])
+
+is_positive_infinity = np.isposinf(<v>array_1<>)
+
+<#># Returns: [False, False, False, True, False]<><>
+@
+@ numpy.isposinf(), np.isposinf(), np.isposi)
+
+
+
+# Trigonomotry Functions
+
+
+
+### Arccosine
+
+<cb>import numpy as np
+
+= np.arccos(<v>radians<>)<>
+
+
+Calculates inverse cosine of array values.
+
+
+Example:
+
+<cb>import numpy as np
+
+<v>cosines<> = np.array(
+    [1.0, 0.87, 0.71, 0])
+
+<v>radians<> = np.arccos(<v>cosines<>).round(decimals = 2)
+
+<#># Returns: [0.0, 0.52, 0.79, 1.57]<><>
+@
+@ np.arccos(), .arccos(), np.acos(), .acos(), arc cosine, inverse
+
+
+
+### Arcsine
+
+<cb>import numpy as np
+
+= np.arcsin(<v>radians<>)<>
+
+
+Calculates inverse sine of array values.
+
+
+Example:
+
+<cb>import numpy as np
+
+<v>sines<> = np.array(
+    [0, 0.5, 0.71, 1])
+
+<v>radians<> = np.arcsin(<v>sines<>).round(decimals = 2)
+
+<#># Returns: [0.0, 0.52, 0.79, 1.57]<><>
+@
+@ np.arcsin(), .arcsin(), np.asin(), .asin(), arc sine, inverse
+
+
+
+### Arctangent
+
+<cb>import numpy as np
+
+= np.arctan(<v>radians<>)<>
+
+
+Calculates inverse tangent of array values.
+
+
+Example:
+
+<cb>import numpy as np
+
+<v>tangents<> = np.array(
+    [0, 0.5, 1, 1.63312394e+16])
+
+<v>radians<> = np.arctan(<v>tangents<>).round(decimals = 2)
+
+<#># Returns: [0.0, 0.46, 0.79, 1.57]<><>
+@
+@ np.arctan(), .arctan(), np.atan(), .atan(), arc tangent, inverse
+
+
+
+### Cosine
+
+<cb>import numpy as np
+
+= np.cos(<v>radians<>)<>
+
+
+Calculates cosine of array values.
+
+
+Example:
+
+<cb>import numpy as np
+from numpy import pi
+
+<v>radians<> = np.array(
+    [0, pi * 0.16667, pi * 0.25, pi * 0.5])
+
+<v>cosines<> = np.cos(<v>radians<>).round(decimals = 2)
+
+<#># Returns: [1.0, 0.87, 0.71, 0]<><>
+@
+@ np.cos(), .cos()
+
+
+
+### Hypotenuse
+
+<cb>import numpy as np
+
+= np.hypot(<v>adjacents<>, <v>opposites<>)<>
+
+
+Calculates the hypotenuses of the arrays.
+
+
+Equivalent To:
+
+<cb>= sqrt(<v>adjacents<> ** 2 + <v>opposites<> ** 2)<>
+
+
+Example:
+
+<cb>import numpy as np
+
+<v>adjacents<> = np.array([1, 1, 3])
+<v>opposites<> = np.array([1, 2, 4])
+
+<v>hypotenuses<> = np.hypot(<v>adjacents<>, <v>opposites<>)
+
+<#># Returns: [1.4142135623730951, 2.23606797749979, 5.0]<><>
+@
+@ np.hypot(), .hypot()
+
+
+
+### Sine
+
+<cb>import numpy as np
+
+= np.sin(<v>radians<>)<>
+
+
+Calculates sine of array values.
+
+
+Example:
+
+<cb>import numpy as np
+from numpy import pi
+
+<v>radians<> = np.array(
+    [0, pi * 0.16667, pi * 0.25, pi * 0.5])
+
+<v>sines<> = np.sin(<v>radians<>).round(decimals = 2)
+
+<#># Returns: [0, 0.5, 0.71, 1]<><>
+@
+@ np.sin(), .sin()
+
+
+
+### Tangent
+
+<cb>import numpy as np
+
+= np.tan(<v>radians<>)<>
+
+
+Calculates tangent of array values.
+
+
+Example:
+
+<cb>import numpy as np
+from numpy import pi
+
+<v>radians<> = np.array(
+    [0, pi * 0.16667, pi * 0.25, pi * 0.5])
+
+<v>tangents<> = np.tan(<v>radians<>)
+
+<#># Returns: [0.00000000e+00, 5.77364232e-01, 1.00000000e+00, 1.63312394e+16]<><>
+@
+@ np.tan(), .tan()
+
+
+
+### Hyperbolic Arccosine
+
+<cb>import numpy as np
+
+= np.arccosh(<v>radians<>)<>
+
+
+Calculates hyperbolic inverse cosine of array values.
+
+
+Example:
+
+<cb>import numpy as np
+
+<v>cosines<> = np.array(
+	[1.0, 1.14, 1.32, 2.51])
+
+<v>radians<> = np.arccosh(<v>cosines<>).round(decimals = 2)
+
+<#># Returns: [0.0, 0.52, 0.78, 1.57]<><>
+@
+@ np.arccosh(), .arccosh(), np.acosh(), .acosh(), arc cosine, inverse
+
+
+
+### Hyperbolic Arcsine
+
+<cb>import numpy as np
+
+= np.arcsinh(<v>radians<>)<>
+
+
+Calculates hyperbolic inverse sine of array values.
+
+
+Example:
+
+<cb>import numpy as np
+
+<v>sines<> = np.array(
+	[0.0, 0.55, 0.87, 2.3])
+
+<v>radians<> = np.arcsinh(<v>sines<>).round(decimals = 2)
+
+<#># Returns: [0.0, 0.53, 0.79, 1.57]<><>
+@
+@ np.arcsinh(), .arcsinh(), np.asinh(), .asinh(), arc sine, inverse
+
+
+
+### Hyperbolic Arctangent
+
+<cb>import numpy as np
+
+= np.arctanh(<v>radians<>)<>
+
+
+Calculates hyperbolic inverse tangent of array values.
+
+
+Example:
+
+<cb>import numpy as np
+
+<v>tangents<> = np.array(
+	[0.0, 0.48, 0.66, 0.92])
+
+<v>radians<> = np.arctanh(<v>tangents<>).round(decimals = 2)
+
+<#># Returns: [ 0.0, 0.52, 0.79, 1.59]<><>
+@
+@ np.arctanh(), .arctanh(), np.atanh(), .atanh(), arc tangent, inverse
+
+
+
+### Hyperbolic Cosine
+
+<cb>import numpy as np
+
+= np.cosh(<v>radians<>)<>
+
+
+Calculates hyperbolic cosine of array values.
+
+
+Example:
+
+<cb>import numpy as np
+from numpy import pi
+
+<v>radians<> = np.array(
+    [0, pi * 0.16667, pi * 0.25, pi * 0.5])
+
+<v>cosines<> = np.cosh(<v>radians<>).round(decimals = 2)
+
+<#># Returns: [1.0, 1.14, 1.32, 2.51]<><>
+@
+@ np.cosh(), .cosh()
+
+
+
+### Hyperbolic Sine
+
+<cb>import numpy as np
+
+= np.sinh(<v>radians<>)<>
+
+
+Calculates hyperbolic sine of array values.
+
+
+Example:
+
+<cb>import numpy as np
+from numpy import pi
+
+<v>radians<> = np.array(
+    [0, pi * 0.16667, pi * 0.25, pi * 0.5])
+
+<v>sines<> = np.sinh(<v>radians<>).round(decimals = 2)
+
+<#># Returns: [0.0, 0.55, 0.87, 2.3]<><>
+@
+@ np.sinh(), .sinh()
+
+
+
+### Hyperbolic Tangent
+
+<cb>import numpy as np
+
+= np.tanh(<v>radians<>)<>
+
+
+Calculates hyperbolic tangent of array values.
+
+
+Example:
+
+<cb>import numpy as np
+from numpy import pi
+
+<v>radians<> = np.array(
+    [0, pi * 0.16667, pi * 0.25, pi * 0.5])
+
+<v>tangents<> = np.tanh(<v>radians<>).round(decimals = 2)
+
+<#># Returns: [0.0, 0.48, 0.66, 0.92]<><>
+@
+@ np.tanh(), .tanh()
+
+
+
+### To Degrees
+
+<cb>import numpy as np
+
+= np.degrees(<v>radians<>)<>
+
+
+Converts radians to degrees.
+
+
+Example:
+
+<cb>import numpy as np
+
+<v>radians<> = np.array(
+	[0, np.pi * 0.16667, np.pi * 0.25, np.pi * 0.5 ])
+
+<v>degrees<> = np.degrees(<v>radians<>)
+
+<#># Returns: [ 0.0  30.005999999999993  45.0  90.0 ]<><>
+@
+@ np.degrees(), .degrees(), np.rad2deg(), .rad2deg(), radians, convert, conversion, converting, from, change, rads, ˚
+
+
+
+### To Radians
+
+<cb>import numpy as np
+
+= np.radians(<v>degrees<>)<>
+
+
+Converts degrees to radians.
+
+
+Example:
+
+<cb>import numpy as np
+
+<v>degrees<> = np.array(
+	[<v>0<>, <v>30<>, <v>45<>, <v>90<>])
+
+<v>radians<> = np.radians(<v>degrees<>)
+
+<#># Returns: [ 0.0  0.5235987755982988  0.7853981633974483  1.5707963267948966 ]<><>
+@
+@ np.radians(), .radians(), np.deg2rad(), .deg2rad(), degrees, convert, conversion, converting, from, change, rads, ˚
+
+
+
+# IO
+@
+@ file functions
+
+
+### CSV File - Read
+
+<cb>import numpy as np
+
+<v>data<> = np.genfromtxt(<v>file_name<>, delimiter = ',')<>
+
+
+Returns: <c>numpy.ndarray<>
+
+
+.loadtext() requires each row has the same number of values
+@
+@ np.loadtext(), .loadtext()
+
+
+
+### CSV File - Read With Header
+
+<cb>import numpy as np
+
+<v>data<> = np.genfromtxt(<v>file_name<>, delimiter = ',', skip_header = 1)<>
+
+
+Returns: <c>numpy.ndarray<>
+
+
+<c>skip_header<> skips the header line.
+.loadtext() requires each row has the same number of values
+@
+@ np.loadtext(), .loadtext()
+
+
+
+### CSV File - Write
+
+<cb>import numpy as np
+
+np.savetxt(<v>file_name<>, <v>array_1<>, delimiter = ',')<>
+
+
+Examples:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.arange(<v>1<>, <v>7<>).reshape(<v>2<>, <v>3<>)
+np.savetxt(<v>file_name<>, <v>array_1<>, delimiter = ',')
+
+<#># Writes:
+
+1.000000000000000000e+00,2.000000000000000000e+00,3.000000000000000000e+00
+4.000000000000000000e+00,5.000000000000000000e+00,6.000000000000000000e+00<><>
+@
+@ np.savetext(), .savetext()
+
+
+
+### CSV File - Write With Formatting
+
+<cb>import numpy as np
+
+np.savetxt(<v>file_name<>, <v>array_1<>, delimiter = ',', fmt = '<v>format<>')<>
+
+
+Use <c>'fmt ='<>.
+
+
+Examples:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.arange(<v>1<>, <v>7<>).reshape(<v>2<>, <v>3<>)
+np.savetxt(<v>file_name<>, <v>array_1<>, delimiter = ',', fmt = '<v>%.1f<>')
+
+<#># Writes:
+
+1.0,2.0,3.0
+4.0,5.0,6.0<><>
+@
+@ np.savetext(), .savetext()
+
+
+
+### CSV File - Write With Header
+
+<cb>import numpy as np
+
+np.savetxt(<v>file_name<>, <v>array_1<>, delimiter = ',', header = "<v>header<>")<>
+
+
+Use <c>'header ='<>.
+
+
+Note:
+Using header writes the header with a leading <c>'# '<>. <#>(Why NumPy, Why!!)<>
+
+
+Example:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.loadtxt(<v>file_name<>)
+
+np.savetxt(<v>file_name<>, <v>array_1<>,
+        delimiter = ',',
+        header = "column 1, column 2, column 3")
+
+<#># Writes:
+
+\# column 1, column 2, column 3
+1.000000000000000000e+00,2.000000000000000000e+00,3.000000000000000000e+00
+4.000000000000000000e+00,5.000000000000000000e+00,6.000000000000000000e+00<><>
+@
+@ np.savetext(), .savetext(), header=, delimiter=
+
+
+
+### Text File - Read
+
+Reads Values Separated By Spaces, Line Separators
+
+<cb>import numpy as np
+
+<v>array_1<> = np.loadtxt(<v>file_name<>)<>
+
+Or:
+
+<cb><v>array_1<> = np.genfromtxt(<v>file_name<>)<>
+@
+@ np.loadtxt(), .loadtxt(), np.genfromtxt(), .genfromtxt()
+
+
+
+### Text File - Write
+
+Write Separated By Spaces
+
+<cb>import numpy as np
+
+np.savetxt(<v>file_name<>, <v>array_1<>)<>
+
+Write With Delimiter, Header, Newline:
+
+<cb>np.savetxt(<v>file_name<>, <v>array_1<>, delimiter = ',', newline = '\n', header = "<v>header<>")<>
+
+
+Examples:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.arange(<v>1<>, <v>7<>).reshape(<v>2<>, <v>3<>)
+np.savetxt(<v>file_name<>, <v>array_1<>)
+
+<#># Writes:
+
+1.000000000000000000e+00 2.000000000000000000e+00 3.000000000000000000e+00
+4.000000000000000000e+00 5.000000000000000000e+00 6.000000000000000000e+00<><>
+@
+@ np.savetext(), .savetext(), header=, delimiter=
+
+
+
+# Constants
+
+
+### Constant - Infinitiy / Inf
+
+<cb>= np.inf<>
+
+<cb>= np.Inf<>
+
+<cb>= np.Infinity<>
+
+<cb>= np.PINF<>
+
+
+Positive infinity.
+These are all equivalent.
+Prefer <c>np.inf<>.
+@
+@ np.inf, .inf, np.infinity, .infinity, np.pinf, .pinf
+
+
+
+### Constant - Negative Infinitiy / NINF
+
+<cb>= np.NINF<>
+@
+@ np.ninf, .ninf
+
+
+
+### Constant - Not A Number / NAN
+
+<cb>= np.NAN<>
+@
+@ np.nan, .nan
+
+
+
+### Constant - Zero / NZERO
+
+<cb>= np.PZERO<>
+
+Positive zero.
+@
+@ np.pzero, .pzero
+
+
+
+### Constant - Non Zero / NZERO
+
+<cb>= np.NZERO<>
+
+Negative zero.
+@
+@ np.nzero, .nzero
+
+
+
+### Constant - e
+
+<cb>= np.e<>
+
+= 2.71828...
+@
+@ np.e, .e, natural Number
+
+
+
+### Constant - Gamma / euler_gamma
+
+<cb>= np.euler_gamma<>
+
+= 0.57721...
+@
+@ euler-mascheroni constant, euler mascheroni constant
+@ np.euler_gamma, .euler_gamma, γ
+
+
+
+### Constant - Pi
+
+<cb>= np.pi<>
+
+= 3.14159...
+@
+@ np.pi, .pi, π
+
+
+
+### Constant - newaxis
+
+<cb>= np.newaxis<>
+
+
+Alias for <c>None<>.
+Used for indexing arrays.
+@
+@ None, np.newaxis, .newaxis, new axis
+
+
+
+# Boolean
+
+<cb>numpy.bool_  /  np.bool_<>
+
+
+New Scalar:
+
+<cb>= np.bool_(<v>True<>)
+
+= np.bool_(<v>1<>)<>
+
+New Array (Implicit):
+
+<cb>= np.array([<v>True<>, <v>False<>, <v>...<>])<>
+
+New Array (Explicit):
+
+<cb>= np.array([<v>True<>, <v>False<>, <v>...<>], dtype = np.bool_)<>
+
+
+C Type:		<c>bool<>
+Memory:		1 Byte
+
+
+Stores True, False.
+Can be set with 1 or 0.
+Stored as a byte.
+
+False = 0
+True = 1
+@
+@ numpy.bool_(), np.bool_(), .bool_(), bool_()
+@ bool-only, boolean-only, booleans-only, scalars, new, create, type
+@ True, False
+
+
+
+# Byte
+@
+@ byte-only, bytes-only, scalars, new, create, type
+
+
+### Byte - Signed Byte
+
+<cb>numpy.byte  /  np.byte<>
+
+
+New Scalar:
+
+<cb>= np.byte(<v>1<>)<>
+
+New Array (Explicit):
+
+<cb>= np.array([<v>-1<>, <v>0<>, <v>1<>, <v>...<>], dtype = np.byte)<>
+
+
+Range:		<c>-128<> ... <c>127<>
+C Type:		<c>signed char<>
+Memory:		1 Byte
+
+
+Platform dependent byte value.
+@
+@ numpy.byte(), np.byte(), .byte()
+
+
+
+### Byte - Unsigned Byte
+
+<cb>numpy.ubyte / np.ubyte<>
+
+
+New Scalar:
+
+<cb>= np.ubyte(<v>1<>)<>
+
+New Array:
+
+<cb>= np.array([<v>0<>, <v>1<>, <v>2<>, <v>...<>], dtype = np.ubyte)<>
+
+
+Range:		<c>0<> ... <c>255<>
+C Type:		<c>unsigned char<>
+Memory:		1 Byte
+
+Platform dependent unsigned byte.
+@
+@ np.ubyte(), numpy.ubyte(), .ubyte()
+
+
+
+### Byte - bytes_
+
+<cb>numpy.bytes_  /  np.bytes_<>
+
+
+New Scalar:
+
+<cb>= np.bytes_(<v>'abc'<>)<>
+
+New Array:
+
+<cb>= np.array([<v>'abc'<>, <v>'efg'<>, <v>...<>], dtype = np.bytes_)<>
+@
+@ np.bytes_(), numpy.bytes_(), .bytes_(), bytes_()
+
+
+
+# Complex
+@
+@ complex numbers, complex-only, complex-numbers-only, scalars, new, create, type
+
+
+
+### Complex - complex_
+
+<cb>numpy.complex_  /  np.complex_<>
+
+
+New Scalar:
+
+<cb>= np.complex_(<v>1 + 2j<>)<>
+
+New Array (Implicit):
+
+<cb>= np.array([<v>1 + 2j<>, <v>3 + 4j<>, <v>...<>])<>
+
+New Array (Explicit):
+
+<cb>= np.array([<v>1 + 2j<>, <v>3 + 4j<>, <v>...<>], dtype = np.complex_)<>
+
+
+Return Type: <c>numpy.complex128<>
+
+
+Stores a floating point complex number.
+Represented by two 64-bit floats (real and imaginary components).
+@
+@ numpy.complex_(), numpy.complex128(), np.complex_(), np.complex128(), .complex_(), .complex128(), complex_(), complex128(), 128
+
+
+
+### Complex - csingle
+
+<cb>numpy.csingle  /  np.csingle<>
+
+
+New Scalar:
+
+<cb>= np.csingle(<v>1 + 2j<>)<>
+
+New Array:
+
+<cb>= np.array([<v>1 + 2j<>, <v>3 + 4j<>, <v>...<>], dtype = np.csingle)<>
+
+Type:
+
+Numpy:	<c>numpy.complex64<>
+C:		<c>float complex<>
+
+
+Alias for <c>numpy.complex64<>.
+@
+@ numpy.csingle(), np.csingle(), .csingle()
+@ numpy.complex64(), np.complex64(), .complex64()
+
+
+
+### Complex - cdouble
+
+<cb>numpy.cdouble  /  np.cdouble<>
+
+
+New Scalar:
+
+<cb>= np.cdouble(<v>1 + 2j<>)<>
+
+New Array:
+
+<cb>= np.array([<v>1 + 2j<>, <v>3 + 4j<>, <v>...<>], dtype = np.cdouble)<>
+
+Type:
+
+Numpy:	<c>numpy.complex128<>
+C:		<c>double complex<>
+
+Alias for <c>numpy.complex128<>.
+@
+@ np.cdouble(), numpy.cdouble(), .cdouble()
+@ np.complex128(), numpy.complex128(), .complex128()
+@ 128 bit
+
+
+
+### Complex - long double
+
+<cb>numpy.clongdouble  /  np.clongdouble<>
+
+
+New Scalar:
+
+<cb>= np.clongdouble(<v>1 + 2j<>)<>
+
+New Array:
+
+<cb>= np.array([<v>1 + 2j<>, <v>3 + 4j<>, <v>...<>], dtype = np.clongdouble)<>
+
+Type:
+
+Numpy:	<c>numpy.complex256<>
+C:		<c>long double complex<>
+
+Alias for <c>numpy.complex256<>.
+@
+@ np.clongdouble(), numpy.clongdouble(), .clongdouble()
+@ np.complex256(), numpy.complex256(), .complex256()
+@ 256 bit
+
+
+
+### Complex - complex64
+
+<cb>numpy.complex64  /  np.complex64<>
+
+
+New Scalar:
+
+<cb>= np.complex64(<v>1 + 2j<>)<>
+
+New Array:
+
+<cb>= np.array([<v>1 + 2j<>, <v>3 + 4j<>, <v>...<>], dtype = np.complex64)<>
+
+Types:
+
+Numpy:	<c>numpy.complex64<>
+C:		<c>float complex<>
+
+
+Stores a floating point complex number.
+Represented by two 32-bit floats (real and imaginary components).
+
+Same as <c>numpy.csingle<>.
+@
+@ np.complex64(), numpy.complex64(), .complex64(), 64 bit
+@ np.csingle(), numpy.csingle(), .csingle()
+
+
+
+### Complex - complex128
+
+<cb>numpy.complex128  /  np.complex128<>
+
+
+New Scalar:
+
+<cb>= np.complex128(<v>1 + 2j<>)<>
+
+New Array (Implicit):
+
+<cb>= np.array([<v>1 + 2j<>, <v>3 + 4j<>, <v>...<>])<>
+
+New Array (Explicit):
+
+<cb>= np.array([<v>1 + 2j<>, <v>3 + 4j<>, <v>...<>], dtype = np.complex128)<>
+
+Type:
+
+Numpy:	<c>numpy.complex128<>
+C:		<c>double complex<>
+
+
+Stores a floating point complex number.
+Represented by two 64-bit floats (real and imaginary components).
+Matches the precision of the builtin python complex.
+
+Same as <c>numpy.complex_<>, <c>numpy.cdouble<>.
+@
+@ np.complex128(), numpy.complex128(), .complex128(), 128 bit
+@ np.complex_(), numpy.complex_(), .complex_(), complex_()
+@ np.cdouble(), numpy.cdouble(), .cdouble()
+
+
+
+### Complex - complex256
+
+<c>numpy.complex256  /  np.complex256<>
+
+
+New Scalar:
+
+<cb>= np.complex256(<v>1 + 2j<>)<>
+
+New Array:
+
+<cb>= np.array([<v>1 + 2j<>, <v>3 + 4j<>, <v>...<>], dtype = np.complex256)<>
+
+Type:
+
+Numpy:	<c>numpy.complex256<>
+C:		<c>long double complex<>
+
+
+Stores a floating point complex number.
+Represented by two 128-bit floats (real and imaginary components).
+
+Same as <c>numpy.clongdouble<>.
+@
+@ numpy.complex256(), np.complex256(), .complex256(), complex256(), 256 bit
+@ np.clongdouble(), numpy.clongdouble(), .clongdouble()
+
+
+
+# Float
+@
+@ float-only, floats-only, scalars, new, create, type
+
+
+
+### Float - float_
+
+<cb>numpy.float_  /  numpy.float_<>
+
+
+New Scalar:
+
+<cb>= np.float_(<v>1.2<>)<>
+
+New Array:
+
+<cb>= np.array([<v>1.0<>, <v>2.0<>, <v>...<>], dtype = np.float_)<>
+
+Types:
+
+Numpy:	<c>numpy.float64<>
+Python:	<c>float<>
+C:		<c>double<>
+
+Alias for <c>numpy.float64<>.
+Platform dependent.
+Typically 64 bit, sign bit, 11 bit exponent, 52 bit mantissa.
+@
+@ np.float_(), numpy.float_(), .float_(), float_()
+@ np.float64(), numpy.float64(), .float64()
+@ 64 bit
+
+
+
+### Float - half
+
+<cb>numpy.half  /  numpy.half<>
+
+
+New Scalar:
+
+<cb>= np.half(<v>1.2<>)<>
+
+New Array:
+
+<cb>= np.array([<v>1.0<>, <v>2.0<>, <v>...<>], dtype = np.half)<>
+
+
+Numpy Type:	<c>numpy.float16<>
+
+
+Alias for <c>numpy.float16<>.
+Half Precision Float
+16 bit, sign bit, 5 bits exponent, 10 bits mantiss.
+@
+@ np.half(), numpy.half(), .half()
+@ np.float16(), numpy.float16(), .float16()
+
+
+
+### Float - single
+
+<cb>numpy.single  /  np.single<>
+
+
+New Scalar:
+
+<cb>= np.single(<v>1.2<>)<>
+
+New Array:
+
+<cb>= np.array([<v>1.0<>, <v>2.0<>, <v>...<>], dtype = np.single)<>
+
+Types:
+
+Numpy:	<c>numpy.float32<>
+C:		<c>float<>
+
+
+Alias for <c>numpy.float32<>.
+Platform dependent.
+Typically 32 bit, sign bit, 8 bit exponent, 23 bit mantissa.
+@
+@ numpy.single(), np.single(), .single()
+@ numpy.float32(), np.float32(), .float32()
+
+
+
+### Float - double
+
+<cb>numpy.double  /  np.double<>
+
+
+New Scalar:
+
+<cb>= np.double(<v>1.2<>)<>
+
+New Array:
+
+<cb>= np.array([<v>1.0<>, <v>2.0<>, <v>...<>], dtype = np.double)<>
+
+Types:
+
+Numpy:	<c>numpy.float64<>
+Python:	<c>float<>
+C:		<c>double<>
+
+Alias for <c>numpy.float64<>.
+Platform dependent.
+Typically 64 bit, sign bit, 11 bit exponent, 52 bit mantissa.
+@
+@ np.double(), numpy.double(), .double()
+@ np.float64(), numpy.float64(), .float64()
+@ 64 bit
+
+
+
+### Float - long double
+
+<cb>numpy.longdouble  /  np.longdouble<>
+
+
+New Scalar:
+
+<cb>= np.longdouble(<v>1.2<>)<>
+
+New Array:
+
+<cb>= np.array([<v>1.0<>, <v>2.0<>, <v>...<>], dtype = np.longdouble)<>
+
+Types:
+
+Numpy:	<c>numpy.float128<>
+Python:	<c>float<>
+C:		<c>double<>
+
+Alias for <c>numpy.float128<>.
+Platform dependent.
+Typically 128 bit.
+@
+@ np.longdouble(), numpy.longdouble(), .longdouble()
+@ np.float128(), numpy.float128(), .float128()
+@ 128 bit
+
+
+
+### Float - float16
+
+<cb>numpy.float16  /  numpy.float16<>
+
+
+New Scalar:
+
+<cb>= np.float16(<v>1.2<>)<>
+
+New Array:
+
+<cb>= np.array([<v>1.0<>, <v>2.0<>, <v>...<>], dtype = np.float16)<>
+
+Same as <c>numpy.half<>.
+Half Precision Float
+16 bit, sign bit, 5 bits exponent, 10 bits mantiss.
+@
+@ np.half(), numpy.half(), .half()
+@ np.float16(), numpy.float16(), .float16()
+@ 16 bit
+
+
+
+### Float - float32
+
+<cb>numpy.float32  /  np.float32<>
+
+
+New Scalar:
+
+<cb>= np.float32(<v>1.2<>)<>
+
+New Array:
+
+<cb>= np.array([<v>1.0<>, <v>2.0<>, <v>...<>], dtype = np.float32)<>
+
+
+C Type:		<c>float<>
+
+
+Platform dependent.
+Typically 32 bit, sign bit, 8 bit exponent, 23 bit mantissa.
+
+Same as <c>numpy.single<>.
+@
+@ np.float32(), numpy.float32(), .float32()
+@ np.single(), numpy.single(), .single()
+@ 32 bit
+
+
+
+### Float - float64
+
+<cb>numpy.float64  /  np.float64<>
+
+
+New Scalar:
+
+<cb>= np.float64(<v>1.2<>)<>
+
+New Array:
+
+<cb>= np.array([<v>1.0<>, <v>2.0<>, <v>...<>], dtype = np.float64)<>
+
+Types:
+
+Python:	<c>float<>
+C:		<c>double<>
+
+
+Platform dependent.
+Typically 64 bit, sign bit, 11 bit exponent, 52 bit mantissa.
+
+Same as <c>numpy.float_<>, <c>numpy.double<>.
+@
+@ np.float64(), numpy.float64(), .float64()
+@ np.float_(), numpy.float_(), .float_(), float_()
+@ np.double(), numpy.double(), .double()
+@ 64 bit
+
+
+
+### Float - float128
+
+<cb>numpy.float128  /  np.float128<>
+
+
+New Scalar:
+
+<cb>= np.float128(<v>1.2<>)<>
+
+New Array:
+
+<cb>= np.array([<v>1.0<>, <v>2.0<>, <v>...<>], dtype = np.float128)<>
+
+Types:
+
+Python:	<c>float<>
+C:		<c>double<>
+
+
+Platform dependent, 128 bit.
+
+Same as <c>numpy.longdouble<>.
+@
+@ np.float128(), numpy.float128(), .float128()
+@ np.longdouble(), numpy.longdouble(), .longdouble()
+@ 128 bit
+
+
+
+# Integer
+@
+@ int-only, ints-only, integer-only, integers-only, scalars, new, create, type
+
+
+
+### Integer - Default
+
+New Array (All Integers):
+
+<cb>= np.array([<v>1<>, <v>2<>, <v>...<>])<>
+
+Type:
+
+Numpy:	<c>numpy.int64<>
+C:		<c>long<>
+
+
+<c>np.array()<> returns an array of type <c>int64<> when all array values are integers.
+Alias for <c>numpy.int64<>.
+@
+@ np.int_(), numpy.int_(), .int_(), int_()
+@ np.int64(), numpy.int64(), .int64()
+
+
+
+### Integer - int_
+
+<cb>numpy.int_  /  np.int_<>
+
+
+New Scalar:
+
+<cb>= np.int_(<v>1<>)<>
+
+New Array:
+
+<cb>= np.array([<v>1<>, <v>2<>, <v>...<>], dtype = np.int_)<>
+
+Type:
+
+Numpy:	<c>numpy.int64<>
+C:		<c>long<>
+
+
+Alias for <c>numpy.int64<>.
+@
+@ np.int_(), numpy.int_(), .int_(), int_()
+@ np.int64(), numpy.int64(), .int64()
+@ signed, 64 bit
+
+
+
+### Integer - uint
+
+<cb>numpy.uint  /  np.uint<>
+
+
+New Scalar:
+
+<cb>= np.uint(<v>1<>)<>
+
+New Array:
+
+<cb>= np.array([<v>1<>, <v>2<>, <v>...<>], dtype = np.uint)<>
+
+Type:
+
+Numpy:	<c>numpy.uint64<>
+C:		<c>unsigned int<>
+
+
+Platform dependent.
+
+Alias as <c>numpy.uint64<>.
+@
+@ np.uint(), numpy.uint(), .uint()
+@ np.uint64(), numpy.uint64(), .uint64()
+@ unsigned, 64 bit
+
+
+
+### Integer - Signed / intc
+
+<cb>numpy.intc  /  np.intc<>
+
+
+New Scalar:
+
+<cb>= np.intc(<v>1<>)<>
+
+New Array:
+
+<cb>= np.array([<v>1<>, <v>2<>, <v>...<>], dtype = np.intc)<>
+
+Type:
+
+Numpy:	<c>numpy.int32<>
+C:		<c>int<>
+
+
+Alias for <c>numpy.int32<>
+@
+@ np.intc(), numpy.intc(), .intc()
+@ np.int32(), numpy.int32(), .int32()
+
+
+
+### Integer - Unsigned / uintc
+
+<cb>numpy.uintc  /  np.uintc<>
+
+
+New Scalar:
+
+<cb>= np.uintc(<v>1<>)<>
+
+New Array:
+
+<cb>= np.array([<v>1<>, <v>2<>, <v>...<>], dtype = np.uintc)<>
+
+Type:
+
+Numpy:	<c>numpy.uint32<>
+C:		<c>unsigned int<>
+
+
+Platform dependent.
+
+Alias as <c>numpy.uint32<>.
+@
+@ np.uintc(), numpy.uintc(), .uintc()
+@ np.uint32(), numpy.uint32(), .uint32()
+
+
+
+### Integer - Long Long, Signed / longlong
+
+<cb>numpy.longlong  /  np.longlong<>
+
+
+New Scalar:
+
+<cb>= np.longlong(<v>1<>)<>
+
+New Array:
+
+<cb>= np.array([<v>1<>, <v>2<>, <v>...<>], dtype = np.longlong)<>
+
+
+C Type:	<c>long long<>
+
+
+Platform dependent.
+@
+@ np.longlong(), numpy.longlong(), .longlong()
+
+
+
+### Integer - Long Long, Unsigned / ulonglong
+
+<cb>numpy.ulonglong  /  np.ulonglong<>
+
+
+New Scalar:
+
+<cb>= np.ulonglong(<v>1<>)<>
+
+New Array:
+
+<cb>= np.array([<v>1<>, <v>2<>, <v>...<>], dtype = np.ulonglong)<>
+
+
+C Type:	<c>unsigned long long<>
+
+
+Platform dependent. unsigned long value.
+@
+@ np.ulonglong(), numpy.ulonglong(), .ulonglong()
+
+
+
+### Integer - Signed Short / short
+
+<cb>numpy.short  /  np.short<>
+
+
+New Scalar:
+
+<cb>= np.short(<v>1<>)<>
+
+New Array:
+
+<cb>= np.array([<v>1<>, <v>2<>, <v>...<>], dtype = np.short)<>
+
+
+C Type:	<c>short<>
+
+
+Platform dependent.
+@
+@ np.short(), numpy.short(), .short()
+
+
+
+### Integer - Unsigned Short / ushort
+
+<cb>numpy.ushort  /  np.ushort<>
+
+
+New Scalar:
+
+<cb>= np.ushort(<v>1<>)<>
+
+New Array:
+
+<cb>= np.array([<v>1<>, <v>2<>, <v>...<>], dtype = np.ushort)<>
+
+
+C Type:	<c>unsigned short<>
+
+
+Platform dependent.
+@
+@ np.ushort(), numpy.ushort(), .ushort()
+
+
+
+### Integer - 8 Bit, Signed
+
+<cb>numpy.int8  /  np.int8<>
+
+
+New Scalar:
+
+<cb>= np.int8(<v>1<>)<>
+
+New Array:
+
+<cb>= np.array([<v>1<>, <v>2<>, <v>...<>], dtype = np.int8)<>
+
+
+Range:		<c>-128<> ... <c>127<>
+C Type		<c>int8_t<>
+@
+@ numpy.int8(), np.int8(), .int8()
+
+
+
+### Integer - 8 Bit, Unsigned
+
+<cb>numpy.uint8  /  np.uint8<>
+
+
+New Scalar:
+
+<cb>= np.uint8(<v>1<>)<>
+
+New Array:
+
+<cb>= np.array([<v>1<>, <v>2<>, <v>...<>], dtype = np.uint8)<>
+
+
+Range:		<c>0<> ... <c>255<>
+C Type:		<c>uint8_t<>
+@
+@ numpy.uint8(), np.uint8(), .uint8()
+
+
+
+### Integer - 16 Bit, Signed
+
+<cb>numpy.int16  /  np.int16<>
+
+
+New Scalar:
+
+<cb>= np.int16(<v>1<>)<>
+
+New Array:
+
+<cb>= np.array([<v>1<>, <v>2<>, <v>...<>], dtype = np.int16)<>
+
+
+Range:		<c>-32,768<> ... <c>32,767<>
+C Type:		<c>int16_t<>
+@
+@ numpy.int16(), np.int16(), .int16()
+
+
+
+### Integer - 16 Bit, Unsigned
+
+<cb>numpy.uint16  /  np.uint16<>
+
+
+New Scalar:
+
+<cb>= np.uint16(<v>1<>)<>
+
+New Array:
+
+<cb>= np.array([<v>1<>, <v>2<>, <v>...<>], dtype = np.uint16)<>
+
+
+Range:		<c>0<> ... <c>65,535<>
+C Type:		<c>uint16_t<>
+@
+@ numpy.uint16(), np.uint16(), .uint16()
+
+
+
+### Integer - 32 Bit, Signed
+
+<cb>numpy.int32  /  np.int32<>
+
+
+New Scalar:
+
+<cb>= np.int32(<v>1<>)<>
+
+New Array:
+
+<cb>= np.array([<v>1<>, <v>2<>, <v>...<>], dtype = np.int32)<>
+
+
+Range:		<c>-2,147,483,648<> ... <c>2,147,483,647<>
+C Type:		<c>int32_t<>
+@
+@ numpy.int32(), np.int32(), .int32()
+
+
+
+### Integer - 32 Bit, Unsigned
+
+<cb>numpy.uint32  /  np.uint32<>
+
+
+New Scalar:
+
+<cb>= np.uint32(<v>1<>)<>
+
+New Array:
+
+<cb>= np.array([<v>1<>, <v>2<>, <v>...<>], dtype = np.uint32)<>
+
+
+Range:		<c>0<> ... <c>4,294,967,295<>
+C Type:		<c>uint32_t<>
+@
+@ numpy.uint32(), np.uint32(), .uint32()
+
+
+
+### Integer - 64 Bit, Signed
+
+<cb>numpy.int64  /  np.int64<>
+
+
+New Scalar:
+
+<cb>= np.int64(<v>1<>)<>
+
+New Array:
+
+<cb>= np.array([<v>1<>, <v>2<>, <v>...<>], dtype = np.int64)<>
+
+
+C Type:		<c>int64_t<>
+
+
+Range: -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
+@
+@ numpy.int64(), np.int64(), .int64()
+
+
+
+### Integer - 64 Bit, Unsigned
+
+<cb>numpy.uint64  /  np.uint64<>
+
+
+New Scalar:
+
+<cb>= np.uint64(<v>1<>)<>
+
+New Array:
+
+<cb>= np.array([<v>1<>, <v>2<>, <v>...<>], dtype = np.uint64)<>
+
+
+C Type:		<c>uint64_t<>
+
+
+Range: 0 to 18,446,744,073,709,551,615
+
+Same as <c>numpy.int_<>.
+@
+@ numpy.uint64(), np.uint64(), .uint64()
+@ numpy.uint_(), np.uint_(), .uint_(), uint_()
+
+
+
+### Integer - Index Integer
+
+<cb>numpy.intp  /  np.intp<>
+
+
+C Type:		<c>intptr_t<>
+
+
+Used for indexing.
+Usually the same as <c>ssize_t<>.
+@
+@ numpy.intp(), np.intp(), .intp()
+
+
+
+### Integer - Pointer Integer
+
+<cb>numpy.uintp  /  np.uintp<>
+
+
+C Type:		<c>uintptr_t<>
+
+
+Integer large enough to hold a pointer
+@
+@ numpy.uintp(), np.uintp(), .uintp()
+
+
+
+# String
+@
+@ str-only, string-only, strings-only, scalars, new, create, type
+
+
+
+### String - str_
+
+<cb>numpy.str_  /  np.str_<>
+
+
+New Scalar:
+
+<cb>= np.str_(<v>'text'<>)<>
+
+New Array (Implicit):
+
+<cb>= np.array([<v>'text 1'<>, <v>'text 2'<>, <v>...<>])<>
+
+New Array (Explicit):
+
+<cb>= np.array([<v>'text 1'<>, <v>'text 2'<>, <v>...<>], dtype = np.str_)<>
+
+Type:
+
+Python:		<c>str<>
+@
+@ numpy.str_(), np.str_(), .str_(), str_()
+@ numpy.unicode_(), np.unicode_(), .unicode_(), unicode_()
+@ str-only, string-only, strings-only, scalars
+
+
+
+### String - unicode_
+<cb>numpy.unicode_  /  np.unicode_<>
+
+
+New Scalar:
+
+<cb>= np.unicode_(<v>'text'<>)<>
+
+New Array:
+
+<cb>= np.array([<v>'text 1'<>, <v>'text 2'<>, <v>...<>], dtype = np.unicode_)<>
+
+
+Alias for <c>numpy.str_<>
+@
+@ numpy.str_(), np.str_(), .str_(), str_()
+@ numpy.unicode_(), np.unicode_(), .unicode_(), unicode_()
+
+
+
+# Date And Time
+@
+@ scalars, new, create, type
+
+
+### Datetime
+
+<cb>numpy.datetime64  /  np.datetime64<>
+
+
+New Scalar:
+
+<cb>= np.datetime64(<v>datetime_1<>)
+
+= np.datetime64('<v>yyyy-mm-dd<>')
+
+= np.datetime64('<v>yyyy-mm-ddTHH:MM:SS<>')
+
+<#># Not a Time:<>
+= np.datetime64('NaT')<>
+
+New Array (Implicit):
+
+<cb>= np.array([<v>datetime_1<>, <v>datetime_2<>, <v>...<>])<>
+
+New Array (Explicit):
+
+<cb>= np.array([<v>datetime_1<>, <v>datetime_2<>, <v>...<>], dtype = np.datetime64)
+
+= np.array(['<v>yyyy-mm-ddTHH:MM:SS<>', '<v>yyyy-mm-ddTHH:MM:SS<>', <v>...<>], dtype = np.datetime64)<>
+@
+@ np.datetime64(), numpy.datetime64(), .datetime64(), datetime(), datetime-only, datetimes-only
+
+
+
+#### DateTime - Not a Time / NaT
+
+<cb>numpy.datetime64  /  np.datetime64<>
+
+<cb>= np.datetime64('NaT')<>
+
+
+
+### TimeDelta
+
+<cb>numpy.timedelta64  /  np.timedelta64<>
+
+
+New Scalar:
+
+<cb>= np.timedelta64(<v>timedelta_1<>)
+
+= np.timedelta64(<v>value<>, '<v>unit<>')
+
+= np.timedelta64(2, 'h')<>
+
+New Array (Implicit):
+
+<cb>= np.array([<v>timedelta_1<>, <v>timedelta_2<>, <v>...<>])<>
+
+New Array (Explicit):
+
+<cb>= np.array([<v>timedelta_1<>, <v>timedelta_2<>, <v>...<>], dtype = np.timedelta64)<>
+@
+@ numpy.timedelta64(), np.timedelta64(), .timedelta64(), timedelta(), timedelta-only, timedeltas-only
+
+
+
+#### TimeDelta - Not a Time / NaT
+
+<cb>numpy.timedelta64  /  np.timedelta64<>
+
+<cb>= np.timedelta64('NaT')<>
+
+
+
+#### TimeDelta - Units
+
+<cb>= np.timedelta64(<v>value<>, '<v>unit<>')<>
+
+'<c>as<>'		Attosecond
+'<c>fs<>'		Femtosecond
+'<c>ps<>'		Picosecond
+'<c>ns<>'		Nanosecond
+'<c>us<>'		Microsecond
+'<c>ms<>'		Millisecond
+
+'<c>s<>'		Second
+'<c>m<>'		Minute
+'<c>h<>'		Hour
+
+<c>'D'<>		Day
+<c>'W'<>		Week
+<c>'M'<>		Month
+<c>'Y'<>		Year
+
+@
+@ np.timedelta64(), numpy.timedelta64(), .timedelta64(), timedelta()
+
+
+
+# How To
+
+
+
+### Binaries - To String
+
+<cb>= np.vectorize(np.binary_repr)(<v>array_1<>, width=<v>bits<>)<>
+
+Returns: <c>str<>
+
+Converts byte values into binary form.
+
+
+Example:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([0b<v>10101010<>, 0b<v>0<>, 0b<v>1111<>], dtype = np.byte)
+
+print(np.vectorize(np.binary_repr)(<v>array_1<>, width=<v>8<>))
+
+<#># Prints ['10101010' '00000000' '00001111']<><>
+@
+@ print ones and zeroes, zeros, bytes, binary, 1s, 0s, convert
+@ numpy.vectorize(), np.vectorize(), .vectorize()
+
+
+
+### Function - Apply To Array Elements
+
+1. Wrap function with ufunc or vectorize.
+2. Call wrapped function.
+
+
+With <c>ufunc<>:
+
+<cb>import numpy as np
+
+<v>double<> = lambda <v>a<>: <v>a * 2<>
+<v>double_ufunc<> = np.frompyfunc(<v>double<>, 1, 1)
+
+<v>array_1<> = np.array([<v>1<>, <v>2<>, <v>3<>])
+
+<v>doubled<> = <v>double_ufunc<>(<v>array_1<>)
+
+<#># Returns: [2, 4, 6]<><>
+
+
+With <c>vectorize<>:
+
+<cb>import numpy as np
+
+<v>double<> = lambda <v>a<>: <v>a * 2<>
+<v>double_vectorized<> = np.vectorize(<v>double<>)
+
+<v>array_1<> = np.array([<v>1<>, <v>2<>, <v>3<>])
+
+<v>doubled<> = <v>double_vectorized<>(<v>array_1<>)
+
+<#># Returns: [2, 4, 6]<><>
+@
+@ numpy.frompyfunc(), np.frompyfunc(), .frompyfunc()
+@ numpy.vectorize(), np.vectorize(), .vectorize()
+@ ufunc, functional
+
+
+
+### Function - Apply To 2 Arrays
+
+1. Convert function to ufunc or vectorize.
+2. Call converted function.
+
+
+With <c>ufunc<>:
+
+<cb>import numpy as np
+
+<v>add<> = lambda <v>a<>, <v>b<>: <v>a + b<>
+<v>add_ufunc<> = np.frompyfunc(<v>add<>, 2, 1)
+
+<v>array_1<> = np.array([<v>1<>, <v>2<>, <v>3<>])
+<v>array_2<> = np.array([<v>10<>, <v>20<>, <v>30<>])
+
+<v>added<> = <v>add_ufunc<>(<v>array_1<>, <v>array_2<>)
+
+<#># Returns: [11, 22, 33]<><>
+
+
+With <c>vectorize<>:
+
+<cb>import numpy as np
+
+<v>add<> = lambda <v>a<>, <v>b<>: <v>a + b<>
+<v>add_vectorize<> = np.vectorize(<v>add<>, 2, 1)
+
+<v>array_1<> = np.array([<v>1<>, <v>2<>, <v>3<>])
+<v>array_2<> = np.array([<v>10<>, <v>20<>, <v>30<>])
+
+<v>added<> = <v>add_vectorize<>(<v>array_1<>, <v>array_2<>)
+
+<#># Returns: [11, 22, 33]<><>
+@
+@ numpy.frompyfunc(), np.frompyfunc(), .frompyfunc()
+@ numpy.vectorize(), np.vectorize(), .vectorize()
+@ ufunc, functional
+
+
+
+### Function - Apply To Mask
+
+Use This:
+
+<cb>import numpy as np
+
+def apply_to_mask(<v>data<>, <v>mask<>, <v>function<>):
+	<v>unchanged<> = lambda a: a
+	<v>inverse<> = np.logical_not(<v>mask<>)
+	return np.piecewise(<v>data<>,
+		[<v>mask<>, <v>inverse<>],
+		[<v>function<>, <v>unchanged<>])<>
+
+Call:
+
+<cb>= apply_to_mask(<v>array_1<>, <v>mask<>, <v>function_1<>)<>
+
+
+Use this function when you want to apply a function to the elements of an array where a mask is <c>True<>.
+
+
+Example:
+
+<cb>import numpy as np
+
+def apply_to_mask(<v>data<>, <v>mask<>, <v>function<>):
+	<v>unchanged<> = lambda a: a
+	<v>inverse<> = np.logical_not(<v>mask<>)
+	return np.piecewise(<v>data<>,
+		[<v>mask<>, <v>inverse<>],
+		[<v>function<>, <v>unchanged<>])
+
+<v>array_1<> = np.array([[<v>1<>, <v>2<>],
+                    [<v>3<>, <v>4<>]])
+
+<v>mask<> = np.array([[<v>True<>,  <v>False<>],
+                 [<v>False<>, <v>True<>]])
+
+<v>multiply<> = lambda <v>a<>: <v>a * 10<>
+
+<v>multiplied<> = apply_to_mask(<v>array_1<>, <v>mask<>, <v>multiply<>)
+
+<#># Returns:
+\#
+\#   [[10,  2],
+\#    [ 3, 40]]<><>
+@
+@ numpy.piecewise(), np.piecewise(), .piecewise()
+@ functional, with
+
+
+
+### Print - Print Full Array
+
+<cb>import numpy as np
+
+np.set_printoptions(threshold=np.inf)
+print(<v>array_1<>)<>
+
+Print Function:
+
+<cb>import numpy as np
+
+def print_full(*<v>args<>, **<v>kwargs<>):
+    <#>"""Prints entire contents of the array."""<>
+    <v>options<> = np.get_printoptions()
+    np.set_printoptions(threshold=np.inf)
+    print(*<v>args<>, **<v>kwargs<>)
+    np.set_printoptions(**<v>options<>)<>
+
+
+Numpy will hide everything but the first and last 3 rows of an array is over a certain size (default is over 1000 entries).
+Default <c>threshold<> is 1000.
+Use <v>set_printoptions()<> to change the threshold.
+The option is global. Reset to the original threshold if just printing once.
+
+
+Examples:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.arange(2000).reshape(200, 10)
+
+np.set_printoptions(threshold=np.inf)
+print(<v>array_1<>)<>
+
+Using Print Function:
+
+<cb>def print_full(*<v>args<>, **<v>kwargs<>):
+    <#>"""Prints entire contents of the array."""<>
+    <v>options<> = np.get_printoptions()
+    np.set_printoptions(threshold=np.inf)
+    print(*<v>args<>, **<v>kwargs<>)
+    np.set_printoptions(**<v>options<>)
+
+<v>array_1<> = np.arange(2000).reshape(200, 10)
+
+print_full(<v>array_1<>)<>
+
+
+
+### Strings - Get Lengths
+
+<cb>import numpy as np
+
+calc_lengths = np.vectorize(len)
+<v>lengths<> = calc_lengths(<v>array_1<>)<>
+
+Example:
+
+<cb>import numpy as np
+
+calc_lengths = np.vectorize(len)
+
+<v>array_1<> = np.array([[<v>"a"<>, <v>"bb"<>], [<v>"ccc"<>, <v>"dddd"<>]])
+<v>lengths<> = calc_lengths(<v>array_1<>)
+
+<#># Returns:
+\#
+\#    [[1 2]
+\#     [3 4]]<><>
+
+
+
+### Strings - Get Max Length
+
+<cb>import numpy as np
+
+calc_lengths = np.vectorize(len)
+<v>max_length<> = calc_lengths(<v>array_1<>).max()<>
+
+Example:
+
+<cb>import numpy as np
+
+calc_lengths = np.vectorize(len)
+
+<v>array_1<> = np.array([[<v>"a"<>, <v>"bb"<>], [<v>"ccc"<>, <v>"dddd"<>]])
+<v>max_length<> = calc_lengths(<v>array_1<>).max()
+
+<#># Returns: 4<><>
+
+
+
+# Numpy Internal Libraries
+
+
+
+### N-Dimensional Array (ndarray)
+Fixed size multidimensional array of items.
+Items must be of the same type.
+
+Library:
+<c>numpy<>
+
+Official Documentation:
+<l>https://numpy.org/doc/stable/reference/arrays.ndarray.html<>
+@
+@ numpy.ndarray
+
+
+
+### N-Dimensional Array (ndarray) - Creation
+Routines to create arrays.
+
+Official Documentation:
+<l>https://numpy.org/doc/stable/reference/routines.array-creation.html<>
+@
+@ numpy.ndarray
+
+
+
+### Linear Algebra (linalg)
+Linear Algebra functions.
+
+Library:
+<c>numpy.linalg<>
+
+Official Documentation:
+<l>https://numpy.org/doc/stable/reference/routines.linalg.html<>
+@
+@ numpy.linalg, linear algebra
+
+
+
+### matlib / Matrix Library (matlib)
+Matrix specific functions.
+Works with matrix
+
+
+
+### Math Library
+
+Library:
+<c>numpy<>
+
+Official Documentation:
+<l>https://numpy.org/doc/stable/reference/routines.math.html<>
+@
+@ mathematics
+
+
+
+# Related Python Libraries
+
+
+
+### MatPlotLib
+
+Creates 2d graphs and data visualizations.
+
+Library:
+
+<cb>matplotlib<>
+
+
+
+### Pandas
+
+Manipulates and analyses data.
+
+Library:
+
+<cb>pandas<>
+
+
+
+### scikit-image
+
+Image processing library.
+
+Library:
+
+<cb>scikit-image<>
+
+
+
+### scikit-learn
+
+Machine learning library.
+
+Library:
+
+<cb>scikit-learn<>
+
+
+
+### StatsModel
+
+Used to create and test statistical models.
+
+Library:
+
+<cb>statsmodel<>
+
+
+
+# What's The Difference?
+@ vs
+
+
+
+### flat vs flatiter vs flatten vs nditer vs ravel vs reshape
+
+These all return a flattened array. Here are the differences:
+
+<c>flat<>
+
+<*>Returns an Iteraror of Type flatiter
+Will Iterator Over All Values
+Limited In Comparison To Other Options<>
+
+<c>flatiter<>
+
+<*>The Type Returned By Flat
+Can't Be Instantiated Directly<>
+
+<c>flatten()<>:
+
+<*>Returns a Flattened Array
+Creates a New Copy
+Works Only With Type ndarray<>
+
+<c>nditer<>
+
+<*>Returns an Iterator
+Supersedes flat / flatiter<>
+
+<c>ravel()<>:
+
+<*>Returns a Flattened Array
+References the Underlying Original If Possible (Nothing Copied)
+Works With Any Compatible Data Type
+If The Original Changes, The Ravelled Version Changes Too
+Equivalent To <c>.reshape((-1))<><>
+
+<c>reshape((-1))<>:
+
+<*>Equivalent to <c>ravel()<>
+Works With Any Compatible Data Type
+References Underlying Original Data (Nothing Copied)<>
+@
+@ .flat(), .flatiter(), .flatten(), .ravel(), .reshape()
+@ difference
+
+
+
+### fromfile() vs loadtxt() vs genfromtxt()
+
+<c>fromfile():<>
+
+<*>For Binary Files With A Known Data-type
+Can Also Parse Simple Text Files
+Reads Data Created With <c>tofile()<><>
+
+<c>loadtxt():<>
+
+<*>Reads text files.<>
+
+<c>genfromtxt():<>
+
+<*>Wrapper Around loadtext().
+Has A Lot Of Parameters
+"Most Straight Forward To Use"<>
+@
+@ fromfile(), loadtxt(), genfromtxt()
+@ difference
+
+
+
+### frompyfunc() vs vectorize()
+
+All these take a function that accepts an element, and turns it into a form that can take an array. All work using broadcasting rules.
+
+<c>frompyfunc<>:<>
+
+<*>Returns a ufunc
+Parameters Are Explicitly Defined
+When Called, Returns dtype = Object<>
+
+<c>vectorize():<>
+
+<*>Wraps frompyfunc
+Works Like A Map() Function
+When Called, Returns The Correct Data Type
+Slow For Large Arrays (50% slower)<>
+
+
+
+### permutation vs shuffle
+
+Shuffle randomizes in place whereas permutation returns a new array with the elements randomized, leaving the original intact.
+@
+@ permutation(), shuffle()
+@ difference
+
+
+
+# Glossary
+@
+@ Terms
+
+
+### 1D
+1 Dimensional
+
+As in 1 dimension array (.ndim = 1).
+
+
+Example:
+
+<cb>from numpy import array
+
+one_dimension = array([11, 12, 13])<>
+
+
+
+### 2D
+2 Dimensional
+
+As in a 2 dimension array (.ndim = 2).
+
+Example:
+
+<cb>from numpy import array
+
+two_dimensions = array(
+        [[11, 12, 13],
+         [21, 22, 23]])<>
+
+
+
+### NAN
+Not a number
+
+
+
+### NaT
+Not a Time
+
+(datetime64, timedelta64)
+
+
+
+### RNG
+Random Number Generator
+
+
+
+### Array Scalar
+An element of an array that is associated with a dtype.
+
+
+
+### Copy vs View
+A copy is where the data of an array is physically copied to a new location.
+A view is a different representation of the same underlying data. No copy is made.
+
+
+
+### Gorilla
+Here is a gorilla  🦍
+
+
+
+### Matrix
+A 2 dimensional (2D) NumPy array.
+@
+@ 2d
+
+
+
+### Shape
+Defines the size of the array in terms the size of each dimension.
+Usually defined as a tuple of dimension sizes.
+
+Example: 1D Array of 5 Elements - Shape (5)
+Example: 2D Array of 2 x 3 Elements - Shape (2, 3)
+
+
+
+### Universal Function (UFunc)
+A function that takes an array and performs an operation on each element inside the array.
+
+
