@@ -1990,17 +1990,17 @@ Example:
 
 ### Array - Create From List
 
-<cb>import numpy as np
+<cb>from numpy import array
 
-= np.array(<v>list_1<>)<>
+= array(<v>list_1<>)<>
 
 
-<cb>= np.array([<v>1, 2, 3, ...<>])<>
+<cb>= array([<v>1, 2, 3, ...<>])<>
 
 
 Set Type Explicitly:
 
-<cb>= np.array(<v>list_1<>, dtype = <v>type<>)<>
+<cb>= array(<v>list_1<>, dtype = <v>type<>)<>
 
 Returns: <c>numpy.ndarray<>
 
@@ -2010,28 +2010,28 @@ Creates an array initialized with the values from a standard Python list.
 
 Examples:
 
-<cb>import numpy as np
+<cb>from numpy import array
 
-<v>array_1<> = np.array(
-        [[<v>10<>, <v>11<>, <v>12<>],
-         [<v>20<>, <v>21<>, <v>22<>]])
+<v>array_1<> = array(
+        [[<v>1<>, <v>2<>, <v>3<>],
+         [<v>4<>, <v>5<>, <v>6<>]])
 
 <#># Returns
 \#
-\#   [[10 11 12]
-\#    [20 21 22]]<><>
+\#   [[1 2 3]
+\#    [4 5 6]]<><>
 
-<cb>import numpy as np
+<cb>from numpy import array
 
 <v>array_1<> = np.array(
-        [[<v>10<>, <v>11<>, <v>12<>],
-         [<v>20<>, <v>21<>, <v>22<>]],
+        [[<v>1<>, <v>2<>, <v>3<>],
+         [<v>4<>, <v>5<>, <v>6<>]],
         dtype = np.float_)
 
 <#># Returns
 \#
-\#   [[10. 11. 12.]
-\#    [20. 21. 22.]]<><>
+\#   [[1. 2. 3.]
+\#    [4. 5. 6.]]<><>
 @
 @ numpy.array(), np.array(), .array()
 @ tuple, sequence
@@ -2758,7 +2758,7 @@ Old Way:
 
 <cb>from numpy import random
 
-= random.uniform(<v>min<>, <v>max<>, (<v>dimension_1_size<>, <v>dimension_2_size<>, <v>...<>)<>
+= random.uniform(<v>min<>, <v>max<>, (<v>dimension_1_size<>, <v>dimension_2_size<>, <v>...<>))<>
 
 
 Returns:	<c>numpy.ndarray<>
@@ -3089,7 +3089,10 @@ Example:
 
 ### Array - Get Shape
 
-<cb>= <v>array_1<>.size<>
+<cb>= <v>array_1<>.shape<>
+
+Returns: <c>tuple<>
+
 
 Returns the number of elements in the array.
 
@@ -3102,7 +3105,7 @@ Example:
         [[<v>10<>, <v>11<>, <v>12<>],
          [<v>20<>, <v>21<>, <v>22<>]])
 
-<v>size<> = <v>array_1<>.size
+<v>shape<> = <v>array_1<>.shape
 
 <#># Returns (2, 3)<><>
 @
@@ -3276,7 +3279,7 @@ Example:
 
 <#># Converted array from np.int_ to np.float_<><>
 @
-@ cast, casting, .astype(), convert
+@ cast, casting, .astype(), convert, set to
 
 
 
