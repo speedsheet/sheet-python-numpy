@@ -2423,7 +2423,7 @@ Define Shape:
 \#		 [3 4 5]]<><>
 @
 @ numpy.arange(), np.arange(), .arange(), range()
-@ linear, even series evenly spaced, interval
+@ linear, even series evenly spaced, interval, from, to sequence, sequenctial
 
 
 
@@ -3061,6 +3061,8 @@ Matrix Co-ordinates:
 
 
 ## Array - Operations
+@
+@ functions
 
 
 
@@ -3681,6 +3683,8 @@ Example:
 
 
 ## Array - Calculation Operations
+@
+@ functions
 
 
 
@@ -4810,6 +4814,8 @@ Example:
 
 
 ## Array - Shape Operations
+@
+@ functions, reshape
 
 
 
@@ -4843,7 +4849,7 @@ Example:
 /#
 /#   [ 1 2 3 4  .... 21 22 23 24]<><>
 @
-@ .flatten(), order
+@ .flatten(), order, sequential
 
 
 
@@ -4877,7 +4883,7 @@ Example:
 /#
 /#   [ 1 2 3 4  .... 21 22 23 24]<><>
 @
-@ .ravel(), order
+@ .ravel(), order, sequential
 
 
 
@@ -4992,7 +4998,7 @@ Reshape To 3 x ?:
 
 ## Array - Statistics Operations
 @
-@ calculations, stats
+@ calculations, stats, functions
 
 
 
@@ -5123,7 +5129,8 @@ Examples:
 
 
 ## Array - Matrix Operations
-
+@
+@ functions
 
 
 ### Matrix Array - Product (Multiply)
@@ -10131,6 +10138,7 @@ from numpy import newaxis
 /#      [[6]]]]<>
 @
 @ new, create, newaxis, axes
+@ shape operations, reshape
 
 
 
