@@ -3111,7 +3111,7 @@ Example:
 
 <#># Returns (2, 3)<><>
 @
-@ count, length, len(), .size
+@ length, len(), .size
 
 
 
@@ -4942,9 +4942,6 @@ Using Tuple:
 
 ### Array - Reshape With -1
 
-<cb>= <v>array_1<>.reshape(<v>shape<>)<>
-
-
 To 1 Dimension:
 
 <cb>= <v>array_1<>.reshape(-1)
@@ -6622,7 +6619,9 @@ Array ** Scalar:
 
 ### Square Root
 
-<cb>= sqrt(<v>array_1<>)<>
+<cb>import numpy as np
+
+= np.sqrt(<v>array_1<>)<>
 
 
 Calculates the square root of all values.
