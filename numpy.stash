@@ -1,11 +1,18 @@
 # <#>NumPy<> SpeedSheet
-<b>What you need, faster.<>
+<b>Find what you need, faster.<>
 
 Get answers to your NumPy questions fast.
 
 <*>Use <b>Search<> (above) For Realtime Answers
 Answers Get Right To The Point
 Covers The <b>NumPy<> Python Library<>
+
+
+# SpeedSheets Tips
+
+Here is a quick video to help you get the most out of the Numpy SpeedSheet:
+
+<h>iframe width=640 height=360 src=https://www.youtube.com/embed/fKFDRRj9SYA</h><h>/iframe</h>
 
 
 
@@ -16,11 +23,11 @@ Covers The <b>NumPy<> Python Library<>
 <l>https://numpy.org/doc/stable/<>
 
 
-### Data Types - Basics
+### Docs - Data Types
 <l>https://numpy.org/doc/stable/user/basics.types.html<>
 
 
-### Data Types - Scalars
+### Docs - Scalar Data Types
 <l>https://numpy.org/doc/stable/reference/arrays.scalars.html<>
 
 
@@ -57,6 +64,8 @@ Command:
 
 
 # Data Types
+@
+@ basics
 
 
 ## Arrays
@@ -210,7 +219,7 @@ Calculate the operation and save the result in <c><v>a<><>.
 	<c><v>a<> \<\< <v>shift_count<><>		Bitwise Shift Left
 	<c><v>a<> >> <v>shift_count<><>		Bitwise Shift Right
 @
-@ ~, &, |, ^, \<\<, >>
+@ ~, &, |, ^, \<\<, >>, binary
 
 
 
@@ -225,7 +234,7 @@ Calculate the operation and save the result in <c><v>a<><>:
 	<c><v>a<> \<\<= <v>shift_count<><>	Bitwise Shift Left
 	<c><v>a<> >>= <v>shift_count<><>	Bitwise Shift Right
 @
-@ &=, |=, ^=, \<\<=, >>=
+@ &=, |=, ^=, \<\<=, >>=, binary
 
 
 
@@ -255,17 +264,6 @@ np.logical_or()
 np.logical_xor()<>
 @
 @ boolean
-
-
-
-## Matrix Operators
-
-	<c><v>A<> @ <v>B<><>				Product (Multiplication)
-
-
-<c><v>A<><> and <c><v>B<><> must be 2D NumPy arrays.
-@
-@ @, dot product, multiply, multiplication
 
 
 
@@ -1014,7 +1012,7 @@ Example:
 
 <#># Returns [01010101 11111111 11110000]<><>
 @
-@ ~
+@ ~, not
 
 
 
@@ -1810,7 +1808,7 @@ Scalar >= Array:
 
 
 The preferred way to calculate the product of two matrices.
-<c><v>array_1<><>'s row size must equal <c><v>array_2<><>'s column size.
+<c><v>array_1<><>'s column size must equal <c><v>array_2<><>'s row size.
 
 
 Example:
@@ -2850,7 +2848,7 @@ Old Way:
 @ numpy.random.randint(), np.random.randint(), random.randint(), .randint(), .random_integer()
 @ rng.randint(), rng.integers(), .integers()
 @ numpy.random.default_rng(), np.random.default_rng(), random.default_rng(), .default_rng(), default_rng()
-@ minimum, maximum, randomized, values
+@ minimum, maximum, randomized, values, ints
 
 
 
@@ -2915,8 +2913,7 @@ With Mean 50, Standard Deviation 10:
 Returns:	<c>numpy.ndarray<>
 
 
-Returns an array of random floats with a normal distribution.
-(mean = 0, standard deviation = 1)
+Returns an array created by picking randomly from items from another array.
 
 
 Examples:
@@ -3281,7 +3278,7 @@ Example:
 
 <#># Converted array from np.int_ to np.float_<><>
 @
-@ cast, casting, .astype(), convert, set to
+@ cast, casting, .astype(), convert, set to, conversion
 
 
 
@@ -4815,7 +4812,7 @@ Example:
 
 ## Array - Shape Operations
 @
-@ functions, reshape
+@ functions, reshape, change
 
 
 
@@ -5435,6 +5432,7 @@ Shape (3) vs Shape (2):
 # Iterators
 @
 @ iteration operations, iterate, control statements
+@ for in
 
 
 
@@ -6633,7 +6631,7 @@ Example:
 
 <v>array_1<> = np.array([4, 25, 100])
 
-<v>square_root<> = np.sqrt(<v>array_1<>, <v>array_2<>)
+<v>square_root<> = np.sqrt(<v>array_1<>)
 
 <#># Returns [2.0, 5.0, 10.0]<><>
 @
@@ -6655,10 +6653,13 @@ Example:
 
 
 Joins two arrays along an axis.
+The arrays must have the same number of dimensions.
 Default axis is 0.
 
 
 Examples:
+
+Join To 1D Array:
 
 <cb>import numpy as np
 
@@ -6668,6 +6669,8 @@ Examples:
 <v>joined<> = np.concatenate((<v>array_1<>, <v>array_2<>))
 
 <#># Returns: [1, 2, 3, 4, 5, 6]<><>
+
+Join To 2D Array:
 
 <cb>import numpy as np
 
@@ -10137,7 +10140,30 @@ from numpy import newaxis
 /#      [[6]]]]<>
 @
 @ new, create, newaxis, axes
-@ shape operations, reshape
+@ shape operations, reshape, resize, change dimensions
+
+
+
+###Array - Find All Occurrences
+
+<cb>= np.where(<v>array_1<> == <v>match_value<>)[0]<>
+
+
+Returns indexes of all locations containing the matching value.
+
+
+Examples:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([1, 3, 2, 5, 4, 2, 5])
+
+<v>match_value<> = 2
+<v>match_locations<> = np.where(<v>array_1<> == <v>match_value<>)[0]
+
+<#># Returns [2, 5]<><>
+@
+@ indexes of
 
 
 
