@@ -3,9 +3,8 @@
 
 Get answers to your NumPy questions fast.
 
-<*>Use <b>Search<> (above) For Realtime Answers
-Answers Get Right To The Point
-Covers The <b>NumPy<> Python Library<>
+
+<image "numpy-example.webp">
 
 
 # SpeedSheets Tips
@@ -3309,7 +3308,7 @@ Example:
 
 
 
-### Array - Deep Copy
+### Array - Copy - Deep Copy
 
 <cb>from copy import deepcopy
 
@@ -6274,6 +6273,47 @@ Example:
 
 
 
+### Dot Product (Multiply)
+
+<cb>= <v>array_1<> @ <v>array_2<><>
+
+<cb>= np.dot(<v>array_1<>, <v>array_2<>)<>
+
+Full Usage:
+
+<cb>import numpy as np
+
+= <v>array_1<> @ <v>array_2<>
+= np.dot(<v>array_1<>, <v>array_2<>)<>
+
+
+Calculates the product of two matrices.
+<c><v>array_1<><>'s row size must equal <c><v>array_2<><>'s column size.
+
+
+Examples:
+
+1D Arrays:
+
+2D Arrays:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+        [[1, 2, 3],
+         [4, 5, 6]])
+
+<v>array_2<> = np.array(
+        [2, 3, 4])
+
+<v>product<> = np.dot(<v>array_1<>, <v>array_2<>)
+
+<#>Returns: [ 20  47 ]<><>
+@
+@ numpy.dot(), np.dot(), .dot(), dot product, Multiplication
+
+
+
 ### Exponent
 
 <cb>import numpy as np
@@ -6643,13 +6683,89 @@ Example:
 
 
 
-### Concatenate
+### Append
+
+<cb>= np.append(<v>array_1<>, <v>values<>)<>
+
+Full Form:
 
 <cb>import numpy as np
 
-= np.concatenate((<v>array_1<>, <v>array_2<>))<>
+= np.append(<v>array_1<>, <v>values<>)
+= np.append(<v>array_1<>, <v>values<>, axis = <v>axis<>)<>
 
-<cb>= np.concatenate((<v>array_1<>, <v>array_2<>), axis = <v>axis<>)<>
+Returns: <c>Array<>
+
+
+Creates a new array with data appended to the end.
+
+If no axis is specified, returns a 1 dimension array with new data appended to the end.
+If specifying the axis, the data must have a compatible shape (same number of dimensions, same shape except along appending axis).
+
+
+Examples:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+        [[<v>1<>, <v>2<>],
+         [<v>3<>, <v>4<>]])
+
+<v>data<> = [10, 20, 30, 40]
+
+<v>appended<> = np.append(<v>array_1<>, <v>data<>)
+
+<#>Returns: [1, 2, 3, 4, 10, 20, 30, 40]<><>
+
+Append Axis 0:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+        [[<v>1<>, <v>2<>],
+         [<v>3<>, <v>4<>]])
+
+<v>data<> = [[10, 20]]
+
+<v>appended<> = np.append(<v>array_1<>, <v>data<>, axis = <v>0<>)
+
+<#>Returns: [ 1,  2],
+\#        [ 3,  4],
+\#        [10, 20]]<><>
+
+Append Axis 1:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array(
+        [[<v>1<>, <v>2<>],
+         [<v>3<>, <v>4<>]])
+
+<v>data<> = [[10], [20]]
+
+<v>appended<> = np.append(<v>array_1<>, <v>data<>, axis = <v>1<>)
+
+<#>Returns: [1, 2, 10],
+\#        [3, 4, 20]]<><>
+@
+@ arrays
+@ numpy.append(), np.append(), .append()
+@ append, combine, lists, join
+
+
+
+### Concatenate
+
+<cb>= np.concatenate((<v>array_1<>, <v>array_2<>))<>
+
+Usage:
+
+<cb>import numpy as np
+
+= np.concatenate((<v>array_1<>, <v>array_2<>))
+= np.concatenate((<v>array_1<>, <v>array_2<>), axis = <v>axis<>)<>
+
+Returns: <c>Array<>
 
 
 Joins two arrays along an axis.
@@ -6679,11 +6795,39 @@ Join To 2D Array:
 
 <v>joined<> = np.concatenate((<v>array_1<>, <v>array_2<>))
 
-<#># Returns: [[1, 2], [3, 4], [5, 6]]<><>
+<#># Returns: [[1, 2],
+\#           [3, 4],
+\#           [5, 6]]<><>
+
+Join Axis 0:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([[<v>1<>, <v>2<>], [<v>3<>, <v>4<>]])
+<v>array_2<> = np.array([[<v>5<>, <v>6<>]])
+
+<v>joined<> = np.concatenate((<v>array_1<>, <v>array_2<>), axis = 0)
+
+<#># Returns: [[1, 2],
+\#           [3, 4],
+\#           [5, 6]]<><>
+
+Join Axis 1:
+
+<cb>import numpy as np
+
+<v>array_1<> = np.array([[<v>1<>, <v>2<>], [<v>3<>, <v>4<>]])
+<v>array_2<> = np.array([[<v>5<>], [<v>6<>]])
+
+<v>joined<> = np.concatenate((<v>array_1<>, <v>array_2<>), axis = 1)
+
+<#># Returns: [[1, 2, 6],
+\#           [3, 4, 6]]<><>
 @
 @ arrays
 @ numpy.concatenate(), np.concatenate(), .concatenate()
-@ append, merge, combine, union
+@ numpy.concat(), np.concat(), .concat()
+@ append, merge, combine, union, join
 
 
 
@@ -7543,6 +7687,10 @@ Example:
 
 ### Matrix - Inverse
 
+<cb>= np.linalg.inv(<v>array_1<><>
+
+Full Usage:
+
 <cb>import numpy as np
 
 = np.linalg.inv(<v>array_1<>)<>
@@ -7573,7 +7721,15 @@ Example:
 
 ### Matrix - Product (Multiply)
 
+<cb>= <v>array_1<> @ <v>array_2<><>
+
 <cb>= np.dot(<v>array_1<>, <v>array_2<>)<>
+
+Full Usage:
+
+<cb>import numpy as np
+
+= np.dot(<v>array_1<>, <v>array_2<>)<>
 
 
 Calculates the product of two matrices.
@@ -7600,7 +7756,7 @@ Example:
 
 <#>Returns: [ 20  47 ]<><>
 @
-@ .dot(), dot product, Multiplication
+@ numpy.dot(), np.dot(), .dot(), dot product, Multiplication
 
 
 
