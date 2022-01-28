@@ -4,27 +4,58 @@
 Get answers to your NumPy questions fast.
 
 
-<image "numpy-example.webp">
+Follow us on Twitter:
+
+<card><l https://twitter.com/_speedsheet>@_speedsheet<><>
+@
+@ twitter
 
 
-# SpeedSheets Tips
+### 5 Things Search Can Find
+
+<in-2><l "/s/numpy?search=change+type">Change Array Type<>
+<l "/s/numpy?search=calculate+tota&select=uSB8">Calculate Total<>
+<l "/s/numpy?search=calculate+max&select=FM8y">Calculate Max Value<>
+<l "/s/numpy?search=swap+axes">Swap Axes<>
+<l "/s/numpy?search=flat+vs">Explain the Difference Between flat and flatiter and flatten<><>
+
+
+### In This Sheet
+
+<in-2><l "/s/numpy?search=create+array">20+ Ways to Create Arrays<>
+<l "/s/numpy?search=array+operations">50+ Array Operations<>
+
+<l "/s/numpy?search=slicing">Array Slicing<>
+<l "/s/numpy?search=conditional&select=cKTP">Conditional Functions<>
+<l "/s/numpy?search=manipulation">Array Manipulation Functions<>
+<l "/s/numpy?search=statistics">Statistic Functions<>
+<l "/s/numpy?search=test">Test Functions<>
+
+<l "/s/numpy?search=boolean+index">Masks / Boolean Indexing<>
+<l "/s/numpy?search=integer+index&select=fWSB">Integer Indexing<>
+<l "/s/numpy?search=iterating">Iterating<>
+
+<l "/s/numpy?search=axes">Array Axes<>
+<l "/s/numpy?search=broad">Broadcasting Rules<>
+
+<l "/s/numpy?search=csv">Read/Write CSV Files<>
+<l "/s/numpy?search=text+file">Read/Write Text Files<><>
+
+
+# Tips
 
 Here is a quick video to help you get the most out of the Numpy SpeedSheet:
 
 <h>iframe width=640 height=360 src=https://www.youtube.com/embed/fKFDRRj9SYA</h><h>/iframe</h>
 
 
-
 # NumPy Documents
-
 
 ### Official Site
 <l>https://numpy.org/doc/stable/<>
 
-
 ### Docs - Data Types
 <l>https://numpy.org/doc/stable/user/basics.types.html<>
-
 
 ### Docs - Scalar Data Types
 <l>https://numpy.org/doc/stable/reference/arrays.scalars.html<>
@@ -3680,7 +3711,7 @@ Example:
 
 ## Array - Calculation Operations
 @
-@ functions
+@ functions, calculate, calculating
 
 
 
@@ -5374,15 +5405,15 @@ Examples:
 Stretches arrays or data so that they can perform operations together.
 
 
-Rules:
+Broadcast Rules:
 
 <card><b>If The Same Shape:<>
 
-	A-OK, go to work.
+	A-OK, NumPy goes to work.
 
 <b>If Different Number of Dimensions:<>
 
-	Increase dimensions of smaller array to match the bigger.
+	Increases dimensions of smaller array to match the bigger.
 
 	Each dimension will be added on top of the existing dimensions
 	Each new dimension will be of size 1.
@@ -5390,14 +5421,14 @@ Rules:
 <b>From Lowest Dimension to Hightes, Compare Sizes:<>
 
 	If Same Size:
-		Ok
+		Ok, goes to work.
 
 	If One Is Size 1:
-		Expand to the size of the other.
+		Expands to the size of the other.
 		'Copy' lower dimensions as needed.
 
 	If Different Size:
-		Reject.
+		Rejects.
 		They are incompatible.<>
 
 
@@ -5430,7 +5461,7 @@ Shape (3) vs Shape (2):
 
 # Iterators
 @
-@ iteration operations, iterate, control statements
+@ iteration operations, iterating, iterate, control statements
 @ for in
 
 
@@ -6097,7 +6128,7 @@ from numpy import array
 <#># Returns [1, -2, 3]<><>
 @
 @ numpy.where(), np.where(), .where(), condition, ternary, conditional
-@ mask, boolean index
+@ mask, boolean index, if
 
 
 
@@ -6136,7 +6167,7 @@ Get Index of Odd Values:
 <#># Returns [[0, 0], [0, 2], [1, 1]]<><>
 @
 @ numpy.argwhere(), np.argwhere(), .argwhere(), condition
-@ mask, boolean index
+@ mask, boolean index, if
 
 
 
@@ -8752,7 +8783,7 @@ Example:
 
 # IO
 @
-@ file functions
+@ file functions, files
 
 
 ### CSV File - Read
@@ -8884,6 +8915,7 @@ Or:
 <cb><v>array_1<> = np.genfromtxt(<v>file_name<>)<>
 @
 @ np.loadtxt(), .loadtxt(), np.genfromtxt(), .genfromtxt()
+@ files
 
 
 
@@ -8913,6 +8945,7 @@ np.savetxt(<v>file_name<>, <v>array_1<>)
 4.000000000000000000e+00 5.000000000000000000e+00 6.000000000000000000e+00<><>
 @
 @ np.savetext(), .savetext(), header=, delimiter=
+@ files
 
 
 
