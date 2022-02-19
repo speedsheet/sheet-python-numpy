@@ -11,13 +11,15 @@ Follow us on Twitter:
 @ twitter
 
 
-### 5 Things Search Can Find
+### 5 Things Search Will Find
 
-<in-2><l "/s/numpy?search=change+type">Change Array Type<>
-<l "/s/numpy?search=calculate+tota&select=uSB8">Calculate Total<>
-<l "/s/numpy?search=calculate+max&select=FM8y">Calculate Max Value<>
-<l "/s/numpy?search=swap+axes">Swap Axes<>
-<l "/s/numpy?search=flat+vs">Explain the Difference Between flat and flatiter and flatten<><>
+<card><table><col><b>Need This?				<><><col><b>Search For:			<><><col><b>See Search In Action:<><>
+<col> <>
+<col>Change Array Type<><col>change type<><col><l "/s/numpy?search=change+type">Search Result<><>
+<col>Calculate Total<><col>calculate total<><col><l "/s/numpy?search=calculate+tota&select=uSB8">Search Result<><>
+<col>Calculate Max Value<><col>calculate max<><col><l "/s/numpy?search=calculate+max&select=FM8y">Search Result<><>
+<col>Swap Axes<><col>swap axes<><col><l "/s/numpy?search=swap+axes">Search Result<><>
+<col>flat vs flatiter vs flatten<><col>flat vs<><col><l "/s/numpy?search=flat+vs">Search Result<><><><>
 
 
 ### In This Sheet
