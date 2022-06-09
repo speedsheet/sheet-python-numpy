@@ -1,57 +1,88 @@
 # <#>NumPy<> SpeedSheet
-<b>Find what you need, faster.<>
+<b>Find it faster.<>
 
-Get answers to your NumPy questions fast.
+This is an interactive <b>NumPy<> cheat sheet. Covers the core NumPy data crunching library. Use the search to instantly get answers.
 
 
-Follow us on Twitter:
+<card><b>Sample Searches<>
 
-<card><l https://twitter.com/_speedsheet>@_speedsheet<><>
+<*><l "/s/numpy?search=change+type">Change Array Type<>
+<l "/s/numpy?search=calculate+tota&select=uSB8">Calculate Total<>
+<l "/s/numpy?search=calculate+max&select=FM8y">Calculate Max Value<>
+<l "/s/numpy?search=swap+axes">Swap Axes<>
+<l "/s/numpy?search=flat+vs">flat vs flatiter vs flatten<><>
+<>
+
+
+<table><col><b>Basics<>
+
+<*><link "?q=install">Installing<><>
+
+<*><link "?q=operators-only">Operators<>
+<link "?q=axes-only">Axes<>
+<link "?q=axis+order">Axis Order<>
+<link "?q=broadcasting">Broadcasting<>
+<link "?q=iterators">Iterators<><>
+
+
+<b>Functions<>
+
+<*><link "?q=functional">Apply Function<>
+<link "?q=manipulation-only">Array Manipulation<>
+<link "?q=bitwise">Bitwise<>
+<link "?q=compare">Compare<>
+<link "?q=conditional-only">Conditional<>
+<link "?q=logical-only">Logical<>
+<link "?q=math-only">Math<>
+<link "?q=matrix">Matrix<>
+<link "?q=rounding-only">Rounding<>
+<link "?q=stats-only">Statistics<>
+<link "?q=tests-only">Test<>
+<link "?q=trig-only">Trigonometry<><>
+
+<*><link "?q=file-io">File IO<><>
+
+<b>How To<>
+
+<*><link "?q=how-tos">How Tos<>
+<link "?q=how+to+apply+function">Apply Function<><>
+
+<b>Reference<>
+
+<*><link "?q=constants">Constants<><>
+
+<*><link "?q=acronyms">Acronyms<>
+<link "?q=official+documents">Official Docs<>
+<link "?q=terms">Terms<><><><col><b>Arrays<>
+
+<*><link "?q=arrays-only">Arrays<><>
+
+<*><link "?q=create+array">Creating<>
+<link "?q=array+operations">Operations<>
+<link "?q=array+aggregate">Aggregating<>
+<link "?q=array+slicing">Indexing, Slicing<>
+<link "?q=array+">Shape<>
+<link "?q=array+statistics">Statistics<><>
+
+<b>Data Types<>
+
+<*><link "?q=data-types-only">Data Types<><>
+
+<*><link "?q=arrays-only+create">Array<>
+<link "?q=bytes-only">Byte<>
+<link "?q=complex-only">Complex Nmuber<>
+<link "?q=float-only">Float<>
+<link "?q=int-only">Integer<>
+<link "?q=string-only">String<><>
+
+<*><link "?q=datetime-only">Datetime<>
+<link "?q=timedelta-only">TimeDelta<><><><>
+
+
+
+# Online Documents
 @
-@ twitter
-
-
-### 5 Things Search Will Find
-
-<card><table><col><b>Need This?				<><><col><b>Search For:			<><><col><b>See Search In Action:<><>
-<col> <>
-<col>Change Array Type<><col>change type<><col><l "/s/numpy?search=change+type">Search Result<><>
-<col>Calculate Total<><col>calculate total<><col><l "/s/numpy?search=calculate+tota&select=uSB8">Search Result<><>
-<col>Calculate Max Value<><col>calculate max<><col><l "/s/numpy?search=calculate+max&select=FM8y">Search Result<><>
-<col>Swap Axes<><col>swap axes<><col><l "/s/numpy?search=swap+axes">Search Result<><>
-<col>flat vs flatiter vs flatten<><col>flat vs<><col><l "/s/numpy?search=flat+vs">Search Result<><><><>
-
-
-### In This Sheet
-
-<in-2><l "/s/numpy?search=create+array">20+ Ways to Create Arrays<>
-<l "/s/numpy?search=array+operations">50+ Array Operations<>
-
-<l "/s/numpy?search=slicing">Array Slicing<>
-<l "/s/numpy?search=conditional&select=cKTP">Conditional Functions<>
-<l "/s/numpy?search=manipulation">Array Manipulation Functions<>
-<l "/s/numpy?search=statistics">Statistic Functions<>
-<l "/s/numpy?search=test">Test Functions<>
-
-<l "/s/numpy?search=boolean+index">Masks / Boolean Indexing<>
-<l "/s/numpy?search=integer+index&select=fWSB">Integer Indexing<>
-<l "/s/numpy?search=iterating">Iterating<>
-
-<l "/s/numpy?search=axes">Array Axes<>
-<l "/s/numpy?search=broad">Broadcasting Rules<>
-
-<l "/s/numpy?search=csv">Read/Write CSV Files<>
-<l "/s/numpy?search=text+file">Read/Write Text Files<><>
-
-
-# Tips
-
-Here is a quick video to help you get the most out of the Numpy SpeedSheet:
-
-<h>iframe width=640 height=360 src=https://www.youtube.com/embed/fKFDRRj9SYA</h><h>/iframe</h>
-
-
-# NumPy Documents
+@ official docs, documents-only, docs-only
 
 ### Official Site
 <l>https://numpy.org/doc/stable/<>
@@ -71,7 +102,7 @@ Here is a quick video to help you get the most out of the Numpy SpeedSheet:
 
 <cb>pip install numpy<>
 @
-@ command, commandline
+@ command, commandline, install-only
 
 
 
@@ -85,7 +116,7 @@ Command:
 
 <cb>pip install -r requiremets.txt<>
 @
-@ command, commandline
+@ command, commandline, install-only
 
 
 
@@ -97,7 +128,7 @@ Command:
 
 # Data Types
 @
-@ basics
+@ basics, data-types-only
 
 
 ## Arrays
@@ -1869,6 +1900,7 @@ NumPy multidimentional (n-dimension) arrays.
 Type: <c>numpy.ndarray<>
 @
 @ np.ndarray, numpy.ndarray, .ndarray, numpy.array np.array
+@ array-only, arrays-only
 
 
 
@@ -3711,9 +3743,9 @@ Example:
 
 
 
-## Array - Calculation Operations
+## Array - Aggregate Operations
 @
-@ functions, calculate, calculating
+@ functions, calculate, calculating, aggrigating
 
 
 
@@ -4845,6 +4877,7 @@ Example:
 ## Array - Shape Operations
 @
 @ functions, reshape, change
+@ shape-only
 
 
 
@@ -5231,7 +5264,7 @@ Example:
 
 
 ## Array Axes
-@ axis
+@ axis, axes-only, array-axes-only, axis-only, array-axis-only
 
 
 ### 1D Array
@@ -5957,6 +5990,8 @@ Examples:
 
 
 # Conditional Functions
+@
+@ conditional-only, conditionals-only, conditional-functions-only
 
 
 
@@ -6175,7 +6210,7 @@ Get Index of Odd Values:
 
 # Logical Functions
 @
-@ boolean, operators
+@ boolean, operators, logical-only, logical-functions-only
 
 
 ### Logical And
@@ -6279,7 +6314,7 @@ Example:
 
 # Math Functions
 @
-@ maths
+@ maths, math-only, maths-only, math-functions-only, maths-functions-only
 
 
 
@@ -6713,7 +6748,8 @@ Example:
 
 
 # Manipulation Functions
-
+@
+@ manipulation-only, manipulation-functions-only
 
 
 ### Append
@@ -7689,7 +7725,8 @@ Swap Axes 0 and 2:
 
 
 # Matrix Functions
-
+@
+@ matrix-only, matrix-functions-only
 
 
 ### Matrix - Determinant
@@ -7794,7 +7831,8 @@ Example:
 
 
 # Rounding Functions
-
+@
+@ rounding-only, rounding-functions-only
 
 
 ### Round
@@ -7964,6 +8002,7 @@ Examples:
 # Statistics Functions
 @
 @ statistical, stats
+@ stats-only, statistics-only, statistics-functions-only
 
 
 
@@ -8252,7 +8291,8 @@ Examples:
 
 # Test Functions
 @
-@ contents
+@ contents, tests
+@ test-only, tests-only, test-functions-only
 
 
 
@@ -8393,8 +8433,9 @@ is_positive_infinity = np.isposinf(<v>array_1<>)
 
 
 
-# Trigonomotry Functions
-
+# Trigonometry Functions
+@
+@ trig-only, triginometry-only, trig-functions-only, trigonometry-functions-only
 
 
 ### Arccosine
@@ -8783,9 +8824,10 @@ Example:
 
 
 
-# IO
+# File IO
 @
 @ file functions, files
+@ file-io
 
 
 ### CSV File - Read
@@ -10210,7 +10252,8 @@ New Array (Explicit):
 
 
 # How To
-
+@
+@ how-tos, tos, how-to-only, how-tos-only
 
 
 ### Array - Add Axis / Dimension
@@ -10821,8 +10864,10 @@ Shuffle randomizes in place whereas permutation returns a new array with the ele
 
 
 # Glossary
+
+## Acronyms
 @
-@ Terms
+@ acronyms-only 
 
 
 ### 1D
@@ -10868,6 +10913,12 @@ Not a Time
 
 ### RNG
 Random Number Generator
+
+
+
+## Terms
+@
+@ terms-only
 
 
 
